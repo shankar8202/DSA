@@ -11,13 +11,69 @@
 </body>
 </html>
 <script>
-//  Algo
+    // ALGO
+//To find unique values from 2 arrays and keep into one array. i.e. Union.
+
+// step 1 - creat 2 variable assign both array to them
+//step 2 - combine them with spread oprator
+//step 3 - using Set method
+//step 4 - console
+
+// Input = [1,2,3,4,5,6,1,2,3,4], [3,8,9,1]
+// Output = [1,2,3,4,5,6,8,9]
 
 
-// --first we need to creat a variable inside the variable we have all alphabet 
-// --- running loop inside the function 
-// --put if else condition 
-// --then console it
+
+
+
+// let a1 =[1,2,3,4,5,6,1,2,3,4];
+// let a2 = [3,8,9,1];
+
+// let combo =[...a1,...a2];
+// let setObj =new Set(combo)
+// console.log(setObj);
+
+
+
+
+
+
+
+
+
+
+
+//  question print vowels otherwise print consonent
+
+// Step 1--first we need to creat a variable inside the variable we have all alphabet 
+// Step 2--- running loop inside the function 
+//  Step 3--put if else condition 
+//  Step 4 --then console it
+
+// or 
+
+// * Step 1 - Store input in a variable
+//  * Step 2 - Check in if condition for the letter is vowel or not
+//  * Step 3 - Check If it is vowel
+//  * Step 3.1 - Print it is a vowel
+//  * Step 4 - Print it is a consonent
+
+
+
+function shn(str){
+    if(str==="a"||str=="e"||str=="i"||str=="o"||str=="u"||
+    str==="A"||str=="E"||str=="I"||str=="O"||str=="Y"  
+    ){
+        console.log("yes this is vowel")
+    }
+    else if (typeof str !== "string" ||typeof str === "number"){
+        console.log("please enter alphabet")
+    }
+    else{
+        console.log("this is consonent")
+    }
+}
+shn("a");
 
 
 </script>
