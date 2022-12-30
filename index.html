@@ -11,7 +11,127 @@
 </body>
 </html>
 <script>
+  
+// step 1 - split the data 
+// step 2 run a loop
+// step 3 - checking condition
+// if      a is === a+1 
+// declear empty variable  
+// step 5  = else condition
 
+//   Input - AAAABBBCCDAAABB   //--- input we have 
+
+// Output - 4A3B2C1D3A2B       //---output we need
+
+
+
+// function shn(data){
+//   let split = data.split("")
+//   let total =1
+//   let final ="";
+//   for(let a=0;a<=split.length;a++){
+//    if(split[a]===split[a+1]){
+//     total=total+1
+//    }
+//    else{
+//       final =final+total+split[a];
+   //  console.log(final)
+//       total = 1
+//    }
+
+//   }
+//   return(final)
+// }
+// console.log(shn("AAAABBBCCDAAABB"))
+// ---------------------------------------------------------------------
+// // step :1 Initialize an empty object to store the counts of each character in the input string.
+// // step :2     Iterate through the characters in the input string. For each character, increment the count in the object by 1.
+// // step :3    Initialize an empty result string.
+// // step :4       Iterate through the keys in the object and append the count and character to the result string in the desired format.
+
+// const inputString = "AAAABBBCCDAAABB";
+
+// // Initialize an empty object to store the counts of each character
+// const counts = {};
+
+// // Iterate through the characters in the input string
+// for (const a of inputString) {
+
+//   if (a in counts) {
+//     counts[a]++;
+//   } else {
+//     counts[a] = 1;
+//   }
+// }
+
+// // Initialize an empty result string
+// let result = "";
+
+// // Iterate through the keys in the object and append the count and aaracter to the result string
+// for (const a in counts) {
+//   result += counts[a] + a;
+// }
+
+// console.log(result);  // prints "4A3B2C1D3A2B"
+
+
+
+// -------------------------------------------------------------
+
+//   let value = "tHis Is oUr taSk" ;
+//   let splitted = value.split(" ");   //spitted 
+//   for (let a=0;a<splitted.length;a++){
+//     splitted[a]=splitted[a][0].toUpperCase()+splitted[a].slice(1).toLocaleLowerCase();
+    
+//   }
+//   let join = splitted.join(" ")
+// console.log(join)
+
+
+
+
+
+
+// let a= "hello i am sAtyam"
+//           let splitSat= a.split(" ")
+//           // console.log(splitSat)
+//           for(let i=0;i<splitSat.length;i++){
+//                     splitSat[i]= splitSat[i][0].toUpperCase()+ splitSat[i].slice(1).toLowerCase();
+//                     // console.log( splitSat[i]);
+//           }
+//           let final=splitSat.join(" ")
+//           console.log(final)
+
+
+
+
+
+
+// let value = "tHis Is oUr task"
+// let split= value.split(" ");
+// for(let a=0;a<=split.length;a++){
+//   split[a] = split[a].charAt(0).toUpperCase() + split[a].toLowerCase().slice(1);
+//   const join = split.join(" ");
+// console.log(join);
+// }
+
+
+
+
+
+  // Uppercase and lover case 
+
+  // let = tHis Is oUr task 
+
+  //  function shn (value){
+  //   for (let a=0; a<value.length;a++){
+  //     let split = value.split(" ")
+  //     // let Upp = split.toUpperCase()[0];
+  //     return split
+  //   }
+  
+  //  }
+  //  console.log(shn("tHis Is oUr task "))
 
 
   // palandrom 
@@ -21,7 +141,7 @@
   //   let reverse =value.split("").reverse().join("");
 
   //   if (value===reverse){
-  //     console.log("yes this is loladrom")
+  //     console.log("yes this is palandrom")
   //   }
   // else {
   //   console.log("no buddy try harder")

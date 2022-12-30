@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- // resume generator  -->
+    <form id="resume-form">
+      <h2>Personal Information</h2>
+      <label>
+        Name:
+        <input type="text" name="name" required>
+      </label>
+      <br>
+      <label>
+        Title:
+        <input type="text" name="title" required>
+      </label>
+      <br>
+      <label>
+        Email:
+        <input type="email" name="email" required>
+      </label>
+      <br>
+      <label>
+        Phone:
+        <input type="tel" name="phone" required>
+      </label>
+      <br>
+      <h2>Experience</h2>
+      <div id="experience-fields">
+        <label>
+          Position:
+          <input type="text" name="experience">
+        </label>
+        <br>
+        <label>
+          Description:
+          <textarea name="experience"></textarea>
+        </label>
+        <br>
+      </div>
+      <button type="button" id="add-experience-button">Add Experience</button>
+      <h2>Education</h2>
+      <div id="education-fields">
+        <label>
+          Degree:
+          <input type="text" name="education">
+        </label>
+        <br>
+        <label>
+          School:
+          <input type="text" name="education">
+        </label>
+        <br>
+      </div>
+      <button type="button" id="add-education-button">Add Education</button>
+      <h2>Template</h2>
+      <label>
+        <input type="radio" name="template" value="template1" checked>
+        Template 1
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="template" value="template2">
+        Template 2
+      </label>
+      <br>
+      <button type="submit">Generate Resume</button>
+    </form>
+    
+    <!-- HTML for the resume output -->
+    <div id="resume"></div>
+    <script>
+
+const templates = {
+  template1: {
+    name: 'Template 1',
+    html: `
+      <h1>{{name}}</h1>
+      <h2>{{title}}</h2>
+      <ul>
+        <li>{{email}}</li>
+        <li>{{phone}}</li>
+      </ul>
+      <h3>Experience</h3>
+      <ul>
+        {{#each experience}}
+          <li>
+            <h4>{{position}}</h4>
+            <p>{{description}}</p>
+          </li>
+        {{/each}}
+      </ul>
+      <h3>Education</h3>
+      <ul>
+        {{#each education}}
+          <li>
+            <h4>{{degree}}</h4>
+            <p>{{school}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    `
+  },
+  template2: {
+    name: 'Template 2',
+    html: `
+      <h1>{{name}}</h1>
+      <h2>{{title}}</h2>
+      <ul>
+        <li>{{email}}</li>
+        <li>{{phone}}</li>
+      </ul>
+      <h3>Experience</h3>
+      {{#each experience}}
+        <h4>{{position}}</h4>
+        <p>{{description}}</p>
+      {{/each}}
+      <h3>Education</h3>
+      {{#each education}}
+        <h4>{{degree}}</h4>
+        <p>{{school}}</p>
+      {{/each}}
+    `
+  }
+};
+
+// Define a function to generate the resume
+function generateResume(template, data) {
+  // Use the template engine to render the HTML
+  const html = Mustache.render(template.html, data);
+
+  // Insert the HTML into the page
+  document.getElementById('resume').innerHTML = html;
+}
+
+// Define a function to handle the form submission
+function handleFormSubmit(event) {
+  // Prevent the form from submitting
+  event.preventDefault();}
+
+  // Get the form data
+  const form = event.target;
+  const data = {
+    name: form.elements.name.value,
+    title: form.elements.title.value,
+    email: form.elements.email.value,
+    phone: form.elements.phone.value,
+    experience: [],
+    education: []
+  };
+
+  // Get the experience and education data
+  const experienceElements = form.elements.experience;
+  const educationElements = form.elements.education;
+  for (let i = 0; i < experienceElements.length; i++) {
+    data.experience.push({
+      position: experienceElements[i].value,
+      description: experienceElements[i].nextElementSibling.value
+    });
+  }
+  for (let i = 0; i < educationElements.length; i++) {}
+   
+    </script>
+    
+</body>
+</html>
