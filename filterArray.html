@@ -31,15 +31,15 @@ const profiles = [
       active: false,
     },
   ];
-  const result = profiles.filter((data)=>{
-    if( data.active===true){
-        return data
-    }
+  const result = profiles.filter((data)=>data.active
+    // if( data.active===true){
+    //     return data
+    // }
 // Boolean(data)
     // return  [data="active"]
       
          
-  })
+  )
 console.log(result)
 
 // const filterProfiles = [    //output  we need only that output which is true
@@ -67,17 +67,17 @@ console.log(result)
     
   
 
-  // Number > 5 -> Way 1
+//   Number > 5 -> Way 1
 
-//   const v1FilterLogicNF = function (data) {          //in 6 line 
-//     console.log("@LN17: ", data);
-//     if (data > 5) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   };
-//   //const resultsV1 = numbers.filter(v1FilterLogicNF);
+  const v1FilterLogicNF = function (data) {          //in 6 line 
+    console.log("@LN17: ", data);
+    if (data > 5) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+  //const resultsV1 = numbers.filter(v1FilterLogicNF);
 
 //   const resultsV2 = numbers.filter(function (data) {
 //     // console.log("@LN17: ", data);
@@ -100,12 +100,12 @@ console.log(result)
 //   });
 
 //   console.log("AF :", resultsV3);
+const numbers = [1, 2, 3, 4, 5, 6,7, 8, 9, 10];
+  const resultsV4 = numbers.filter((data) => {
+    return data > 5;
+  });
 
-//   const resultsV4 = numbers.filter((data) => {
-//     return data > 5;
-//   });
-
-//   //console.log("AF :", resultsV4);
+  console.log("AF :", resultsV4);
 
 //   const resultsV5 = numbers.filter((data) => data > 5);      //in 1 line
 //   const resultsV6 = numbers.filter((data) => data % 2 === 0);
