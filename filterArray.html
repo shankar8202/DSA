@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+const profiles = [
+    {
+      name: "ankit",
+      active: true,
+    },
+    {
+      name: "ankit",                 
+      active: true,
+    },
+    {
+      name: "rahul",
+      active: false,
+    },
+    {
+      name: "shivam",
+      active: true,
+    },
+    {
+      name: "mitesh",
+      active: false,
+    },
+  ];
+  const result = profiles.filter((data)=>{
+    if( data.active===true){
+        return data
+    }
+
+   
+    // Boolean(data)
+    // return  [data="ankit"]
+      
+         
+  })
+console.log(result)
+
+// const filterProfiles = [    //output
+//     {
+//       name: "ankit",
+//       active: true,
+//     },
+//     {
+//       name: "ankit",
+//       active: true,
+//     },
+//     {
+//       name: "shivam",
+//       active: true,
+//     },
+//   ];
+
+
+
+
+//   const numbers = [1, 2, 3, 4, 5, "shankar", "shivam", 8, 9, 10,"shankar"];
+//   let final =numbers.filter((data)=>data==="shankarr"||data==="shankar")
+//  console.log(final)
+    
+    
+  
+
+  // Number > 5 -> Way 1
+
+//   const v1FilterLogicNF = function (data) {          //in 6 line 
+//     console.log("@LN17: ", data);
+//     if (data > 5) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   };
+//   //const resultsV1 = numbers.filter(v1FilterLogicNF);
+
+//   const resultsV2 = numbers.filter(function (data) {
+//     // console.log("@LN17: ", data);
+//     if (data > 5) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   });
+// //   console.log(resultsV2);
+
+//   // Way 3 - Using Arrow Func
+
+//   const resultsV3 = numbers.filter((data) => {      //in 5 line
+//     if (data > 5) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   });
+
+//   console.log("AF :", resultsV3);
+
+//   const resultsV4 = numbers.filter((data) => {
+//     return data > 5;
+//   });
+
+//   //console.log("AF :", resultsV4);
+
+//   const resultsV5 = numbers.filter((data) => data > 5);      //in 1 line
+//   const resultsV6 = numbers.filter((data) => data % 2 === 0);
+
+// //   console.log("AF :", resultsV5, resultsV6);
+</script>

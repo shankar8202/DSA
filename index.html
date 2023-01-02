@@ -11,16 +11,102 @@
 </body>
 </html>
 <script>
+// duplicate
+let arr =[1, 2, 3, 4,10, 5, 6, 7, 8, 9, 10,10,8,5,6,7]
+function shn(arr){
+  let empty =[]
+  for(let a=0;a<=arr.length;a++){
+    if(arr[a]===arr){
+      empty=arr
+    }
+  }
+  return empty
+}
+console.log(shn(arr))
+  // --------------------
+//   // unique 
+//  let arr =[1, 2, 3, 4,6,6, 5,4,4 ]
+//  let final = new Set(arr) ;
+// console.log(...final)
+
+  // ----------------------------------------------------------
+//   let arr =[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+//           18, 19, 20, 21, 22, 23,24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
+//           35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
+//           52, 53, 54, 55, 56, 57, 58, 59, 60, 62, 63, 64, 65, 66, 67, 68,
+//           69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
+//           86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100,]
+
+//   function shn(arr){
+//     arr.sort((a,b)=>{return a-b})
+//     let mis =[];
+//     for(let a=0;a<=arr.length;a++){
+//     if(  arr[a]!==a+1){
+//       mis =a+1
+//       break
+//     }
+    
+//     }
+//     return mis
+    
+// }
+// console.log(shn(arr))
+
+
+  // -----------------------------------------
+//   const array = [1, 2, 3, 5, 6, 7, 8, 9, 10];
+//   function findMissingNumber(array) {
+//   array.sort((a, b) => a - b); // sort the array in ascending order
+//   let missingNumber = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] !== i + 1) {
+//       missingNumber = i + 1;
+//       break;
+//     }
+//   }
+//   return missingNumber;
+// }
+// console.log(findMissingNumber(array)); // Output: 4
+  // -------------------------------------------------
+// Q=  How to Find Missing Number on Integer Array of 1 to 100 
+  // -------------------------
+  //  let arr=[1,"shankar",3,5,2]
+  //  arr.reverse();
+  //  console.log(arr)
+
+// ----------------------------------
+  // how t find max value in ann array (same goes with small value just write index 0)
+  // let arr=[1,4,3,5,2]
+  // arr.sort((a,b)=>{return a-b})
+  // console.log(arr[4])
+  
+    // --------------------------------------
+  // // Array destructring 
+  // ///let arr = [1,2,3]
+  // let [value1,value2,value3]=[1,2,3]
+  // console.log(value3)
+
+  // -----------------------------------------
+  // unique value 
+  
+  // function uniqeuValue(arr){
+  //   let setMethod= new Set(arr);
+  //   return[...setMethod]
+   
+  // }
+  // console.log(uniqeuValue([1, 2, 2, 4, 5, 6, 6]))
+
+  // --------------------------------------------------------
 // let arrayOfLetters = ['a','b','c','d','e','f'];
 // const anotherArrayOfLetters = arrayOfLetters;
 // arrayOfLetters = [];
 // console.log(anotherArrayOfLetters);
 
 
-let obj = {name:"shnakr", lname:"sahu"}
-let obj2=obj
-obj={};
-console.log(obj2)
+// let obj = {name:"shnakr", lname:"sahu"}
+// let obj2=obj
+// obj={};
+// console.log(obj2)
 
 // ---------------------------------
 // for(let a=0;a<5;a++){
