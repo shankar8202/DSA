@@ -1,108 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    
+  
 </body>
 </html>
 <script>
-
-// Define an object to store the templates
-const templates = {
-  template1: {
-    name: 'Template 1',
-    html: `
-      <h1>{{name}}</h1>
-      <h2>{{title}}</h2>
-      <ul>
-        <li>{{email}}</li>
-        <li>{{phone}}</li>
-      </ul>
-      <h3>Experience</h3>
-      <ul>
-        {{#each experience}}
-          <li>
-            <h4>{{position}}</h4>
-            <p>{{description}}</p>
-          </li>
-        {{/each}}
-      </ul>
-      <h3>Education</h3>
-      <ul>
-        {{#each education}}
-          <li>
-            <h4>{{degree}}</h4>
-            <p>{{school}}</p>
-          </li>
-        {{/each}}
-      </ul>
-    `
-  },
-  template2: {
-    name: 'Template 2',
-    html: `
-      <h1>{{name}}</h1>
-      <h2>{{title}}</h2>
-      <ul>
-        <li>{{email}}</li>
-        <li>{{phone}}</li>
-      </ul>
-      <h3>Experience</h3>
-      {{#each experience}}
-        <h4>{{position}}</h4>
-        <p>{{description}}</p>
-      {{/each}}
-      <h3>Education</h3>
-      {{#each education}}
-        <h4>{{degree}}</h4>
-        <p>{{school}}</p>
-      {{/each}}
-    `
-  }
-};
-
-// Define a function to generate the resume
-function generateResume(template, data) {
-  // Use the template engine to render the HTML
-  const html = Mustache.render(template.html, data);
-
-  // Insert the HTML into the page
-  document.getElementById('resume').innerHTML = html;
-}
-
-// Define a function to handle the form submission
-function handleFormSubmit(event) {
-  // Prevent the form from submitting
-  event.preventDefault();
-
-  // Get the form data
-  const form = event.target;
-  const data = {
-    name: form.elements.name.value,
-    title: form.elements.title.value,
-    email: form.elements.email.value,
-    phone: form.elements.phone.value,
-    experience: [],
-    education: []
-  };}
-
-  // Get the experience and education data
-  const experienceElements = form.elements.experience;
-  const educationElements = form.elements.education;
-  for (let i = 0; i < experienceElements.length; i++) {
-    data.experience.push({
-      position: experienceElements[i].value,
-      description: experienceElements[i].nextElementSibling.value
-    });
-  }
-  for (let i = 0; i < educationElements.length; i++) {}
-
-
-
-
+  const input = [1, -4, 12, 0, -3, 29, -150];
+  let final =input.filter((data)=>{
+    if(value==-value){
+      value
+    }
+  })
+  console.log(final)
 </script>

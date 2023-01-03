@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// ----------------------------------------------------------------------------
+// need output =[67,64] age >60 
+const inputOne = [
+    {
+      name: "John",
+      age: 13,
+    },
+    {
+      name: "Mark",
+      age: 56,
+    },
+    {
+      name: "Rachel",
+      age: 45,
+    },
+    {
+      name: "Nate",
+      age: 67,
+    },
+    {
+      name: "Jeniffer",
+      age: 65,
+    },
+  ];
+  let blankArray=[];
+let MapFil= inputOne.map((value)=>{
+    
+    if(value.age>=65){
+        
+         blankArray.push(value.age)
+    }
+})
+console.log(blankArray)
+
+//output =[67,65]
+
+
+
+    // ----------------------------------------------------------------
+//   1 =  split the string with space 
+//   2 = checking the length if length <=3 return value
+//   3 =  from value 0 index to value.length -1 among the character count if they greater than 3
+//   4 = join the oprational variable
+
+
+
+let str = "Every developer likes to mix kubernetes and javascript";
+let split = str.split(" ");
+let map =split.map((value)=>{
+    if (value.length<=3){
+        return value;  
+    }
+    
+    return value[0] + (value.length - 2) + value[value.length - 1];
+})
+let join= map.join(" ")
+console.log(map)
+
+// need output like this ==  Output - "E3y d7r l3s to mix k8s and j8t";
+// -------------------------------------------------------------------------
+const inputThree = [
+  {
+    username: "john",
+    team: "red",
+    score: 5,
+    items: ["ball", "book", "pen"],
+  },
+  {
+    username: "becky",
+    team: "blue",
+    score: 10,
+    items: ["tape", "backpack", "pen"],
+  },
+  {
+    username: "susy",
+    team: "red",
+    score: 55,
+    items: ["ball", "eraser", "pen"],
+  },
+  {
+    username: "tyson",
+    team: "green",
+    score: 1,
+    items: ["book", "pen"],
+  },
+];
+let empty=[];
+let out =inputThree.filter((value)=>empty.push("hello  "+value.username))
+console.log(empty)
+// - Output 1 - ['Hello John', 'Hello Becky', 'Hello Susy', 'Hello Tyson']
+let out2=inputThree.map((value)=>value.username.length)
+console.log(out2)
+// - Output 2 - [4,5,4,5]
+// not clear with [3,3,3,3]
+// - Output 3 - [3,3,3,3]
+let empty2=[]
+let out4 = inputThree.map((value)=>empty2.push(" Hello "+value.username.charAt(0).toUpperCase()+value.username.slice(1)+", from "+value.team.charAt(0).toUpperCase()+value.team.slice(1)))
+console.log(empty2)
+// - Output 4 - ['Hello John from Red', 'Hello Becky from Blue', 'Hello Susy from Red', 'Hello Tyson from Green']
+let out5=inputThree.filter((value)=>value.username==="susy")
+console.log(out5)
+// - Output 5 - [{ username: "susy", team: "red", score: 55, items: ["ball", "eraser", "pen"]}]
+// - Output 6 - [71]
+// -----------------------------------------------------
+//       arr = [1,2,3,4,5,6,7,8]
+// let fil =arr.filter((value)=>value%3==0).map((value)=>value*2).filter((value)=>value<10)    // in one line method chaining
+// // let map =fil.map((value)=>value*2)
+// console.log(fil)
+// // console.log(map)
+
+</script>
