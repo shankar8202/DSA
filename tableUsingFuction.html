@@ -11,10 +11,26 @@
 </body>
 </html>
 <script>
-    let functionForMultipication =(input)=>{
-  for (let a=0;a<=10;a++){
-  console.log( `${input} x ${a} = ${(input * a)}`)
-  }
+// document.write("<h2>Factorials:</h2>");
+// for(i = 1, fact = 1; i < 10; i++, fact *= i) {
+//     document.write(i + "! = " + fact);
+//     document.write("<br>");
+// }
+// -------------------------------------------------------
+
+let functionForFactorial =(input)=>{
+    let factorial=1;
+    for (let a=1;a<=10;a++){
+        factorial*=a
+     console.log(`${a} !  ${factorial}`)
+    }
 }
-functionForMultipication(12)
+functionForFactorial(8)
+// -------------------------------------------------------
+//     let functionForMultipication =(input)=>{
+//   for (let a=0;a<=10;a++){
+//   console.log( `${input} x ${a} = ${(input * a)}`)
+//   }
+// }
+// functionForMultipication(12)
 </script>
