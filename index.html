@@ -11,19 +11,63 @@
 </body>
 </html>
 <script>
-function findDuplicates(array) {
-  var duplicates = [];
-  var seenNumbers = {};
-  for (var i = 0; i < array.length; i++) {
-    if (seenNumbers[array[i]]) {
-      duplicates.push(array[i]);
-    } else {
-      seenNumbers[array[i]] = true;
-    }
+// multipication of no. 
+
+let functionForMultipication =(input)=>{
+  for (let a=0;a<=10;a++){
+  console.log( `${input} x ${a} = ${(input * a)}`)
   }
-  return duplicates;
 }
-console.log( findDuplicates([1, 2, 3, 2, 4, 1]))
+functionForMultipication(12)
+
+  // ---------------------------------------------------
+//   // loop 1+loop2+loop3 ===24 
+
+//  let arr= [12, 3, 4, 1, 6, 9]
+//  for(let a=0;a<=arr.length;a++){
+//   for(let b=a;b<=arr.length;b++){
+//     for(let c=b;c<=arr.length;c++)
+//     if(arr[a]+arr[b]+arr[c]===24){
+//       console.log(arr[a]+","+arr[b]+","+arr[c])
+//     }
+//   }
+//  }
+
+// we need 24 
+// Output: [12, 3, 9]
+
+// --------------------------------------------------------------
+// function findPair(arr, k) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] + arr[j] === k) {
+//         return [arr[i], arr[j]];
+//       }
+//     }
+//   }
+//   return [];
+// }
+// findPair([1, 2, 7, 2, 4, 6, 2], 8);  // returns [1, 7]
+
+
+
+
+// ----------------------------------------------------
+
+
+// function findDuplicates(array) {
+//   var duplicates = [];
+//   var seenNumbers = {};
+//   for (var i = 0; i < array.length; i++) {
+//     if (seenNumbers[array[i]]) {
+//       duplicates.push(array[i]);
+//     } else {
+//       seenNumbers[array[i]] = true;
+//     }
+//   }
+//   return duplicates;
+// }
+// console.log( findDuplicates([1, 2, 3, 2, 4, 1]))
 
 
 
@@ -324,7 +368,7 @@ console.log( findDuplicates([1, 2, 3, 2, 4, 1]))
 //     document.write("not an anagram")
 //   }
 // }
-// anagram("ram","mar")
+// anagram("mar")
 
 
 
