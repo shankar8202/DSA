@@ -11,14 +11,81 @@
 </body>
 </html>
 <script>
-// multipication of no. 
+// 1 - creat two variable 
+//    [ largest and second Largest with value 0 ]
+// 2 - running Loop and putting the conditions 
 
-let functionForMultipication =(input)=>{
-  for (let a=0;a<=10;a++){
-  console.log( `${input} x ${a} = ${(input * a)}`)
+let data =[1,6,1,3,54,23,4]
+let shn=(data)=>{
+  let largest =0;
+  let secLargest= 0;
+  for (let a=0;a<=data.length;a++){
+    if (data[a]>largest){
+       secLargest=largest
+      //  console.log(secLargest)
+       largest=data[a]
+    }
+    // console.log(largest)
+  else if (data [a]>secLargest && data[a]<largest ){
+    secLargest=data[a]
   }
+
+  }console.log(secLargest)
 }
-functionForMultipication(12)
+console.log(shn(data))
+
+
+
+
+
+
+// function findSecondLargest(arr) {
+//     let largest = 0;
+//     let secondLargest = 0;
+
+//     for (let i = 0; i < arr.length; i++) {
+
+//         if (arr[i] > largest) {
+//             secondLargest = largest;
+//             largest = arr[i];
+//         } else if (arr[i] > secondLargest && arr[i] < largest) {
+//             secondLargest = arr[i];
+//         }
+//     }
+
+//     return secondLargest;
+// }
+// console.log(findSecondLargest([1,6,1,3,54,23,4]))
+  // ------------------------------------------------------------
+// // find duplicate string in array 
+
+//   let myarr =["shankar","saju","sahu",2,3,"shankar"]
+//   let fil = myarr.filter((value,index,Arr)=>Arr.indexOf(value)===index)
+     
+  
+//   console.log(fil)
+//   console.log(myarr)
+  // ----------------------------------------------------
+// find duplicate string 
+
+// function removeDuplicateCharacters() {
+//   var string='priya riya supriya kiraya raya maya'
+//   let result= string.split('').filter((item, index, arr)=> {
+//                return arr.indexOf(item) == index;
+//                }).join('');
+//   return result;
+// }
+// console.log(removeDuplicateCharacters());
+
+
+// // multipication of no. 
+
+// let functionForMultipication =(input)=>{
+//   for (let a=0;a<=10;a++){
+//   console.log( `${input} x ${a} = ${(input * a)}`)
+//   }
+// }
+// functionForMultipication(12)
 
   // ---------------------------------------------------
 //   // loop 1+loop2+loop3 ===24 
@@ -84,11 +151,11 @@ functionForMultipication(12)
 // finding higher and lower value without sorting 
   // let input=[1,56,85,45,100,4578]
   // function shn(arr){
-  //   return  Math.min.apply(null,arr) // or finding highr value use math.max.apply
+  //   return  Math.max.apply(null,arr) // or finding highr value use math.max.apply
     
 
   // }
-  // console.log(shn(input))
+  // console.log(shn(input-1))
 // --------------------------------------------------------------
 // duplicate
 // let arr =[1, 2, 3, 4,10, 5, 6, 7, 8, 9, 10,10,8,5,6,7]

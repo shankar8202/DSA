@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // let arr=[232]
+    // let str=arr.toString()
+    // for(let a=0;a<str.length;a++){
+    //     for(b=str.length;b>b;b--){
+    //         let empty1=[];
+    //         let empty2=[]
+    //         empty1.push(str[a])
+    //         empty2.push(str[b])
+    //         empty1.splite("")
+    //         empty2.splite("")
+    //         console.log(empty2)
+    //         console.log(empty1)
+    //    if(str[a]===str[b]){
+    //     console.log(empty1)
+        
+    //    }
+    //    else{
+    //     console.log(false)
+    //    }
+    //     }
+    // }
+
+
+//   ----------------------------------------------------------- 
+let palandrom =(x)=>{
+    let convertt=x.toString();
+    let opration =convertt.split("").reverse().join("")
+   let Final =Number(opration)
+    if(Final===x){
+        return true
+    }
+    else{ return false}
+
+}
+console.log(palandrom(10))
+
+// Output: true
+
+// function palandrom(value){
+//     let arr=[];
+//     arr.push(value)
+//     // console.log(arr)
+//     let opration =arr.reverse()
+//    let convert= Number(opration)
+//    if(convert===value||value===""){
+//     console.log(true)
+//    }else{
+//     console.log(false)
+//    }
+   
+
+// }
+// console.log(palandrom())
+
+
+
+</script>

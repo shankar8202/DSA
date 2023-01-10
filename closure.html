@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // function shn(){
+    //     let a =20;
+    //     function shn2(){
+    //         let obj={
+
+    //         }
+    //     }
+    // }
+// ---------------------------------------------------
+    function initCart(){
+          const myBasket=[];
+
+          function innerFunc(){
+                    const obj={id:1, name:'dabar hair oil'};
+                    myBasket.push(obj)
+                    return myBasket
+          };
+          return innerFunc;
+          
+}
+initCart()
+
+ let newCart=initCart();
+console.log(newCart("dabarr"))
+</script>
