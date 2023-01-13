@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+// --------------------------------------------------------------------------------------
+// HOW promise work ---
+
+
+function promisee(perameter){
+
+return new Promise((resolve,reject)=>{
+    console.log("kuch nhi se achha yhi print kro")
+
+    setTimeout(()=>{
+   
+         if(perameter){
+
+    resolve("yes waiting for then function call")    //if condition is true it will go to directly (perameterByResolve) through Then FUnction
+}
+else{
+    reject("need to run catch condition")            ////if condition is true it will go to directly (perameterByReject)through catch FUnction
+}
+},2000);
+})
+}
+let fulfulmentPrintValue =(perameterByResolve)=>{
+console.log(perameterByResolve)
+}
+
+let rejectPrintValue=(perameterByReject)=>{
+console.log(perameterByReject)
+}
+
+promisee(true).then(fulfulmentPrintValue).catch(rejectPrintValue)
+
+// or you can write like this 
+
+// promisee().then(fulfulmentPrintValue)   //uper hamne true diya h isliye  
+// promisee().catch(rejectPrintValue)   // 
+
+
+
+
+//here what we are doing we simply calling a function and inside the func it return promise 
+     // if condition is true so call resolve automitacly or if wrong call reject 
+     //just give argument in promisee(true or false ) so if conditiond is true is will go to then function where we already make 
+     //a function which will return the fulfilled value 
+    //  and same goes with reject (reject print value)
+
+
+
+// ---------------------------------------------------------
+// // or 
+//     let con=true
+// let prom =new Promise((resolve,reject)=>{
+//     if(con){
+//         resolve("yes waiting for then function call")
+//     }
+//     else{
+//         reject("need to run catch condition")
+//     }
+// });
+// console.log(prom)
+
+// ----------------------------------------------------------
+//   async  function shn(){
+//      console.log("number : 1")
+//    console.log("number : 2")
+//    await   console.log("number : 3")   //here await wait me dal dega function k ander k nichy k jo bhi code h or baki char k code ko execute krne k bad fir last me execute krega 
+//     console.log("number : 4")
+//    console.log("number : 5")
+// }
+// shn()
+// console.log("new : 1")
+// console.log("new : 2")
+// console.log("new : 3")
+// ----------------------------------------------------------------------------------
+//   async  function shn(){
+//         return "ram ram ji"
+//     }
+//     shn().then((responseFromAsync)=>{     //then tabhi kam krega jab asynce vali condition fulfilled hojaygi 
+//         console.log(responseFromAsync+"  and also you can do something else with it")
+//     })
+// ---------------------------------------------------------------
+//  Or with arrow function 
+// -------------------------------------------------------------------
+// let asynceFucntion = async ()=>{
+//     return "ram ram ji"
+// }
+// shn().then((responseFromAsync)=>{
+//     console.log(responseFromAsync+"  and also you can do something else with it")
+// })
+</script>

@@ -11,29 +11,230 @@
 </body>
 </html>
 <script>
-// 1 - creat two variable 
-//    [ largest and second Largest with value 0 ]
-// 2 - running Loop and putting the conditions 
+  // ---------------------------------------
+ 
+  // ----------------------------------------------------------------------------
+  // convert ARRAY in to Zig Zag Fashion <> <> <>
+// let arr=[4, 3, 7, 8, 6, 2, 1]    // Output: 3 7 4 8 2 6 1
+// let n=7
 
-let data =[1,6,1,3,54,23,4]
-let shn=(data)=>{
-  let largest =0;
-  let secLargest= 0;
-  for (let a=0;a<=data.length;a++){
-    if (data[a]>largest){
-       secLargest=largest
-      //  console.log(secLargest)
-       largest=data[a]
+function convertZigZag(arr) {
+  for (var i = 0; i < arr.length- 1; i++) {
+    if (i % 2 == 0) {
+      
+      if (arr[i] > arr[i + 1]) {       
+        // console.log(arr[i])
+        var temp = arr[i];
+      // console.log(temp)
+        arr[i] = arr[i + 1];
+        // console.log(arr[i])
+        arr[i + 1] = temp;
+      //  console.log(arr[i+1])
+
+      }
+    } else {
+      if (arr[i] < arr[i + 1]) {
+        var temp = arr[i];
+        console.log(temp)
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+      }
     }
-    // console.log(largest)
-  else if (data [a]>secLargest && data[a]<largest ){
-    secLargest=data[a]
   }
-
-  }console.log(secLargest)
+  return arr;
 }
-console.log(shn(data))
+console.log(convertZigZag([4, 3, 7, 8, 6, 2, 1]))
 
+
+
+  // -----------------------------------------------------
+// ADD plus +1 in every value 
+
+
+// var plusOne = function(digits) {
+//        let convert ="";
+       
+//        for(let a=0;a<=digits.length-1;a++){
+//           convert+=digits[a]
+//           } 
+//          let convert2 = ++convert;
+//          return convert2.toString().split("").map(Number)
+
+// };
+
+// console.log(plusOne([9]))
+// console.log(plusOne([1,2,3]))
+// console.log(plusOne([4,3,2,1]))
+  // ----------------------------------------------------------
+
+// var plusOne = function(digits) {
+//        let convert ="";
+       
+//        for(let a=0;a<=digits.length-1;a++){
+//           convert+=digits[a]
+//           } 
+//         let con= ++convert
+//          let arrr= Array.from(con)
+//    console.log(arrr)
+
+
+//   //         // let ar =Array.from(sub)
+//   // console.log(ar)
+          
+// };
+
+// plusOne([1,2,3])
+// // let digit=540;
+// // console.log(digit.split(""))
+// ---------------------------------------------
+// OR 
+
+// function plusOne(digits) {
+//    let n = digits.length;
+//     for(let i=n-1; i>=0; i--) {
+//         if(digits[i] < 9) {
+//             digits[i]++; return digits;
+//         }
+//         digits[i] = 0;
+//     }
+
+//     let newArr = Array.from({length: n+1}, () => 0);
+//     newArr[0] = 1;
+//     return newArr;
+// };
+// plusOne([1,2,3])
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------      
+// sort without using sort method 
+
+
+// let arr =[1,2,4,55,789,45,4,5,444,7]
+// for (let a=0;a<=arr.length;a++){
+//   let empty;
+//   for(let b=a;b<=arr.length;b++){
+//     if(arr[a]>arr[b]){                 //agerr arr[a]bada h arr[b]se to arr[a] ko empty me dal do 
+//    empty =arr[a];                       // assigning arr[a] in empty 
+//     // console.log(arr)
+//     // console.log(empty)
+//    arr[a]=arr[b];                        // arr[a] me arr[b] ki value daal di
+//   //  console.log(arr[a])                        
+//   //  console.log(empty)                        
+//    arr[b]=empty  
+//   // console.log(arr[b])                      // arr[b] me empty ki value dal di
+//     }
+//   }
+// }
+// console.log(arr)
+// -----------------------------------------------------------
+// or 
+
+// function sort(str) {
+//     var sorted = str;
+//     //Selection sort
+//     for (var i = 0; i < str.length; i++) {
+//         for(var j = i + 1; j < str.length - 1; j++) {   
+//             if (str[i] < str[j]) {
+//                 str = swap(str, i, j)
+//             }
+//         }
+//     }
+//     return str;
+// }
+
+// console.log(sort("zaasfweqrouoicxzvjlmmknkniqwerpopzxcvdfaa"));
+//output: aaaaccdeeffiijkklmmnnoooppqqrrsuvvwwxxzzz
+// -----------------------------------------------------
+//  function shn(arr){
+//  let sortt=arr.slice().sort()
+
+
+// //  console.log(sortt)
+// //  console.log(arr)
+
+
+// let empty =[];
+// for(let a=0;a<sortt.length-1;a++){
+//   if(sortt[a+1]===sortt[a]){
+//     empty.push(sortt[a]) 
+//   }
+  
+// }return empty
+//  }
+// console.log(shn([1,5,6,6,6,8,9,8]))     //if you directly go with arr so it will give you only first duplicate value that's why we use sort
+
+
+// ------------------------------------------------------------------------------------------------
+// second method 
+
+//  let arr= [1,5,6,6,6,8,9,8]   //output[6,8]
+//  function findDuplicates(arr) {
+//     var count = {};
+//     var duplicates = [];
+
+//     // Count the occurrences of each element
+//     for (var i = 0; i < arr.length; i++) {
+//         count[arr[i]] = count[arr[i]] ? count[arr[i]] + 1    :     1;    //in this line left side one is just variable and than condition then condition is true so if and other one is else
+//         console.log(count[arr[i]])   
+//     }
+//   console.log(count)    // ispe ham dekhty h ki hamari jo value unki key bn gai h and uspe ye btta rha h ki kon si value kitti bar aarhi h
+//     // Find elements that occur more than once
+//     for (var key in count) {
+//         if (count[key] > 1) {
+//             duplicates.push(key);
+//         }
+//     }
+
+//     return duplicates;
+// }
+
+// console.log(findDuplicates([1, 5, 6, 6, 6, 8, 9, 8]));
+// // // Output: [6, 8]
+
+// ---------------------------------------------------------------
+// let ss= new Set(arr)
+// // console.log(...ss)
+//  for(let a=0;a<arr.length;a++){
+//   let empty=[];
+//   for(let b=a;b<ss.length;b++){
+//     if(arr[a]===ss[b]){
+//       empty.push(arr[a])
+      
+//     }console.log(empty)
+//   }
+//  }
+
+  // ---------------------------------------------------------
+//   // FIND the second largest value without using sorting 
+// // 1 - creat two variable 
+// //    [ largest and second Largest with value 0 ]
+// // 2 - running Loop and putting the conditions 
+
+// let data =[1,6,1,3,54,23,4]
+// let shn=(data)=>{
+//   let largest =0;
+//   let secLargest= 0;
+//   for (let a=0;a<=data.length;a++){
+//     if (data[a]>largest){
+//        secLargest=largest
+//       //  console.log(secLargest)
+//        largest=data[a]
+//     }
+//     // console.log(largest)
+//   else if (data [a]>secLargest && data[a]<largest ){
+//     secLargest=data[a]
+//   }
+
+//   }console.log(secLargest)
+// }
+// console.log(shn(data))
+// ------------------------------------------------------------------------------
 
 
 
