@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let goingToAtm =()=>{
+        return new Promise ((resolve,reject)=>{
+           setTimeout(()=>{
+            resolve("hi im resolve condition")
+           },3000)                                  //matlv 3 sec lene k bad for nichy vale iske bad 4 sec or lega execute k liye fir uske bad 5 sec or lega 
+        }) }
+    let bringAtm=()=>{
+       return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve( "resolve condition two")
+        },4000)
+       })
+    }
+    let insertAtm=()=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("reoslve condition three")
+            },5000)
+        })
+    }
+    // goingToAtm().then((data)=>{
+    //     bringAtm().then((data)=>{
+    //         insertAtm().then((data)=>{
+    //             console.log(data)
+    //         })
+    //     })
+    // })
+
+
+    let CommonFunc= async()=>{
+        let goAtm= await goingToAtm();       //goingToAtm call hua uska resolve resolve hoke await k throug goAtm me store hogya same goes with below one
+        console.log(goAtm)
+        let bringCard= await bringAtm();
+        console.log(bringCard)
+        let insertOne= await  insertAtm();
+        console.log(insertOne)
+        }
+       CommonFunc()
+</script>

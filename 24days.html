@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+
+// const input = sumOfNestedArrayElements([1, 2, [3, [4], [5, 6]], [7]]);
+
+let arr=[1, 2, [3, [4], [5, 6]], [7]]
+let arr2= arr.flat(2)
+  const sum = arr2.reduce((acc, val) => {
+    // console.log( acc, val );
+    return acc + val;
+  }, 0);
+console.log(sum)
+
+    // -------------------------------------------------------------------------------------------
+//   // string reverse without using inbuild function
+
+
+//   // let str="using"
+//   function reverseString(str) {
+//     var newString = "";
+//     for (var i = str.length - 1; i >= 0; i--) {
+//       newString += str[i]; // or newString = newString + str[i];
+//     }
+//     /* Here hello's length equals 5
+//         For each iteration: i = str.length - 1 and newString = newString + str[i]
+//         First iteration:    i = 5 - 1 = 4,         newString = "" + "o" = "o"
+//         Second iteration:   i = 4 - 1 = 3,         newString = "o" + "l" = "ol"
+//         Third iteration:    i = 3 - 1 = 2,         newString = "ol" + "l" = "oll"
+//         Fourth iteration:   i = 2 - 1 = 1,         newString = "oll" + "e" = "olle"
+//         Fifth iteration:    i = 1 - 1 = 0,         newString = "olle" + "h" = "olleh"
+//     End of the FOR Loop*/
+
+//     // Step 3. Return the reversed string
+//     console.log(newString) ; // "olleh"
+//   }
+
+//   reverseString("using");
+
+  // ---------------------------------------
+  // for(let a=1;a<=5;a++){
+  //     for(let b=1;b<=a;b++){
+  //         document.write("*")
+
+  //     }
+  //     document.write("</br>")
+
+  // }
+  // ----------------------------------------------------------
+  // spirel in matrix
+
+  // var input = [[1,  2,   3,  4],
+  //              [5,  6,   7,  8],
+  //              [9,  10, 11, 12],
+  //              [13, 14, 15, 16]];
+
+  // function run(input, result) {
+  //     // add the first row to result
+  //     result = result.concat(input.shift());
+  //     console.log("res1", result) //[1, 2, 3, 4] //[1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7]
+  //     console.log("in1", input)   //[[5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]] // [[10, 11]]
+
+  //     // add the last element of each remaining row
+  //     input.forEach(function(rightEnd) {
+  //         result.push(rightEnd.pop());
+  //     });
+  //     console.log("res2", result) //[1, 2, 3, 4, 8, 12, 16] //[1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11]
+  //     console.log("in2", input)   //[[5, 6, 7], [9, 10, 11], [13, 14, 15]] // [[10]]
+
+  //     // add the last row in reverse order
+  //     result = result.concat(input.pop().reverse());
+  //     console.log("res3", result) //[1, 2, 3, 4, 8, 12, 16, 15, 14, 13] //[1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10]
+  //     console.log("in3", input)   //[[5, 6, 7], [9, 10, 11]]
+
+  //     // add the first element in each remaining row (going upwards)
+  //     var tmp = [];
+  //     input.forEach(function(leftEnd) {
+  //         tmp.push(leftEnd.shift());
+  //     });
+  //     console.log("res4", result) //[1, 2, 3, 4, 8, 12, 16, 15, 14, 13]
+  //     console.log("in4", input)   //[[6, 7], [10, 11]]
+
+  //     result = result.concat(tmp.reverse());
+  //     console.log("temp", temp) //[9, 5]
+  //     console.log("res5", result) //[1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5]
+  //     console.log("in5", input)   //[[6, 7], [10, 11]]
+
+  //     //again start the function
+  //     return run(input, result);
+  // }
+  // console.log('result', run(input, [])); // [1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10]
+
+  // -------------------------------------------------------------
+  // var input = [
+  //   [1, 2, 3, 4],
+  //   [5, 6, 7, 8],
+  //   [9, 10, 11, 12],
+  //   [13, 14, 15, 16],
+  // ];
+  // let empty=[]
+  // function spiralOrder(matrix){
+  // for (let a=0;a<input.length;a++){
+  //   console.log(input[0][a])
+  //  }
+  //  for(let b=0;b>input.length;a++){
+  // console.log(  input[1][input.length - 1])
+
+  //   }
+  // }
+  //        console.log(spiralOrder(input))
+
+  // Spiral Matrix Printing | Print the elements of a matrix in spiral form
+  // Input
+  // var input = [
+  //   [1, 2, 3, 4],
+  //   [5, 6, 7, 8],
+  //   [9, 10, 11, 12],
+  //   [13, 14, 15, 16],
+  // ];
+  // function spiralOrder(matrix){
+
+  // let ans = [];
+
+  //     if (matrix.length == 0)
+  //         return ans;
+
+  //     let R = matrix.length, C = matrix[0].length;
+  //     let seen = new Array(R);
+  //   console.log(seen)
+  // }
+  //    console.log(spiralOrder(input))
+  // Output -> Hint - Sprial in clockwise order
+  // [1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10];
+
+  // --------------------------------------------------------------------
+  // let arr=[5,7,9,11,15,17]   //output missing odd =[13]
+  // let empty=[]
+  // let arri=[]
+  // for (let a=0;a<=arr.length-1;a++){
+  // if(arr[a]%2!=0){
+  //     arrA=arr[a]
+  //     empty=arrA+2
+  //     console.log(empty)
+  //     if(arr[a]==empty) continue
+  //     else{console.log(empty)}break
+
+  // }
+  // console.log(empty)
+
+  // }
+
+  // -------------------------------------------------------------------
+  // Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+  // Example 1:
+
+  // let nums = [3,2,3]       //so find the length of an array
+  // Output: [3]
+
+  //
+  // // Example 2:
+
+  // Input: nums = [1]
+  // Output: [1]
+
+  // // Example 3:
+
+  // Input: nums = [1,2]
+  // Output: [1,2]
+
+  //     var majorityElement = function(nums) {
+  //     let numbersCount={};
+  //     for(let i=0;i<nums.length;i++){
+  //         numbersCount[nums[i]]=numbersCount[nums[i]]+1||1  // numbersCount[nums[i]] me assign kr di numbersCount[nums[i]]+1
+  //     }
+  //     console.log(numbersCount)    //array me jo number repaet ho rhy h vo kitti bar horhy h vo dekh rhy h
+  //     let result=[]
+  // for(keys in numbersCount){
+  //     if(numbersCount[keys]>nums.length/3){
+  //  result.push(keys)
+  //     }
+  // }
+  // return result
+  // };
+
+  // console.log(majorityElement([3,2,3,4,4]))
+
+  // -------------------------------------------------------------------------------------
+  // Convert 2D/3D array into 1D using reduce function and inbuilt function i.e flat
+
+  //  const arr = [  ["a", "b"],["c", "d"],["e", "f"] ];                  //  Output=["a", "b", "c", "d", "e", "f"];
+
+  //  let opration =arr.flat();
+  // console.log(opration)
+
+  // or
+
+  // let opration =arr.reduce((acc,data)=>acc.concat(data),[])
+
+  // console.log(opration)
+  // -------------------------------------------------------------------------------------------
+  // const arr = [1, 2, 3, [1, 2, 3, 1, [1, 2]], 1, [1, 2]];  // output= [1,2,3,1,2,3,1,1,2,1,1,2]
+
+  //   let empty=[];
+  //   let flatenArray=(arr)=>{
+  //     for(let a=0;a<arr.length;a++){
+  //         console.log(arr[a])
+  //       if(Array.isArray(arr[a])){
+  //         flatenArray(arr[a]);
+  //       }
+  //       else{
+  //         empty.push(arr[a])
+  //       }
+  //     }return empty
+  //   }
+  //   console.log(flatenArray(arr))
+  // -----------------------------------------------------------------------------------------------
+  // const input = "aaaabbaaccccccccccccccccccde";     //find maximum repetetion cheracter and length also
+
+  // let empty="";
+  // let count={};
+  // for(let a=0;a<input.length-1;a++){
+  //   if(input[a]===input[a+1]){
+  //     empty=input[a+1]
+  //   }
+  // //  else if(input[a+1]>4){console.log(input[a].length)}    //incomplete
+  //    else{
+  //     empty=input[a+1]
+  //   }
+  //   console.log(empty)
+  // }
+  // -----------------------------------
+  // algo
+  // make empty variable
+  // runinng deacrement loop i
+  // runinng deacrement again j
+  // place condition
+  // ( if both the loope value is same put into empty variable )
+
+  // const input = "aaaabbaaccccccccccccccccccde";
+
+  // const result = (inputString,char) => {
+  //     let array = inputString.split("");
+  //     let obj = {};
+
+  //     for (i = 0; i <= array.length; i++) {
+  //         let occurance = 0;           //this is for outer loop
+  //         for (j = 0; j <= array.length; j++) {
+  //             if (array[i] === array[j]) {
+  //                 occurance += 1;
+  //                 console.log(occurance)
+
+  //                 obj[array[i]] = { alphabet: array[i],times: occurance}
+
+  //             }
+  //         }
+  //     }
+  //     return obj[char];
+  // };
+  // console.log(result(input,"c"));
+
+  // Output
+  // {
+  //     character: 'c',
+  //     count: 18
+  // }
+
+  // console.log(("aaaabbaaccccccccccccccccccde".match(new RegExp("c", "g")) || []).length); //logs 4
+
+  // ------------------------------------------------------------------------------
+  // - Write method findPath
+  // - Should take two params:
+  //     - object
+  //     - keys separated by dots as string
+  // - Return value if it exists at that path inside the object, else return undefined
+  // */
+  // var obj = {
+  //     a: {
+  //         b: {
+  //             c: 12,
+  //             j: false
+  //         },
+  //         k: null
+  //     }
+  // };
+  // const findPath = (object, path) => {
+  // const keys = path.split('.');
+  // console.log(keys)
+  // let current = object;
+  // console.log(current)
+  // for (let i = 0; i < keys.length; i++) {
+  // if (current.hasOwnProperty(keys[i])) {
+  // current = current[keys[i]];
+  // } else {
+  // return undefined;
+  // }
+  // }
+  // return current;
+  // };
+
+  // console.log(findPath(obj, 'a.b.c')); // 12
+  // console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
+  // console.log(findPath(obj, 'a.b.d')); // undefined
+  // console.log(findPath(obj, 'a.c')); // undefined
+  // console.log(findPath(obj, 'a.b.c.d')); // undefined
+  // console.log(findPath(obj, 'a.b.c.d.e')); // undefined
+  // console.log(findPath(obj, 'a.b.j')); //false
+  // console.log(findPath(obj, 'a.b.j.k')); //undefined
+  // console.log(findPath(obj, 'a.k')); //null
+  // ---------------------------------------------------------------------------------
+
+  // const arr0 = [1,2,3,4,[5,6],7]      //    nested array        // output   [1,2,3,4,5,6,7]
+
+  // let output = [];
+
+  // for (let a = 0; a < arr0.length; a++) {
+  //   if (Array.isArray(arr0[a])) {
+  //     for (let b = 0; b < arr0[a].length; b++) {
+  //       output.push(arr0[a][b]);
+  //     }
+  //   } else {
+  //     output.push(arr0[a]);
+  //   }
+  // }
+  // console.log(output); // [1,2,3,4,5,6,7]
+
+  // Or
+
+  // const arr0 = [1,2,3,4,[5,6],7]
+  // let out=arr0.flat();
+  // console.log(out)
+
+  // -------------------------------------------------------------------------------------
+  // const arr = [1, 2, 3, [1, 2, 3, 1, [1, 2]], 1, [1, 2]];  // output= [1,2,3,1,2,3,1,1,2,1,1,2]
+
+  // let empty=[];
+  // let flatenArray=(arr)=>{
+  //   for(let a=0;a<arr.length;a++){
+  //     if(Array.isArray(arr[a])){
+  //       flatenArray(arr[a]);
+  //     }
+  //     else{
+  //       empty.push(arr[a])
+  //     }
+  //   }return empty
+  // }
+  // console.log(flatenArray(arr))
+
+  //   ------------------------------------------------------------------
+
+  // *****
+  // ****
+  // ***
+  // **
+  // *
+
+  // ------------------------------------------------------------
+  // Factorial
+
+  //     const number = parseInt(prompt('Enter a positive integer: '));
+  // if (number < 0) { console.log('Error! Factorial for negative number does not exist.')}
+  // else if (number === 0) { console.log(`The factorial is 1.`)}
+  // else {
+  //     let fact = 1;
+  //     for (i = 1; i <= number; i++) {
+  //         fact *= i;
+  //     }
+  //     console.log(`The factorial is ${fact}.`); // ---------- by ankit
+  // }
+  //   -----------------------------------------------------
+  // //     // Find factorial of user input number
+//       let factorial =(data)=>{
+//           let empty=1
+//           for(let a=1;a<=data;a++){
+//              empty*= [a]
+//              console.log(`${data}*${a}=${empty}`)
+//           }
+//       }
+
+//   console.log(factorial(8))  // ----by me
+
+  //     // Day 2  above
+  // --------------------------------------------
+  //     let str ="hello my name is khan"
+  //     let splitt=str.split("");
+  //     let empty="";
+  //    for(let a=splitt.length-1;a>=0;a--){
+  //  empty=empty+splitt[a]
+
+  //    }console.log(empty)
+
+  // //   let jo=splitt.reverse().join(" ")
+  // //     let jo2=jo.split(" ").reverse().join("")
+  // // console.log(jo2)
+
+  // -------------------------------------------------------------
+
+  // let str="this is javascript code you need to find max character which in the string";
+  // let splitt=str.split("");
+  // let Usingreduce=splitt.reduce((acc,value)=>{
+  //     if(Object.keys(acc).includes(value)){
+
+  //     }
+  // })
+
+  // let arr ="Asd7kh";  //output ="Dsa7hk"
+  // let op=arr.split("")
+  // for(let a=0;a<op.length-3;a++){
+
+  // }
+
+  // let op=arr.split("").reverse().join("")
+  // let op2=op.split("").reverse().join("")
+  // console.log(op2)
+  // console.log(op)
+
+  // -------------------------------------------------------------------------------------
+  //      let str="this is javascript code you need to find max character which in the string";
+  //   let splitt=str.split("")
+  //   ss=new Set(...splitt) //real one
+  //  for (let a=0;a<splitt.length;a++){
+  //   let empty=[]
+  //   if(splitt!==ss){
+  //     empty.push(ss)
+  //     empty.join("")
+  //   }
+  //    console.log(empty)
+  //  }
+
+  // -----------------------------------------------
+  // let str ="this is javascript code";
+  // let opration=str.split("").reverse().join("");
+  // let op2=opration.split(" ").reverse().join(" ")
+
+  // console.log(op2)                              //  output = "siht si tpircsavaj edoc"
+
+  // -----------------------------------------------------------
+  // let str ="priya riya supriya"
+  //   let ss=new Set(str)
+  //   let ss2= [...ss].join("")
+  //   console.log(ss2)
+
+  // -----------------------------------------------------------
+  // or
+
+  //   function removeDuplicateCharacters() {
+  //   var string='priya riya supriya'
+  //   let result= string.split('').filter((item, index, arr)=> {
+  //                return arr.indexOf(item) == index;
+  //                }).join('');
+  //   return result;
+  // }
+  // console.log(removeDuplicateCharacters());
+  // ------------------------------------------------------------------
+
+  // Code 2: Remove Duplicate characters from array of element and find the count of an elements using set object
+
+  // var arr = [55, 44, 55,67,67,67,67,8,8,8,8,8,65,1,2,3,3,34,5];
+  // var unique = [...new Set(arr)]
+  // console.log(unique) //output: [55, 44, 67, 8, 65, 1, 2, 3, 34, 5]
+  // console.log(unique.length) //output: 10
+  // ------------------------------------------------------------------------------
+  // // FInd duplicate string in an array
+  // var arr = [55,"shankar","shan","shke","shankar","shankar", 47]
+  // let opration =arr.filter((value,index,arrr)=>arrr.indexOf(value)===index)
+  // console.log(opration)
+</script>

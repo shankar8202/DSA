@@ -14,14 +14,18 @@
 
 
 
-/*1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.*/
-function fiveAndGreaterOnly() {}
 
-//solution 1 
 
-let arr1 =[3, 6, 8, 2]
-let final =arr1.filter((value)=>{return value>5})
-console.log(final)
+
+// --------------------------------------------------
+// /*1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.*/
+// function fiveAndGreaterOnly() {}
+
+// //solution 1 
+
+// let arr1 =[3, 6, 8, 2]
+// let final =arr1.filter((value)=>{return value>5})
+// console.log(final)
 
 
  /// output [6, 8]
@@ -31,72 +35,72 @@ console.log(final)
 // solution 2
 
 
-let arr2= [3, 6, 8, 2]
-function evensOnly() {
-  let final=  arr2.filter((data)=>{return data%2==0})
-return final
-}
-console.log(evensOnly(arr2)); /// [6, 8, 2]
+// let arr2= [3, 6, 8, 2]
+// function evensOnly() {
+//   let final=  arr2.filter((data)=>{return data%2==0})
+// return final
+// }
+// console.log(evensOnly(arr2)); /// [6, 8, 2]
 
-// -------------------------------------------------------
-// /*3) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length.*/
+// // -------------------------------------------------------
+// // /*3) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length.*/
 
-// solution 3
-function fiveCharactersOrFewerOnly(arr3) {
-   let final =arr3.filter((data)=>{return data.length<=5})
-   return final
-}
-console.log(
-  fiveCharactersOrFewerOnly(["dog", "wolf", "by", "family", "eaten", "camping"]))
+// // solution 3
+// function fiveCharactersOrFewerOnly(arr3) {
+//    let final =arr3.filter((data)=>{return data.length<=5})
+//    return final
+// }
+// console.log(
+//   fiveCharactersOrFewerOnly(["dog", "wolf", "by", "family", "eaten", "camping"]))
 
- // output ["by", "dog", "wolf", "eaten"]
-// ---------------------------------------------------------
-// /*4) Given an array of people objects, return a new array that has filtered out all those who don't belong to the club.*/
+//  // output ["by", "dog", "wolf", "eaten"]
+// // ---------------------------------------------------------
+// // /*4) Given an array of people objects, return a new array that has filtered out all those who don't belong to the club.*/
 
-//solution 4 
+// //solution 4 
 
-function peopleWhoBelongToTheIlluminati(arr4) {
-    let final =arr4.filter((data)=>{return data.member==true})
-   return  final
-}
+// function peopleWhoBelongToTheIlluminati(arr4) {
+//     let final =arr4.filter((data)=>{return data.member==true})
+//    return  final
+// }
 
-console.log(
-  peopleWhoBelongToTheIlluminati([
-    { name: "Angelina Jolie", member: true },
-    { name: "Eric Jones", member: false },
-    { name: "Paris Hilton", member: true },
-    { name: "Kayne West", member: false },
-    { name: "Bob Ziroll", member: true },
-  ])
-);
-   // // output   =>
-// //[ { name: 'Angelina Jolie', member: true },
-// //  { name: 'Paris Hilton', member: true },
-// //  { name: 'Bob Ziroll', member: true } ]
-// ----------------------------------------------------------------------
+// console.log(
+//   peopleWhoBelongToTheIlluminati([
+//     { name: "Angelina Jolie", member: true },
+//     { name: "Eric Jones", member: false },
+//     { name: "Paris Hilton", member: true },
+//     { name: "Kayne West", member: false },
+//     { name: "Bob Ziroll", member: true },
+//   ])
+// );
+//    // // output   =>
+// // //[ { name: 'Angelina Jolie', member: true },
+// // //  { name: 'Paris Hilton', member: true },
+// // //  { name: 'Bob Ziroll', member: true } ]
+// // ----------------------------------------------------------------------
 
-// // /*5) Make a filtered list of all the people who are old enough to see The Matrix (older than 18).*/
+// // // /*5) Make a filtered list of all the people who are old enough to see The Matrix (older than 18).*/
 
 
-// //solution 5 
-function ofAge(arr5) {
-  let final = arr5.filter((data)=>{return data.age>18})
-  return final
-}
+// // //solution 5 
+// function ofAge(arr5) {
+//   let final = arr5.filter((data)=>{return data.age>18})
+//   return final
+// }
 
-console.log(
-  ofAge([
-    { name: "Angelina Jolie", age: 80 },
-    { name: "Eric Jones", age: 2 },
-    { name: "Paris Hilton", age: 5 },
-    { name: "Kayne West", age: 16 },
-    { name: "Bob Ziroll", age: 100 },
-  ])
-);
-// // // output  =>
-// // //[ { name: 'Angelina Jolie', age: 80 },
-// // //  { name: 'Bob Ziroll', age: 100 } ]
-// -----------------------------------------------------------------------
+// console.log(
+//   ofAge([
+//     { name: "Angelina Jolie", age: 80 },
+//     { name: "Eric Jones", age: 2 },
+//     { name: "Paris Hilton", age: 5 },
+//     { name: "Kayne West", age: 16 },
+//     { name: "Bob Ziroll", age: 100 },
+//   ])
+// );
+// // // // output  =>
+// // // //[ { name: 'Angelina Jolie', age: 80 },
+// // // //  { name: 'Bob Ziroll', age: 100 } ]
+// // -----------------------------------------------------------------------
 
 
 </script>

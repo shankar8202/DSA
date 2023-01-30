@@ -13,49 +13,56 @@
 <script>
     
 // --------------------------------------------------------------------------------------
-// HOW promise work ---
-
-
-function promisee(perameter){
-
-return new Promise((resolve,reject)=>{
-    console.log("kuch nhi se achha yhi print kro")
-
-    setTimeout(()=>{
-   
-         if(perameter){
-
-    resolve("yes waiting for then function call")    //if condition is true it will go to directly (perameterByResolve) through Then FUnction
-}
-else{
-    reject("need to run catch condition")            ////if condition is true it will go to directly (perameterByReject)through catch FUnction
-}
-},2000);
-})
-}
-let fulfulmentPrintValue =(perameterByResolve)=>{
-console.log(perameterByResolve)
-}
-
-let rejectPrintValue=(perameterByReject)=>{
-console.log(perameterByReject)
-}
-
-promisee(true).then(fulfulmentPrintValue).catch(rejectPrintValue)
-
-// or you can write like this 
-
-// promisee().then(fulfulmentPrintValue)   //uper hamne true diya h isliye  
-// promisee().catch(rejectPrintValue)   // 
 
 
 
 
-//here what we are doing we simply calling a function and inside the func it return promise 
-     // if condition is true so call resolve automitacly or if wrong call reject 
-     //just give argument in promisee(true or false ) so if conditiond is true is will go to then function where we already make 
-     //a function which will return the fulfilled value 
-    //  and same goes with reject (reject print value)
+  // HOW promise work ---
+
+
+  // function promisee(perameter){
+
+  //   return new Promise((resolve,reject)=>{
+  //     console.log("kuch nhi se achha yhi print kro")
+
+  //     setTimeout(()=>{
+    
+  //          if(perameter){
+
+  //     resolve("yes waiting for then function call")    //if condition is true it will go to directly (perameterByResolve) through Then FUnction
+  // }
+  // else{
+  //     reject("need to run catch condition")            ////if condition is true it will go to directly (perameterByReject)through catch FUnction
+  // }
+  // },2000);
+  // })
+  // }
+  // let fulfulmentPrintValue =(valueBYresolve)=>{
+  // console.log(valueBYresolve)
+  // }
+
+  // let rejectPrintValue=(perameterByReject)=>{
+  // console.log(perameterByReject)
+  // }
+
+  // promisee(false).then(fulfulmentPrintValue).catch(rejectPrintValue)
+
+
+
+
+  // or you can write like this 
+
+  // promisee().then(fulfulmentPrintValue)   //uper hamne true diya h isliye  
+  // promisee().catch(rejectPrintValue)   // 
+
+
+
+
+  //here what we are doing we simply calling a function and inside the func it return promise 
+      // if condition is true so call resolve automitacly or if wrong call reject 
+      //just give argument in promisee(true or false ) so if conditiond is true is will go to then function where we already make 
+      //a function which will return the fulfilled value 
+      //  and same goes with reject (reject print value)
 
 
 
@@ -70,20 +77,40 @@ promisee(true).then(fulfulmentPrintValue).catch(rejectPrintValue)
 //         reject("need to run catch condition")
 //     }
 // });
-// console.log(prom)
+// prom.then(value=>console.log(value))
 
 // ----------------------------------------------------------
-//   async  function shn(){
-//      console.log("number : 1")
-//    console.log("number : 2")
-//    await   console.log("number : 3")   //here await wait me dal dega function k ander k nichy k jo bhi code h or baki char k code ko execute krne k bad fir last me execute krega 
-//     console.log("number : 4")
-//    console.log("number : 5")
-// }
-// shn()
-// console.log("new : 1")
-// console.log("new : 2")
-// console.log("new : 3")
+// const myPromise = () => {
+//     const promise = new Promise((resolve, reject) => {
+//       resolve("Executed successfully");
+//     });
+
+//     return promise;
+//   };
+
+  //console.log(myPromise());
+
+//   myPromise().then((data) => {
+//     console.log("Data: ", data);
+//   });
+
+//   for (let i = 1; i < 10; i++) {
+//     console.log("i: ", i);
+//   } 
+
+
+
+ async function shn(){
+     console.log("number : 1")
+   console.log("number : 2")
+  await    console.log("number : 3")   //here await wait me dal dega function k ander k nichy k jo bhi code h or baki char k code ko execute krne k bad fir last me execute krega 
+    console.log("number : 4")
+   console.log("number : 5")
+}
+shn()
+console.log("new : 1")
+console.log("new : 2")
+console.log("new : 3")
 // ----------------------------------------------------------------------------------
 //   async  function shn(){
 //         return "ram ram ji"
@@ -95,9 +122,16 @@ promisee(true).then(fulfulmentPrintValue).catch(rejectPrintValue)
 //  Or with arrow function 
 // -------------------------------------------------------------------
 // let asynceFucntion = async ()=>{
-//     return "ram ram ji"
+//     "ram ram ji"
 // }
-// shn().then((responseFromAsync)=>{
+// asynceFucntion().then((responseFromAsync)=>{
 //     console.log(responseFromAsync+"  and also you can do something else with it")
 // })
+
+// const getData = async() => {
+//     let data = "Hello World";
+//     return data;
+//     }
+      
+//     getData().then(value=>console.log(value))
 </script>
