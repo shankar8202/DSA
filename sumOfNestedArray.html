@@ -11,13 +11,46 @@
 </body>
 </html>
 <script>
-    // const input = sumOfNestedArrayElements([1, 2, [3, [4], [5, 6]], [7]]);
+//     const input = sumOfNestedArrayElements([1, 2, [3, [4], [5, 6]], [7]]);
 
-let arr=[1, 2, [3, [4], [5, 6]], [7]]
-let arr2= arr.flat(2)
-  const sum = arr2.reduce((acc, val) => {
-    // console.log( acc, val );
-    return acc + val;
-  }, 0);
-console.log(sum)
+// let arr=[1, 2, [3, [4], [5, 6]], [7]]
+// let arr2= arr.flat(2)
+//   const sum = arr2.reduce((acc, val) => {
+//     // console.log( acc, val );
+//     return acc + val;
+//   }, 0);
+// console.log(sum)
+
+      // or without inbuild 
+      
+let arr = [1, 2, [3, [4], [5, 6]], [7]];
+
+let empty = [];
+
+const sumOfNestArr = (arr) =>{
+
+    for (let a = 0; a < arr.length; a++) {
+         
+     if(Array.isArray(arr[a])){   //isme ye check krega ki array k ander ek or array h to suppose isne dekh ki 1,2 k bad 
+            sumOfNestArr(arr[a]);  //ek nested array so yha condition break hone pe jo 1,2 h usko recursivly sumOfNestArr(1,2) fir aager ek or nested mila uski valu ko bhi dala fir ek time k bad condition falles hojaygi then else condition chal jaygi
+            
+      }else{
+          empty.push(arr[a]);
+          console.log(empty)
+        }
+    }
+    // let newEm=empty.reduce((acc,val)=>{
+    //     return acc+val
+    // },0)
+    // return newEm
+  
+
+
+}
+console.log(sumOfNestArr(arr));
+
+
+
+
+
 </script>

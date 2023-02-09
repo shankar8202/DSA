@@ -10,15 +10,51 @@
 </html>
 <script>
 
+
+
+// ----------------------------------------------------------------------
+// question : --Given an array A of n positive numbers. The task is to find the first Equilibrium Point in an array. 
+// Equilibrium Point in an array is a position such that the sum of elements before it is equal to the sum of elements after it.
+//input =[1, 3, 5, 2, 2]             find the postion of that perticular position of an elemnt 
+
+function equlibrium(array) {
+  for (let i = 0; i < array.length; i++) {
+    let emptyForLeftSide = 0;
+    let emptyForRightSide = 0;
+
+    for (let j = 0; j < i; j++) {
+      emptyForLeftSide += array[j];
+    }
+
+    for (let j = i + 1; j < array.length; j++) {
+      emptyForRightSide += array[j];
+    }
+
+    if (emptyForLeftSide === emptyForRightSide) {
+      return i + 1;
+    }
+  }
+
+  
+}
+console.log(equlibrium([1, 3, 5, 2, 2]));
+
+
+
+
+
+
+
+// ----------------------------------------------------------
 // const input = sumOfNestedArrayElements([1, 2, [3, [4], [5, 6]], [7]]);
 
-let arr=[1, 2, [3, [4], [5, 6]], [7]]
-let arr2= arr.flat(2)
-  const sum = arr2.reduce((acc, val) => {
-    // console.log( acc, val );
-    return acc + val;
-  }, 0);
-console.log(sum)
+// let arr=[1, 2, [3, [4], [5, 6]], [7]]
+// let arr2= arr.flat(2)
+//   const sum = arr2.reduce((acc, val) => {
+//     // console.log( acc, val );
+//     return acc + val;
+//   }, 0);
+// console.log(sum)      //--neeed to compleate it
 
     // -------------------------------------------------------------------------------------------
 //   // string reverse without using inbuild function
