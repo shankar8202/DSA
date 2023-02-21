@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <style>
+      .fa-wifi {
+        font-size: 200px;
+        width: 20px;
+        height: 20px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div><i class="fa-solid fa-wifi"></i></div>
+  </body>
+</html>
+<script>
+  function checkInternetConnectivity() {
+    if (navigator.onLine) {
+      // if net in connected
+
+      updateWifiIconColor("green");
+    } else {
+      updateWifiIconColor("red");
+    }
+  }
+
+  function updateWifiIconColor(color) {
+    let wifiIconClass = document.getElementsByClassName("fa-solid fa-wifi")[0];
+
+    wifiIconClass.style.color = color;
+  }
+
+  checkInternetConnectivity();
+
+  window.addEventListener("online", checkInternetConnectivity);
+  window.addEventListener("offline", checkInternetConnectivity);
+</script>

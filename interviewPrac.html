@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myElement">hello</div>
+</body>
+</html>
+<script>
+
+
+
+
+
+
+
+    // --------------------------------------------------------
+//To find longest common string from array of strings       //need to complete it
+// function findCommon(){
+//     let str=" shankar ,shnak,sha,shannnnnn"//shan
+// let splited=str.split(" ")
+// let empty="";
+// let empty2="";
+
+// for(let a=0;a<splited.length;a++){
+//     // console.log(splited[a],"splited [a]")
+//     empty=splited[a]
+// if(splited[a]===empty){
+//     empty2+=splited[a]
+  
+//     // console.log(empty2)
+// }
+
+
+// }return check
+// }
+// console.log(findCommon())
+    // ---------------------------------------------------------------------
+    // //Swapping of 2 numbers with third variable
+// let a=10;
+// let b=20;
+// let c;
+//    c=a;
+//    console.log(c,"c")
+//    a=b;
+//    console.log(a,"a")
+//    b=c;
+//    console.log(b,"b")
+// console.log (a,b,c)
+// //================================================================================================================================================================================
+// // Swapping of 2 numbers without third variable
+// let a=10; 
+// let b=20;
+// [a,b]=[20,10]
+// console.log(a)
+// // or 
+//    a=a+b //30
+//    b=a-b //10
+//    a=a-b //20
+// console.log (a,b)
+    // -----------------------------------------------------
+// //can we do object in reduce    let's try
+
+// ----------------------------------------------------------------------
+// //To find the closest number in an array from the given input
+// // Input
+// //const inputArr = [1, 10, 7, 2, 4, 9];
+// //const nearbyNumber = 5;
+
+// // Output
+// //4;
+
+// const inputArr = [1, 10, 7, 2, 4, 9];     //byme
+// const nearbyNumber = 5;
+
+// function closest(inp,nearNum){
+//     let empty=[];
+//     let empty2=[];
+//     for(let a=0;a<=inp.length;a++){
+//         if(a!==nearNum){
+//         //    console.log(a,"a")
+//             empty=a+1
+//             console.log(empty,"em")
+//         }
+//         else if(empty==nearNum){
+//     empty2=empty
+//         }
+//     }return empty2-1
+
+// }
+// console.log(closest(inputArr,nearbyNumber))
+
+
+
+    // ---------------------------------------------------
+    // find longest string 
+// let str=" my name shankar shnkkkkkkk "
+
+// function shn(str){
+//     let splited=str.split(" ");
+// let empty="";
+// for(let a=0;a<splited.length;a++){
+//     if(splited[a].length>empty.length){
+//         empty= splited[a]
+//     }
+// }return empty
+// }
+// console.log(shn(str))
+
+    // --------------------------------------------------------
+// To find the closest number in an array from the given input
+// // Input
+// const inputArr = [1, 10, 7, 2, 4, 9];
+// const nearbyNumber = 5;
+
+// // Output
+// 4;
+
+ 
+// function closestNum(arr, num) {
+//     let out1;
+//     let out2;
+//     for (let i = 0; i < arr.length; i++) {
+//       for (let j = 0; j < arr.length; j++) {
+//         out1=num-i
+//         if(arr.includes(out1)){
+//             return out1
+//         }
+//       }
+//       for (let j = 0; j < arr.length; j++) {
+//         out2=num+i
+//         if(arr.includes(out2)){
+//             return out2
+//         }
+//       }
+//     }
+//   }
+//   console.log(closestNum([1,10,7,2,4,9],5))
+    // -----------------------------------------------------------
+    //call ,bind ,apply are function borrowing method.
+
+// let obj = {
+//   name: "vishal",
+//   //   getMyName: function (city, state) {
+//   //     console.log(this.name + " " + city + " " + state);
+//   //   },
+// };
+
+// function getMyname(city, state) {
+//   console.log(this.name + " " + city + " " + state);
+// }
+
+// let obj1 = {
+//   name: "raja",
+// };
+
+// let obj2 = {
+//   name: "satyam",
+// };
+
+// let obj3 = {
+//   name: "shubham",
+// };
+
+// // obj.getMyName("patna", "bihar");
+
+// // obj.getMyName.call(obj3, "indore", "mp");
+
+// // getMyname.call(obj3, "indore", "mp");
+// // getMyname.apply(obj1, ["jabalpur", "mp"]);
+
+// // let result = getMyname.bind(obj2, "patna", "bihar");
+
+// // console.log(result());
+
+// // console.log("vishal" + " kumar");
+// // console.log("raja" + obj2.name);
+    // --------------------------------------
+//     function addClickHandler() {
+//   const element = document.getElementById('myElement');
+//    count = 0;
+//   element.addEventListener('click', function handleClick() {
+//     console.log(`Clicked ${++count} times`);
+//   });
+// }
+// addClickHandler();
+    // --------------------------------------------
+//     const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const keys = fruits.keys();
+
+// let text = "";
+// for (let x of keys) {
+//   text += x + "<br>";
+// }
+// console.log(text)
+// console.log(keys)
+// console.log(fruits)
+    // ----------------------------------------------------
+// string to array
+// let str="hello my name is khan"
+// let sp=str.split(" ")
+// let toArr=Array.from(sp)
+// console.log(toArr)
+    // ----------------------------------------------
+//     let str = "Every developer likes to mix kubernetes and javascript";
+//   let splited=str.split(" ");
+//   let maping=splited.map((value)=>{
+//      if(value<=3){
+//         return value
+//      }
+//      return value[0]+[value.length-2]+value[value.length-1]
+//   })
+// console.log(maping)
+
+
+    // --------------------------------------------
+// filter polyfil 
+// let arr=[1,2,3,4,5,6]
+// let empty=[];
+// Array.prototype.myfil=function(val){
+   
+// for(let a=0;a<this.length;a++){
+//   if(val.call(this,this[a],a,this)){
+//     empty.push(this[a])
+//   }
+// }
+// return empty
+// }
+// let opration=arr.myfil((data)=>{
+//     return data<3
+// })
+// console.log(opration)
+// let arr=[1,2,3,4,5,6]
+// let opration=arr.filter((data)=>{
+//     return data>3
+// })
+// console.log(opration)
+
+
+    // ------------------------------------------------------------------------
+    // reduce polyfil
+//     let arr=[1,2,3,4,5,6]
+// Array.prototype.Myred=function(value,initialVal){
+//     let initialValStore=initialVal
+// for(let a=0;a<this.length;a++){
+//     initialValStore=initialValStore ?value( initialValStore,this[a],a,this):this[a]
+   
+// }return initialValStore
+// }
+// --------------------
+// let opration=arr.Myred((data,acc)=>{
+//     return  data+acc
+// })
+// console.log(opration)
+// let arr=[1,2,3,4,5,6]
+// let opration=arr.reduce((data,acc)=>{
+// return  data+acc
+// },0)
+// console.log(opration)
+
+
+
+    // ----------------------------------------------------------
+// function shn(str){
+//     let splitt=str.split("");
+// let count=1;
+// let empty="";
+// for(let a=0;a<=splitt.length;a++){
+//     if(splitt[a]===splitt[a+1]){
+//         count+=1;
+//         // console.log(count)
+//     }
+//     else{
+//          empty+=count+splitt[a]
+//          count=1
+//     }
+// }return empty
+// }
+// console.log(shn("AAAABBBCCDAAABB"))
+    // ---------------------------------------------------------------
+//      const findPath = (object, path) => {
+//   const keys = path.split('.');
+//   // console.log(keys,"key")
+//   let current = object;
+//   // console.log(current,"obj")
+//   for (let i = 0; i < keys.length; i++) {
+//   if (current.hasOwnProperty(keys[i])) {
+//   current = current[keys[i]];
+//   // console.log(current,"new obj")
+//   } else {
+//   return undefined;
+//   }
+//   }
+//   return current;
+//   };
+    // -----------------------------------------------------
+
+// var obj = {
+//       a: {
+//           b: {
+//               c: 12,
+//               j: false
+//           },
+//           k: null
+//       }
+//   };
+
+//   function findPath(objj,path){
+//  let keys=path.split(".");
+//  console.log(keys)
+//  let newobj=objj
+//  for(let a=0;a<keys.length;a++){
+//     // console.log(keys)
+//     if(newobj.hasOwnProperty(keys[a])){
+//         newobj= newobj[keys[a]]
+//         // console.log(newobj,"onj")
+//     }
+//     else{
+//         return undefined
+//     }
+//  }
+//  return newobj;
+//   };
+
+
+
+
+//   console.log(findPath(obj, 'a.b.c'),"12"); // 12
+// //   console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
+// //   console.log(findPath(obj, 'a.b.d')); // undefined
+// //   console.log(findPath(obj, 'a.c')); // undefined
+// //   console.log(findPath(obj, 'a.b.c.d')); // undefined
+// //   console.log(findPath(obj, 'a.b.c.d.e')); // undefined
+// //   console.log(findPath(obj, 'a.b.j')); //false
+// //   console.log(findPath(obj, 'a.b.j.k')); //undefined
+// //   console.log(findPath(obj, 'a.k')); //null
+    // ----------------------------------------------------------------
+//   const arr = [1, 2, 3, 5, 6, 7, 8, 9, 10];//find absent number
+//   function absentt(arr){
+//     let empty=[];
+//     for(let a=0;a<arr.length-1;a++){
+//       if(arr[a]!==a+1){
+//        empty.push(a+1)
+       
+//       }
+      
+//     }return empty[0]
+    
+//   }
+//    console.log(absentt(arr))
+
+
+
+
+//flatten object
+// const nestedObj = {
+//   foo: {
+//     bar: {
+//       baz: 42,
+//     },
+//     qux: 'hello',
+//   },
+//   fizz: true,
+// };
+
+
+
+// function flattenObject(obj, prefix = '') {
+//   const flatObj = {};
+//   for (const [key, value] of Object.entries(obj)) {
+//     // console.log(key,value,"ley-val")
+//     const propName = prefix ? `${prefix}.${key}` : key;
+//     if (typeof value === 'object' && value !== null) {
+//       Object.assign(flatObj, flattenObject(value, propName));
+//     } else {
+//       flatObj[propName] = value;
+//     }
+//   }
+//   return flatObj;
+// }
+
+// const flatObj = flattenObject(nestedObj);
+// console.log(flatObj);
+// // Output: { 'foo.bar.baz': 42, 'foo.qux': 'hello', fizz: true }
+
+
+
+    // -------------------------------------------------------------------
+// //Code 16: To find longest common string from array of strings
+// function longestCommonString(){
+//   array=["go","google","gosh"]
+//   var arr = array.sort()
+// //   console.log(arr,"ar")
+//   var i=0;
+//   while(arr[0].length>0 && arr[0].charAt(i)===arr[arr.length-1].charAt(i)){
+//     i++; 
+//     console.log(i,"i")
+//   }
+//   console.log(arr[0].substring(0,i)) // "go"
+//   return arr[0].substring(0,i)
+// }
+// longestCommonString() 
+
+
+
+
+
+    // -------------------------------------------------------
+// function longestWord(){
+//    let string = "supriya is a masooooom good girl"
+//    var words= string.split(' ')
+//    var longest=" "
+//    for(let a=0;a<words.length;a++){
+//         // console.log(words[a])
+//         if (words[a].length > longest.length)
+//         {
+//             longest=words[a];
+//          }
+//    }
+//     return longest.length+"  "+longest
+// }
+// console.log(longestWord())
+
+    //find the largest number in string
+// function longestWord(){
+//    let string = "supriya is a masooooom good girl"
+//    var words= string.split(' ')
+//    var longest=" "
+//    for(var a of words){
+//         console.log(a)
+//         if (a.length > longest.length)
+//         {
+//             longest=a;
+//          }
+//    }
+//     return longest.length
+// }
+// console.log(longestWord())
+
+
+// ----------------------------------------------------------------
+// palandrome //madam
+
+// function shn(){
+//     let str="madam"
+// let sp=str.split("").reverse().join("")
+// console.log(sp,"sp")
+// if(str==sp){
+//     console.log("yes this is ")
+// }else{
+//     console.log("no its not")
+// }
+// }
+// shn()
+    // -----------------------------------------------------------
+    
+//     let str = "aaaabbaaccccccccccccccccccde";
+//     maxChar="";
+//     maxCount=0;
+//    for(let a=0;a<str.length;a++){
+//     let count=0
+//     for(let b=a;b<str.length;b++){
+        
+//         if(str[b]===str[a]){
+//      count++
+//         }
+//         if(count>maxCount){
+//             maxChar=str[a]
+//             maxCount=count
+//         }
+//     }
+//    }console.log(maxChar,maxCount)
+
+    // ---------------------------------------------------------
+// const input = "aaaabbaaccccccccccccccccccde";
+// let empty={};
+// for(let a=0;a<input.length;a++){
+// if(empty.hasOwnProperty(input[a])){
+//  empty[input[a]]+=1;
+// }
+// else{
+//     empty[input[a]]=1
+// }
+
+// }console.log(empty.c)      //its not complete do it
+
+
+//  -------------------------------------------------
+//  for(i=1; i <= 5; i++){
+//   console.log('*'.repeat(i))}
+// //   for(j=1; j<=i; j++)
+// //  {
+// //     //  console.log('*'.repeat(j))
+  
+// //   }
+// //    document.write('<br />');
+//   }
+// -------------------------------------------------------------
+// for(let a=5;a>1;a--){
+//     console.log("*".repeat(a))
+// }
+
+// -----------------------------------------------------------------------
+//   convert ARRAY in to Zig Zag Fashion <> <> <>
+// let arr=[4, 3, 7, 8, 6, 2, 1]    // Output: 3 7 4 8 2 6 1  let n=7
+
+// function zigzag(data){
+    
+//     for(let a=0;a<data.length;a++){
+//         if(a % 2==0){
+//             if(data[a]>data[a+1]){
+//                 let empty=data[data[a]];
+//                data[a]=data[a+1];
+//                data[a+1]=empty
+//             //    console.log(empty)
+            
+//             }
+//         }
+//         else{
+//             if(data[a]<data[a+1]){
+//                 let empty=data[data[a]];
+//                data[a]=data[a+1];
+//                data[a+1]=empty
+//             //    console.log(empty)
+            
+//             }
+//         }
+//     }return data
+  
+// }
+
+// console.log(zigzag(arr))
+
+
+
+// -------------------------------------------------------------------------------
+// let plusOne=(digits)=>{
+//     let converts="";
+// for(let a=0;a<digits.length;a++){
+// converts+=digits[a];
+
+// }
+// converts2=++converts
+// // console.log(converts2,"++2")
+// }
+
+//     // console.log(plusOne([9]))         // [1,0]
+
+// // console.log(plusOne([1,2,3]))     // Output: [1,2,4]
+// console.log(plusOne([4,3,2,1])) 
+// -----------------------------------------------------------------------------
+// let str = "Hello, how are you madam. Hope you're doing good mam";
+// let largestPalindrome = '';
+
+// for (let i = 0; i < str.length; i++) {
+//   for (let j = i + 1; j < str.length; j++) {
+//     let substring = str.substring(i,j);
+//     // console.log(substring)
+//     let reversed = substring.split('').reverse().join('');
+//     // console.log(reversed)
+//     if (substring === reversed && substring.length > largestPalindrome.length) {
+//       largestPalindrome = substring;
+//     }
+//   }
+// }
+
+// console.log(largestPalindrome);
+
+// ----------------------------------------------------------------------------------------------
+// let str="Find the largest palindrome in the string. Hello , how are you madam. Hope you're doing good mam"
+// let splitt= str.split(" ")
+// let arr=[splitt].reverse();
+// for(let a=0;a<splitt.length;a++){
+//     let empty="";
+//     if(splitt[a].length===arr.length){
+//     empty+=splitt[a]
+//     }
+//     console.log(empty)
+// }
+
+
+// --------------------------------------------------------------------------------------
+//                                                       //// // Output
+// // {
+// //     character: 'c',
+// //     count: 18
+// // }
+// const input = "aaaabbaaccccccccccccccccccde";
+
+// let maxChar = "";
+// let maxCount = 0; 
+
+// for (let i = 0; i < input.length; i++) {
+//   let charCount = 0;
+//   for (let j = 0; j < input.length; j++) {
+//     if (input[j] === input[i]) {
+//       charCount++;
+//     }
+//   }
+//   if (charCount > maxCount) {
+//     maxChar = input[i];
+//     maxCount = charCount;
+//   }
+// }
+
+// console.log(`The character '${maxChar}' appears ${maxCount} times in the string.`);
+// --------------------------------------------------------------
+// const input = "aaaabbaaccccccccccccccccccde";
+
+// let maxChar="";
+// let maxCount=0;
+
+// for(let a=0;a<input.length;a++){
+//     let charCount=0;
+// for(let b=0;b<input.length;b++){
+//     if(input[b]===input[a]){
+//         charCount++
+// }
+// if(charCount>maxCount){
+//     maxChar=input[a];
+//     maxCount=charCount
+// }
+// console.log(maxChar,maxCount)
+// }
+   
+// }
+
+
+
+
+
+
+
+
+
+
+
+    // ----------------------------------------------
+// // promise resove in 5 sec 
+
+
+// function pro(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve("done")
+//             reject("reject")
+//         },5000)
+//     })
+// }
+// pro().then((data)=>{
+//     console.log(data)
+// }).catch((err)=>{
+//     console.log(err)
+// })
+
+
+// ---------------------------------------------
+// const input = "Priya Bagde";
+// let splitt=input.split("")
+// let empty="";
+
+// for(let a=0;a<splitt.length;a++){
+//     splitt[a]=splitt[a].charAt(3).toUpperCase()    //not done yet
+//     empty+=splitt[a].join("")
+      
+  
+//     console.log(empty)
+// }
+
+// // Output
+// ("PrIyA BaGdE");
+
+// ----------------------------------------------
+// for (let a = 1; a <= 5; a++) {
+//   let line = "";
+//   for (let b = a; b <= 5; b++) {
+//     line += a;
+//   }
+//   console.log(line);
+// }
+
+// 11111
+// 2222
+// 333
+// 44
+// 5
+// ----------------------------------------------------------
+// let pro=new Promise((resolve,reject)=>{
+// resolve("done")
+// })
+// console.log(pro)
+
+
+
+
+// --------------------------------------------------------------
+// for(let a=1;a<=5;a++){
+//     let empty="";
+//     for(let b=a;b<=5;b++){
+//         empty+=b
+//     }
+//     console.log(empty)
+// } 
+// // // output
+// // 12345
+// // 2345
+// // 345
+// // 45
+// // 5
+
+
+
+// ---------------------------------------------
+
+// function fucn1(a){
+//     return function func2(a1){
+//         return function func3(a2){
+//       console.log( a+a1+a2)
+//         }
+//     }
+// }
+// fucn1(100)(20)(20)       //function currying
+
+
+
+
+
+
+
+//    let pro= new Promise((resolve,reject)=>{
+//     let a=11;
+//     if(a===10){
+//         resolve("done")
+    
+//     }
+//     reject("cancle")
+   
+
+//    })
+// console.log(pro)
+
+
+
+
+
+
+    // let str ="hEllo My name is KHan"
+    // String.prototype.myUppercase=function(){
+    //  let spilttt= str.split("");
+    //  let empty=""
+    //  for(let a=0;a<spilttt.length;a++){
+    //     empty=spilttt[a]
+    //  }return empty
+    // }
+    // let opration=str.myUppercase()   //need to complete it
+    // -------------------------------------------------------------
+// reduce 
+// let arr=[1,2,3,4,5,6]
+// Array.prototype.myred=function(data1,accVal){
+//     let acumulator =accVal
+// for(let a=0;a<this.length;a++){
+//     acumulator=acumulator ? data1(acumulator,this[a],a,this):this[a]
+// }return acumulator
+// }
+// let opration=arr.myred((data,acc)=>{
+//     return data+acc
+// },0)
+// console.log(opration)
+
+// --------------------------------------------------------------------
+// Array.prototype.myreduce=function(data,accValue){           //by me
+//     let store=accValue
+
+//     for(let a=0;a<this.length;a++){
+//      store=store ? data(store,this[a],a,this):this[a]
+//     }return store
+//   }
+//   let op=arr.myreduce((acc,data)=>{
+//      return acc+data
+//   },0)
+//   console.log(op)
+
+
+    // ------------------------------------------------
+// filter polyfil 
+// let arr=[1,2,3,4,5,6]
+// let empty=[];
+// Array.prototype.Myfilter=function(data){
+
+//   for(let a=0;a<this.length;a++){
+//     if(data.call(this,this[a],a,this)){
+        
+        
+//         empty.push(this[a])
+//     }
+    
+// }
+// return empty
+// }
+// let opration =arr.Myfilter((val)=>{
+//     return val>1
+// })
+// console.log(opration)
+
+
+
+
+
+// // let arr=[2,5,6,50,2,7,4]
+// console.log(arr.myFilter((data)=> data<5))
+// let opration =arr.filter((data)=>{
+//     return data>2
+// })
+// console.log(opration)
+
+
+
+
+
+// -------------------------------------------------------------------
+// var obj = {
+//     a: {
+//         b: {
+//             c: 12,
+//             j: false
+//         },
+//         k: null
+//     }
+// };
+
+// const findPath = (object, path) => {
+//     const arr = path.split('.');
+//     //console.log(arr);
+//     let ans = object;
+//     for(let x in arr){
+//         //console.log("path",x,arr[x]);
+//         if(ans[arr[x]]!==undefined){
+//             ans = ans[arr[x]];
+//         }
+//         else{
+//             ans = undefined;
+//             break;
+//         }
+//     }
+//     return ans;   
+// };
+
+// console.log(findPath(obj, 'a.b.c')); // 12
+// console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
+// console.log(findPath(obj, 'a.b.d')); // undefined
+// console.log(findPath(obj, 'a.c')); // undefined
+// console.log(findPath(obj, 'a.b.c.d')); // undefined
+// console.log(findPath(obj, 'a.b.c.d.e')); // undefined
+// console.log(findPath(obj, 'a.b.j')); //false
+// console.log(findPath(obj, 'a.b.j.k')); //undefined
+// console.log(findPath(obj, 'a.k')); //null
+
+
+//   --------------------------------------------------------------------------------------------. 
+    //  let arr=[5,7,9,11,15,17] 
+    //  let empty=[]
+    //  for(let a=0;a<arr.length;a++){
+    //     if ([a]!==arr[a]+2){
+    //         empty.push(arr[a])
+    //     }
+    //  }return empty
+    //  console.log(empty)    //think about it not done yet
+    // ---------------------------------------------------------------------
+// const arr = [1,2,[3,4,[5,6],7],8,[9,10]]; //// [1,2,3,4,5,6,7,8,9,10]   using recursuion function
+// let empty=[];
+// function shn(arr){
+  
+//     for(let a=0;a<arr.length;a++){
+//         if(Array.isArray(arr[a])){
+//             shn(arr[a])
+            
+//         }else{
+//             empty.push(arr[a])
+//         }
+//     }return empty
+// }
+// console.log(shn(arr))
+
+    // ------------------------------------------------------------------/
+//  const arr = [1,2,[3,4,[5,6],7],8,[9,10]]; //// [1,2,3,4,5,6,7,8,9,10]
+
+// let opration=arr.reduce((acc,val)=>{                            //  but in this method not work in nested array
+//       return acc.concat(val)
+// },[])
+// console.log(opration)
+// -----------------------------------------------------
+
+    // ------------------------------------------------------
+//     let arr=[1,2,4,5,6,]
+
+
+// Array.prototype.myMap=function(cb){
+//     let empty=[];
+//        for(let a=0;a<this.length;a++){
+    
+//      empty.push(cb(this[a]))
+
+//      }return empty
+// }
+// let opration =arr.myMap((val)=>{
+//      return val*2
+// })
+// console.log(opration)
+
+
+// let m=arr.map((val)=>{
+//      return val*2
+// })
+// console.log(m,"ln 32")
+
+
+//     const arr = [1,2,[3,4,[5,6],7],8,[9,10]]; //// [1,2,3,4,5,6,7,8,9,10]
+
+//   function nes(data){
+//    for(let a=0;a<data.length;a++){
+//     // console.log(data[a])
+//      if 
+
+//    }
+
+//   }
+// console.log(nes(arr))
+
+
+    // let opration =arr.flat(Infinity)
+    // console.log(opration)
+</script>
