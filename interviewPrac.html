@@ -10,15 +10,683 @@
     <div id="myElement">hello</div>
 </body>
 </html>
+
 <script>
+//  //pyramid star pattern    u can  reverse the loop for reverse pyramid
+// let empty="";
+// for(let a=1;a<=5;a++){
+//     for(let b=1;b<=5-a;b++){
+//     empty+=" "
+//     }
+//     for(let c=1;c<=a*2-1;c++){
+//         empty+="*"
+//     }
+//     empty+="\n"
+// }
+// console.log(empty)
+// -------------------------------------
+
+// -------------------------------------------------------------------------------
+// var obj = {
+//       a: {
+//           b: {
+//               c: 12,
+//               j: false
+//           },
+//           k: null
+//       }
+//   };
+
+//   function findPath(objj,path){
+//  let keys=path.split(".");
+//  console.log(keys,"k")
+//  let newobj=objj
+//  for(let a=0;a<keys.length;a++){
+//     console.log(keys,"keys")
+//     if(newobj.hasOwnProperty(keys[a])){
+//         newobj= newobj[keys[a]]  //original key ko hta k splited key update krrhy h 
+//         console.log(newobj,"onj")
+//     }
+//     else{
+//         return undefined
+//     }
+//  }
+//  return newobj;
+//   };
+
+
+
+
+//   console.log(findPath(obj, 'a.b.c'),"12"); // 12
+//   console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
+//   console.log(findPath(obj, 'a.b.d')); // undefined
+//   console.log(findPath(obj, 'a.c')); // undefined
+//   console.log(findPath(obj, 'a.b.c.d')); // undefined
+//   console.log(findPath(obj, 'a.b.c.d.e')); // undefined
+//   console.log(findPath(obj, 'a.b.j')); //false
+//   console.log(findPath(obj, 'a.b.j.k')); //undefined
+//   console.log(findPath(obj, 'a.k')); //null
+
+
+    // ------------------------------------------
+//     let str = "dsa1fa";
+//   let blank = [];
+//   let after;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i].match(/[1-10]/g)) {
+//       blank.reverse();
+//       blank.push(str[i]);
+//       break;
+//     } else {
+//       blank.push(str[i]);
+//     }
+//   }
+//   let splitStr = str.split("");
+//   for (let i = 0; i < splitStr.length; i++) {
+//     if (splitStr[i].match(/[1-10]/g)) {
+//       after = splitStr.slice(i + 1);
+//       after.reverse();
+//     }
+//   }
+//   let final = [...blank, ...after].join("");
+//   console.log(final);
+// -------------------------------------------------------------
+// let str="dsa1fa"
+// let empty="";
+// let empty2="";
+// let num=1
+// for(let a=str.length-1;a>=4;a--){
+//      empty2+=str[a]
+//    }
+ 
+//     for(let a=str.length-4;a>=0;a--){
+//         empty+=str[a]
+//     }
+//     let com=[...empty,num,...empty2].join("")
+// console.log(com)
+
+// ----------------------------------------------------------
+ 
+// ----------------------------------------------------------------
+//     let str = "AAACCCAABBAEE";
+//   function checkOccurence(str) {
+//     let obj = {};
+
+//     for (let i = 0; i < str.length; i++) {
+//       if (obj.hasOwnProperty(str[i])) {
+//         obj[str[i]] = obj[str[i]] + 1;
+//       } else if (
+//         str[i] == "A" ||
+//         str[i] == "E" ||
+//         str[i] == "I" ||
+//         str[i] == "O" ||
+//         str[i] == "U"
+//       ) {
+//         console.log(str[i]);
+//         obj[str[i]] = 1;
+//       }
+//     }
+//     console.log(obj);
+
+//     let finalstr = "";
+//     for (key in obj) {
+//       finalstr = finalstr + key + obj[key];
+//     }
+//     return finalstr;
+//   }
+//   console.log(checkOccurence(str));
+    // ----------------------------------------------------------------
+    //To find a first pair whose sum is zero
+//algo :- first need to creat a function 
+//        then creat a empty array
+//        run two loop 
+//        in second loop we are checking the conditions 
+//        if condition satisfy put that numbers to empty array
+
+// function sumIsZero(arr){
+// let empty=[]
+// for(let a=0;a<arr.length;a++){
+//     for(let b=a;b<arr.length;b++){
+//         if(arr[a]+arr[b]===0){
+//             empty.push(arr[a],arr[b])
+//         }
+//     }
+// }return empty
+
+// }
+// let result= sumIsZero([-5,-4,-3,-2,-1,0,2,4,6,8])
+// console.log(result)
+    // ------------------------------------------------------------------------
+    // function shn(str){
+    //     let emptyObj={};
+    // for(let a=0;a<str.length;a++){
+    //   emptyObj[str[a]]=emptyObj[str[a]] ? emptyObj[str[a]]+1 : 1
+     
+    // }return emptyObj
+    // }
+    // console.log(shn("cCaaAAbbbBBB"))  //{ c: 1, C: 1, a: 2, A: 2, b: 3, B: 3 }
+    // -----------------------------------------------------------------------
+ // //   sort by frequency of the letters       const input = "cCaaAAbbbBBB";            // Output  "bbbBBBaaAAcC"
+
+//  function frequencySort(str) {
+//   const freq = {};
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str.charAt(i).toLowerCase();
+//     console.log(char,"char")
+//     freq[char] = freq[char] ? freq[char] + 1 : 1;
+//     // console.log(freq[char],"freq[char]")
+//   }
+//   return str.split('').sort((a, b) => {
+//     const diff = freq[b.toLowerCase()] - freq[a.toLowerCase()];
+//     return diff !== 0 ? diff : b.localeCompare(a);
+//   }).join('');
+// }
+
+// const input = frequencySort("cCaaAAbbbBBB");
+// console.log(input); // Output: "bbbBBBaaAAcC"
+
+
+    // ---------------------------------------------------------------------------
+// // //  Create a new array by adding one to each elements of the existing array
+// const input = [1, 2, 3, 4];
+// let empty=[];
+// for(let a=0;a<=input.length-1;a++){
+//   empty.push(input[a]+1)
+// }console.log(empty)
+
+    // ------------------------------------------------------------------------
+    // // Find first repeating character with its index from an array. You need to tell which element is having the first repetation inside an array
+// const input = [1, 0, 2, 3, 4, 4, 5, 7, 7];
+// let checkRepete=[];
+// let checkNormal=[];
+// function shn(input){
+// for(let a=0;a<input.length;a++){
+//     if(input[a]===input[a+1]){
+//       checkRepete.push(input[a])
+    
+//     }else{
+//         checkNormal.push(input[a])
+        
+//     }
+// } return checkRepete[0]
+// }
+// console.log(shn(input))
+    // ---------------------------------------------------------
+//     let str = "aaaabbaaccccccccccccccccccde";
+
+//  function shn(str){
+// let emptyObj={};
+// for(let a=0;a<str.length;a++){
+//     let key=str[a]          //str will be keys a:4,b:2.... like this because jab for in loop chalayngy nichy to isko variable me lena pdega
+//     if(emptyObj.hasOwnProperty(key)){
+//       emptyObj[key]=emptyObj[key]+1
+//      // console.log(emptyObj)      //in this console we can see those key which has reapeted value
+//     }else{
+//         emptyObj[key]=1
+//       //  console.log(emptyObj,"else") ////in this console we can see those key which has  reapeted +new value
+//     }
+// }
+// let maxChar="";
+// let maxCount=0
+// for(let key in emptyObj){
+//   if(emptyObj[key]>maxCount){   //here char is all the key and charcounts in object
+//     maxCount=emptyObj[key];
+//     maxChar=key
+//   }
+// }
+// console.log(maxChar,maxCount)
+//  }
+// shn(str)
+
+
+
+// -----------------------------------------------------------
+// let num=5
+// for(let a=num;a>0;a--){
+//     console.log(num.repeat(a))
+// }
+// ------------------------------------------------------
+//algo  :-  need to split the string 
+    //          run a for loop 
+    //         if a and a+1 i equal so increase +1
+    //         if condition  is false wrape all the else code to empty string
+     
+    
+    // let str="aaaabbcaabbaa"
+    
+    // function count(str){
+    //    let count=1
+    //    let empty="";
+    // let splited=str.split("");
+    // for(let a=0;a<splited.length;a++){
+    //     if(splited[a]===splited[a+1]){
+    //        count+=1
+          
+    //     }
+    //     else{
+    //       empty+= count+splited[a]
+    //       count=1
+    //     }
+    // }
+    // return empty
+    
+    // }
+    // console.log(count(str))
+
+     // //or
+//      let str="aaaabbcaabbaa"
+//      function shn(str){
+//      let emptyObj={};
+//      for(let a=0;a<str.length;a++){
+//         if(emptyObj.hasOwnProperty(str[a])){
+//            emptyObj[str[a]]=emptyObj[str[a]]+1 ||1
+//         }
+//         else{
+//             emptyObj[str[a]]=1
+//             console.log(emptyObj,"em")    // // need to complete it through object 
+//         }
+//      }
+//      return emptyObj
+//      }
+// console.log(shn(str))
+// ---------------------------------------------------------------------
+//To find the largest pair of the 2 elements using indexing with unsorted elements
+// algo : - sort an array 
+//         plus sorted.length-1+sorted.length-2 = result
+
+// let arr=[9,7,8,4,5,6,1,2,3]
+// let sorted=arr.sort()
+// let result=sorted[sorted.length-1]+sorted[sorted.length-2]
+// console.log(result)
+    // ----------------------------------------------------------
+ //  // To find a first pair whose sum is zero using indexing
+ // //same goes with this one as prvious one
+ 
+//     function shn(input) {
+//   for (let i = 0; i < input.length; i++) {
+//     for (let j = 0; j < i; j++) {
+//       if (input[i] + input[j] === 0) {
+//         return [input[i], input[j]];
+//       }
+//     }
+//   }
+//  // return undefined; // If no pair with sum zero is found
+// }
+
+// const input = [-5, -4, -3, -2, -1, 0, 2, 4, 6, 8];
+// const pair = shn(input);
+// console.log(pair); 
+    // -----------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+// ---------------------------------------------------------------------
+//     let str="aaabbbhhhhaattttuuuaaa"
+// function removeDuplicate(str){
+   
+// let blankObj={};
+// blankStr="";
+// for(let a=0;a<str.length;a++){
+//     if(blankObj.hasOwnProperty(str[a])){
+// //   console.log(blankObj,"blankobj")
+//     }else{
+//        blankStr+=str[a]
+//        blankObj[str[a]]=true
+//     }
+// }
+// return blankStr
+// }
+// console.log(removeDuplicate(str))
+
+
+// // or 
+// let opration=str.split("").filter((item,index,arr)=>{
+//   return  arr.indexOf(item)===index
+
+// })
+// console.log(opration)
+// //or
+
+//  //remove duplicate
+// let str="aaabbbhhhhaattttuuuaaa"
+// let splited=str.split("")
+// let op=new Set(splited)
+// let arr=[...op].join("")
+
+// console.log(arr)
+
+
+
+ // ----------------------------------------------------
+// //Print string n times using inbuilt function
+// function shn(str,n){
+// let empty="";
+// for(let a=0;a<=n-1;a++){
+//    console.log(str)
+// }
+// // return empty
+
+
+// }
+// shn("shankar",5)
+
+
+    // -----------------------------------------------
+ // //   To find the largest elements fro the 2 dimensional array.
+//  let empty=[];
+//  const input = [
+//   [1, 4, 3, 2,4],
+//   [5, 6, 7, 9],
+//   [45, 76, 2, 1],
+//   [89, 90, 87, 9], ];             // // Output [4, 9, 76, 90];
+
+
+// for (let i = 0; i < input.length; i++) {
+//   empty.push(Math.max(...input[i]))
+// }
+
+// console.log(empty); // Output: [4, 9, 76, 90]
+
+
+ // //or
+
+
+//  function largestFromArray(arr){
+//    var max=[0,0,0,0];
+//    for(var i=0; i<arr.length;i++){
+//       for(var j=0; j<arr[i].length; j++)
+//       {
+//           if(arr[i][j]>=max[i]){
+//           max[i] = arr[i][j]
+//         }
+//       }
+//    }
+//   console.log(max)
+//   return max;
+// }
+// largestFromArray([[1,2,3,4],[5,6,7,9],[45,76,2,1],[89,90,87,9]])
+    // -------------------------------------------------------
+// const pipe =(...ops) =>(x) =>ops.reduce((acc, op) => op(acc), x),
+//   op1 = (a) => a ** 2,
+//   op2 = (b) => b + 2,
+//   op3 = (c) => c * 5;
+
+// console.log(pipe(op1, op2, op3)(2))
+
+// ------------------------------------------------------------------------
+// // closure form also in callback function ,itretors,IIfe function 
+
+// function fetchData(callback) {
+//   var data = {name: 'John', age: 30};
+//   callback(data);
+// }
+
+// fetchData(function(data) {
+//   console.log(data.name); // logs 'John'
+// });
+
+// // or 
+
+// function createIterator(array) {
+//     // console.log(array,"arr")
+//   var i = 0;
+//   return function() {
+//     return array[i++];
+//   };
+// }
+
+// var next = createIterator(['a', 'b', 'c']);
+// console.log(next()); // logs 'a'
+// console.log(next()); // logs 'b'
+
+// --------------------------------------------------------------
+// function attachEvent(element) {
+//   var count = 0;
+//   element.addEventListener('click', function() {
+//     count++;
+//     console.log(count);
+//   });
+// }
+
+// var button = document.getElementById('myElement');
+// attachEvent(button);
+
+  
+    // ---------------------------------------------
+// // // To find all the missing numbers from an array
+// let arr=[1,2,6]    // //output=3,4,5
+// let empty=[];
+// for(let a=1;a<=6;a++){
+//     if(!arr.includes(a)){
+//         empty.push(a)
+//     }console.log(empty)   // but not doing from this method we need to do with arr.length se 
+// }
+//  
+
+
+    // -------------------------------------------
+// // star number pattern 
+// for(let a=1;a<=5;a++){
+//     let empty="";
+//     for(let b=a;b<=5;b++){
+//         empty+=a
+//     }console.log(empty)
+// }
+
+
+// 12345
+// 2345
+// 345
+// 45
+// 5
+
+
+// --------------------------------------------------------
+// let empty="";
+// for(let a=0;a<=5;a++){
+//     for(let b=a;b<=5;b++){
+//         empty+="*"
+//     }empty+="\n"
+// }console.log(empty)
+
+    // --------------------------------------------------
+// sqare star hollow  pattern
+// let n=5;
+// let string = "";
+
+// for(let i = 0; i < n; i++) { // external loop
+//   for(let j = 0; j < n; j++) { // internal loop
+//     if(i === 0 || i === n - 1) {
+//       string += "*";
+//     }
+//     else {
+//       if(j === 0 || j === n - 1) {
+//         string += "*";
+//       }
+//       else {
+//         string += " ";
+//       }
+//     }
+//   }
+//   // newline after each row
+//   string += "\n";
+// }
+// // printing the string
+// console.log(string);
+// -----------------------------------------------------------
+//// square  star pattern 
+//     let str="";
+// for(let a=0;a<=5;a++){
+//     for(let b=0;b<=5;b++){
+//    str+="*"+"\n"
+//     }
+//     str+="\n"
+// }
+// console.log(str)
+// -------------------------------------------------------------
+// for(let a=1;a<=5;a++){
+//     console.log("*".repeat(a))
+// }
+// -------------------------------------------------------
+//     let arr=[1,2,3,4,5,6,7,8,9]
+//     let empty=[];
+//     let empty2=[];
+//     for(let a=0;a<=arr.length-1;a++){
+//         if(arr[a]%2==0){
+//             empty.unshift ( arr[a])
+//             // console.log(empty)
+//         }
+//         else{
+// empty.push (arr[a])}
+//  let co=empty2.concat(empty)
+// console.log(co)
+// }  
+    // --------------------------------------------
+// remove duplicate string 
+
+// function removeDuplicateCharacters() {
+//   var str='priya riya supriya'
+//  let result= str.split('').filter((item, index, arr)=> {
+//                return arr.indexOf(item) == index;
+//                }).join('');
+//   return result;
+// }
+// console.log(removeDuplicateCharacters());
+ 
+// or 
+
+// var str='priya riya supriya'
+//  let sp=str.split("")
+// let op=new Set(sp)
+// console.log(...op)
+    // ------------------------------------------------
+    //put all the 0 elem end in the array
+//    let arr= [1,0,2,0,0,9,0,6,7];
+//    let sortt=arr.sort()
+//    let empty=[];
+//    for(let a=sortt.length-1;a>=0;a--){
+// empty.push(sortt[a])
+
+//    }console.log(empty)
+    // -------------------------------------------------------
+    // let arr=[1, 2, [3, [4], [5, 6]], [7]]
+    // let obj={...arr}
+    // console.log(obj)
+    // -----------------------------------------------------
+// let str="aaaabbcaabbaa"
+
+// function shn(data){
+//     let sp=data.split("");
+//     let empty="";
+//     let count=1;
+//    for(let a=0;a<=sp.length;a++){
+ 
+//     if(sp[a]==sp[a+1]){
+//       count+=1
+// //    console.log(count)
+//     }
+//     else{
+//        empty+=count+sp[a] 
+//        count=1
+//     }
+//    }return empty
+// }
+//   console.log(shn(str))  
+    // ---------------------------------------------------------
+// //find today's date 
+// var today = new Date();
+// var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+// console.log(date)
+    
+    // --------------------------------------------------------------------------
+// convert array into object 
+
+// const input = ["John", "Peter", "Sally", "Jane"];
+// let obj={...input}
+// console.log(obj)
+
+// ------------------------------------------------------------
+// find the largest string in given string 
+
+// let str = "hello ana madam anananananananan ";
+// function shn2(data2){
+// return data2===data2.split("").reverse().join("");
+// }
+
+// function shn(data){
+//     let empty="";
+//   for(let a=0;a<=data.length;a++){
+//     // console.log(data[a],"for 1")
+//     let emptyForLoop="";
+//     for(let b=a;b<data.length;b++){
+//         // console.log(data[b],"for 2")
+//     emptyForLoop+=data[b]
+//     if(shn2(emptyForLoop)&&emptyForLoop.length>empty.length){
+//      empty=emptyForLoop   
+//     }
+//     }
+//   }return empty
+// }
+// console.log(shn(str))
+                        
+// ---------------------------------------------------------------------
+//  four ways to empty array
+// let arr=[1,2,3,4,5,6]
+
+// var arr =  ['a', 'b', 'c', 'd', 'e', 'f'];
+// console.log("1", arr = [])
+// console.log("2", arr.length = 0)
+// console.log("3", arr.splice(0, arr.length))
+// var result= function(){while(arr.length) {
+//   arr.pop();
+// }}
+
+    // -----------------------------------------------------------
+  //  Find triplets whose sum is given as a second argument
+// function findTriplets(inputArr, sum) {
+//     let empty=[]
+//  for(a=0;a<=inputArr.length;a++){
+//     for(let b=a;b<=inputArr.length;b++){
+//         for(let c=b;c<=inputArr.length;c++){
+//             if(inputArr[a]+inputArr[b]+inputArr[c]===sum){
+//                 empty.push(inputArr[a],inputArr[b],inputArr[c])
+//             }
+//         }
+//     }
+//  }return empty
+// }
+
+// console.log(findTriplets([-1, -4, -9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0))
 
 
 
 
 
+    // -------------------------------------------------------------
+    // Code 24: Fibonacci Series (0,1,1,2,3,5,8,13....)
+// function fibonacciSeries(){
+//    const number = parseInt(prompt('Enter the number of terms: '));
+//    let n1 = 0, n2 = 1, nextTerm, arr=[]
+//    arr.push(n1)
+//    arr.push(n2)
+//    for (let i = 1; i <= number; i++) 
+//    {
+//      console.log(n1);
+//      nextTerm = n1 + n2;
+//      n1 = n2;
+//      n2 = nextTerm;
+//      arr.push(nextTerm)
+//    }
+//    return arr
+// }
+// console.log(fibonacciSeries())
+    // ----------------------------------------------------------
+// //To find the largest pair of the 2 elements using indexing with sorted elements
+// let arr=[1,2,3,4,5,6,7,8,9]
+// let op =arr[arr.length-1]+arr[arr.length-2]
+// console.log(op)
 
-
-    // --------------------------------------------------------
+// --------------------------------------------------------
 //To find longest common string from array of strings       //need to complete it
 // function findCommon(){
 //     let str=" shankar ,shnak,sha,shannnnnn"//shan
@@ -75,7 +743,7 @@
 // //4;
 
 // const inputArr = [1, 10, 7, 2, 4, 9];     //byme
-// const nearbyNumber = 5;
+// const nearbyNumber = 6;
 
 // function closest(inp,nearNum){
 //     let empty=[];
@@ -84,12 +752,12 @@
 //         if(a!==nearNum){
 //         //    console.log(a,"a")
 //             empty=a+1
-//             console.log(empty,"em")
+//             // console.log(empty,"em")
 //         }
 //         else if(empty==nearNum){
 //     empty2=empty
 //         }
-//     }return empty2-1
+//     }return empty2+1
 
 // }
 // console.log(closest(inputArr,nearbyNumber))
@@ -265,22 +933,22 @@
 
 
     // ----------------------------------------------------------
-// function shn(str){
-//     let splitt=str.split("");
-// let count=1;
-// let empty="";
-// for(let a=0;a<=splitt.length;a++){
-//     if(splitt[a]===splitt[a+1]){
-//         count+=1;
-//         // console.log(count)
-//     }
-//     else{
-//          empty+=count+splitt[a]
-//          count=1
-//     }
-// }return empty
-// }
-// console.log(shn("AAAABBBCCDAAABB"))
+function shn(str){
+    let splitt=str.split("");
+let count=1;
+let empty="";
+for(let a=0;a<=splitt.length;a++){
+    if(splitt[a]===splitt[a+1]){
+        count+=1;
+        // console.log(count)
+    }
+    else{
+         empty+=count+splitt[a]
+         count=1
+    }
+}return empty
+}
+console.log(shn("AAAABBBCCDAAABB"))
     // ---------------------------------------------------------------
 //      const findPath = (object, path) => {
 //   const keys = path.split('.');
@@ -299,45 +967,6 @@
 //   };
     // -----------------------------------------------------
 
-// var obj = {
-//       a: {
-//           b: {
-//               c: 12,
-//               j: false
-//           },
-//           k: null
-//       }
-//   };
-
-//   function findPath(objj,path){
-//  let keys=path.split(".");
-//  console.log(keys)
-//  let newobj=objj
-//  for(let a=0;a<keys.length;a++){
-//     // console.log(keys)
-//     if(newobj.hasOwnProperty(keys[a])){
-//         newobj= newobj[keys[a]]
-//         // console.log(newobj,"onj")
-//     }
-//     else{
-//         return undefined
-//     }
-//  }
-//  return newobj;
-//   };
-
-
-
-
-//   console.log(findPath(obj, 'a.b.c'),"12"); // 12
-// //   console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
-// //   console.log(findPath(obj, 'a.b.d')); // undefined
-// //   console.log(findPath(obj, 'a.c')); // undefined
-// //   console.log(findPath(obj, 'a.b.c.d')); // undefined
-// //   console.log(findPath(obj, 'a.b.c.d.e')); // undefined
-// //   console.log(findPath(obj, 'a.b.j')); //false
-// //   console.log(findPath(obj, 'a.b.j.k')); //undefined
-// //   console.log(findPath(obj, 'a.k')); //null
     // ----------------------------------------------------------------
 //   const arr = [1, 2, 3, 5, 6, 7, 8, 9, 10];//find absent number
 //   function absentt(arr){
@@ -660,34 +1289,31 @@
 
 // ---------------------------------------------
 // const input = "Priya Bagde";
-// let splitt=input.split("")
-// let empty="";
-
-// for(let a=0;a<splitt.length;a++){
-//     splitt[a]=splitt[a].charAt(3).toUpperCase()    //not done yet
-//     empty+=splitt[a].join("")
-      
-  
-//     console.log(empty)
+// function alternateText(str){
+//   var char = str.toLowerCase().split('')
+//       for(var i=0; i <char.length; i=i+2){
+//          char[i]=char[i].toUpperCase()
+//       }
+//   return char.join('')
 // }
-
-// // Output
-// ("PrIyA BaGdE");
+// console.log(alternateText("Priya Bagde")) //"PrIyA BaGdE"
 
 // ----------------------------------------------
-// for (let a = 1; a <= 5; a++) {
+// function shn(num){
+//     for (let a = 1; a <= num; a++) {
 //   let line = "";
-//   for (let b = a; b <= 5; b++) {
+//   for (let b = a; b <= num; b++) {
 //     line += a;
 //   }
 //   console.log(line);
 // }
-
-// 11111
-// 2222
-// 333
-// 44
-// 5
+// }
+// console.log(shn(5))
+// // 11111
+// // 2222
+// // 333
+// // 44
+// // 5
 // ----------------------------------------------------------
 // let pro=new Promise((resolve,reject)=>{
 // resolve("done")
@@ -705,12 +1331,12 @@
 //     }
 //     console.log(empty)
 // } 
-// // // output
-// // 12345
-// // 2345
-// // 345
-// // 45
-// // 5
+// // output
+// 12345
+// 2345
+// 345
+// 45
+// 5
 
 
 
