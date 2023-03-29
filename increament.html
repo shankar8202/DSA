@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <div>
+      <button onclick="onIncrement()">Increment</button>
+      <div>
+        <span>Output is</span>
+        <span id="count">0</span>
+        <span id="countTwo">0</span>
+        <span id="countThree">0</span>
+        <span id="countFour">0</span>
+        <span id="countFive">0</span>
+        <span id="countSix">0</span>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const countElem = document.getElementById("count");
+  const countElemTwo = document.getElementById("countTwo");
+  const countElemThree = document.getElementById("countThree");
+  const countElemFour = document.getElementById("countFour");
+  const countElemFive = document.getElementById("countFive");
+  const countElemSix = document.getElementById("countSix");
+
+  let counter = 0;
+
+  function onIncrement() {
+    counter = counter + 1;
+    countElem.innerText = counter;
+    countElemTwo.innerText = counter;
+    countElemThree.innerText = counter;
+    countElemFour.innerText = counter;
+    countElemFive.innerText = counter;
+    countElemSix.innerText = counter;
+  }
+</script>
