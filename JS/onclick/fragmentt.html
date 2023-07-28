@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        let object ={
+            name:"shn",lastName:"sahu",height:58,email:"sahushankar255@gmail.com"
+        }
+        let df =document.createDocumentFragment();
+        for(let a =0;a<object.length;a++){
+            // console.log(object.length)
+        
+
+            let box =document.createElement("div");
+            box.innerText="your lastname is:"+object[a];
+            df.appendChild(box)
+        }
+        document.body.append(df)
+       
+    </script>
+</body>
+</html>

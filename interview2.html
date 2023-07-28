@@ -7,43 +7,229 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" id="inp">
+    <button onclick="handleClick()">add todo</button>
+    <h2>Your To-do's</h2>
+    <div id="output"></div>
 </body>
 </html>
 <script>
+//  function handleClick() {
+//   let outp=document.getElementById("output")
 
-let obj={
-    name:"shankar"
-    
-}
-  function fun(){
-       this.name
-    //    console.log(this.name)
-  }
-    console.log(  fun.bind(obj),"gg")
+//   let input=document.getElementById("inp")
+
+//      let inputVal=input.value
+
+//     let createDiv=document.createElement("div")
+
+//     createDiv.innerHTML=inputVal
+
+//     outp.append(createDiv)
+
+//     input.value=""
 
 
+// }
+
+// --------------------------------------
 
 
-let str="my name is shankar sahu"
-  function fucn(str){
+function findMissingNumber(array) {
+  const n = array.length + 1;  //6
+//   console.log(n,"n")
+  const expectedSum = (n * (n + 1)) //  6*7/2
+
   
-let splited=str.split(" ");
-let empty="";
-for(let a=0;a<splited.length;a++){
-   if(splited[a].length>empty.length){
-      empty=splited[a]
-    //   console.log(empty)
-     }
+
+  let actualSum = 0;
+  for (let i = 0; i < array.length; i++) {
+    actualSum += array[i];
+  }
+
+  return expectedSum - actualSum;
+}
+
+// Example usage
+const numbers = [1, 2, 4, 5, 6];
+const missingNumber = findMissingNumber(numbers);
+console.log(missingNumber); // Output: 3
+
+
+
+
+
+
+
+// let str = ["flower","flow","flight"]
+// function shn(str){
+// for(let i=0;i<str.length;i++){
+//   if(str[i].charAt(0)===str[i].charAt(0)){
+//     console.log("yes")
+//   }
+// }
+
+// }
+// console.log(shn(str))
+
+
+
+
+
+// -------------------------------------------------------
+// function myNumbers() {               //need to understand what code say
+//   let n = 0;
+//   return {
+//     next: function() {
+//       n += 10;
+//       return {value:n, done:false};
+//     }
+//   };
+// }
+
+// const n = myNumbers();
+// n.next(); //10
+// n.next(); //20
+// n.next(); //30
+// console.log(n)
+// console.log(n.next())//40
+// console.log(n.next())//50
+// console.log(n.next())
+// console.log(n.next())
+// console.log(n.next())
+// console.log(n.next())
+// console.log(n.next())
+//  ----------------------------------------------
+  // getter and setter method 
+  // getter 
+
+// const obj = {
+//   get foo() {
+//     return 'Hello, world!';
+//   }
+// };
+
+// console.log(obj.foo); // Outputs: 'Hello, world!'
+
+
+// setter 
+
+// const obj = {
+//   _foo: '',
+//   set foo(value) {
+//     this._foo = value;
+//   }
+// };
+
+// obj.foo = 'Hello, world!';
+// console.log(obj._foo); // Outputs: 'Hello, world!'
+// ---------------------------------------------------------------
+// const obj = {counter : 0};
+
+// // Define Setters and Getters
+// Object.defineProperty(obj, "reset", {
+//   get : function () {this.counter = 0;}
+// });
+// Object.defineProperty(obj, "increment", {
+//   get : function () {this.counter++;}
+// });
+// Object.defineProperty(obj, "decrement", {
+//   get : function () {this.counter--;}
+// });
+// Object.defineProperty(obj, "add", {
+//   set : function (value) {this.counter += value;}
+// });
+// Object.defineProperty(obj, "subtract", {
+//   set : function (value) {this.counter -= value;}
+// });
+
+// // Play with counter:
+// obj.reset;
+// obj.add = 5;
+// obj.subtract = 1;
+// obj.increment;
+// obj.decrement;
+// document.getElementById("demo").innerHTML = obj.counter;  //just understand what this code say
+// ----------------------------------------------------
+// let obj={
+//     name:"shankar"
+    
+// }
+//   function fun(){
+//        this.name
+//     //    console.log(this.name)
+//   }
+//     console.log(  fun.bind(obj),"gg")
+
+
+
+
+// let str="my name is shankar sahu"
+//   function fucn(str){
+  
+// let splited=str.split(" ");
+// let empty="";
+// for(let a=0;a<splited.length;a++){
+//    if(splited[a].length>empty.length){
+//       empty=splited[a]
+//     //   console.log(empty)
+//      }
    
            
 
-}return empty
+// }return empty
 
 
 
-  }
-  console.log(fucn(str));
+//   }
+//   console.log(fucn(str));
+
+
+// function moveZeroes (nums) {
+// let empty=[]
+// if(nums.length==1){
+//   return [0]
+// }
+// else{
+//   for(let i=nums.length-1;i>=0;i--){
+//   if(nums[i]===0){
+//     empty.push(nums[i])
+//   }
+//   else{
+//     empty.unshift(nums[i])
+//   }
+// }return empty
+// }
+// };
+// console.log(moveZeroes([0,1,0,3,12]))//
+
+
+// let c=20;
+// function shn(){
+//   console.log(c)
+// }
+// shn()
+// -------------------------------------------------
+// let arr=[1,2,3,4,56,]                      //---- in foreach return statement not work
+// arr.forEach((data)=>{
+//   // console.log(data)
+//   if(data===3){
+//     return;
+//   }
+//   console.log(data)
+// })
+// console.log(arr)
+// -------------------------------------
+// let arr=[1,2,3,4,56,]
+// let final= arr.map((data)=>{
+//   // console.log(data)
+//   if(data!==4)
+//     return data
+  
+  
+// })
+// console.log(final)
+
 
 
 </script>

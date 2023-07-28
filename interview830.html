@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+//     let user = {   //destructure in diffrent diffrent way
+//   age : 100,
+//   fullName : {
+//     first : "Priya",
+//     last : "Bagde"
+//   }
+// }
+// --------------------------------------------------
+// var player = "Virat";
+//   function displayPlayer() {
+//     if (player === "Virat") {
+//       var player = "VK";
+//       console.log(player);
+//     }
+//     console.log(player);
+//   }
+//   displayPlayer();      //why it show undefined
+// -------------------------------------------------
+// console.log("First");  //1
+
+//   const promise = new Promise((resolve) => {
+//     console.log("Second");     //2
+//   });
+
+//   promise.then((data) => {
+//     console.log(data); //resolve hua hi ni
+//   });
+
+//   console.log("Third");  //3
+// ---------------------------------------------------
+// const user = {
+//     userName: "Jayesh",
+//     displayName: function () {
+//       console.log(this.userName);
+//     },
+//   };
+
+//   setTimeout(user.displayName, 1000);
+// -----------------------------------
+// infinite currying 
+// --------------------------------------------------------
+// let arr=[1,2,3,4,5,6]
+// let opration=arr.map((data)=>{
+// if(data%2==0){
+//     data2= data*3 //if i do return data*3 it will show undefined which is not datisfy consition
+// }return data
+// })
+// console.log(opration)
+
+// let arr=[1,2,3,4,5,6,78]
+
+// console.log(arr.length-1)
+
+// var arr = [
+//   [1, 2, 3, 4],
+//   [5, 6, 7, 8],
+//   [9, 10, 11, 12],
+//   [13, 14, 15, 16]
+// ];
+// let empty = [];
+// let shn=(arr)=> {
+ 
+//   empty.push(arr.shift()); // [1, 2, 3, 4],
+
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     empty.push(arr[i].pop());
+//   }
+//   empty.push(arr.pop().reverse());
+
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     empty.push(arr[i].shift());
+//   }
+//   console.log(arr,"ar")
+//   if (arr.length > 0) {
+//    return shn(arr);
+//   }
+//  return  empty.flat()
+
+// }
+// console.log(shn(arr));
+// ------------------------------------------------
+
+
+</script>

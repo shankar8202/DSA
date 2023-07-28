@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // loop k through obj print krana
+    let obj={
+        name:"shankar",
+        lastname:"sahu",
+        age:50
+    }
+//  we CAN NOT print object through loop SO that we need to convert obj to array down below cheack it out it convert to array
+
+   let convertObject=Object.keys(obj)  //converting object key to array
+   let convertObject_value=Object.values(obj)  //converting object value to array
+   
+   let enteries = Object.entries(obj) 
+    console.log(enteries)
+
+//    console.log(convertObject)
+//    console.log(typeof (convertObject_value))
+
+    let shn = ()=>{
+        for(let a=0;a<=enteries.length;a++){
+            console.log(enteries[a])
+        }
+        
+    }
+    shn()
+
+    setTimeout=()=>({
+
+    })
+
+    
+
+
+
+
+
+
+</script>

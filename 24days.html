@@ -12,32 +12,368 @@
 
 
 
+
+// const input = 'ara vpr skvpr tt';
+// function removeDuplicates(str) {
+//   let empty = '';
+//   for (let i = 0; i < str.length; i++) {
+//     if (empty.indexOf(str[i]) === -1) {
+//       empty += str[i];
+//     }
+//   }
+//   return empty;
+// }
+
+
+// console.log(removeDuplicates(input)); 
+// --------------------------------
+
+
+
+//2
+//Remove Duplicate characters from array of element and find the count of an elements using set
+
+// let arr=[1,2,3,4,5,4,5,5,5,5,2,1,36]
+// let set=[...new Set(arr)]
+// let length=set.length
+// console.log(`unique array ${set} ,length ${length}`)
+// -----------------------------------------
+//Remove Duplicate characters from array of element using filter
+// let arr=[1,1,2,3,4,4,5,5,5,6,6,7,0,100,100]
+// let op =arr.filter((data,index,arr)=>{
+//   return arr.indexOf(data)===index
+// })
+// console.log(op)
+// -------------------------------------------------------
+// let arr=[1,1,2,3,4,4,5,5,5,6,6,7,100,100]
+
+// function removeDup(arr){
+// let obj ={};
+// for(let i=0;i<arr.length;i++){
+//   obj[arr[i]]=true
+
+// } 
+// let final = Object.keys(obj)
+// let final2=final.map(Number)
+// return final2
+// }
+// console.log(removeDup(arr))
+
+// --------------------------------------------------
+
+
+//day 2
+// //reverse string 
+// let str = "hi my name is shankar";
+// let opration =str.split(" ").reverse().join(" ").split("").reverse().join("");
+// console.log(opration)
+// ------------------------------------------------------------
+// // without inbuild 
+
+
+// let str = "hi my name is shankar";
+// let empty1 = "";
+// let empty2="";
+
+// for (let i = str.length - 1; i >= 0; i--) {
+//   empty1 += str[i];
+// }
+// let split=empty1.split(" ")
+// for(let j=split.length-1;j>=0;j--){
+
+//   empty2 += split[j]+" ";
+// }
+
+// console.log(empty2); //ih ym eman si raknahs 
+
+
+// ---------------------------------------------------------------
+// String reverse without using inbult function
+// let str = "hi my name is shankar";
+// function rev(str){
+//   let store ="";
+//   for(let i=str.length-1;i>0;i--){
+//    store+=str[i]
+//   }return store
+// }
+// console.log(rev(str))
+// ------------------------------------------------------------
+// //Find factorial of user input number
+  //   let factorial =(data)=>{
+  //         let empty=1
+  //         for(let a=1;a<=data;a++){
+  //            empty*= a
+  //            console.log(`${empty}*${a}=${empty}`)
+  //         }
+  //     }
+
+  // console.log(factorial(4))  // 1 *2 *3*4  ==24
+// -----------------------------------------------------
+
+
+// -------------------------------------------------------------------
+//      Check if a string is an Anagram without inbuilt method
+// let str="aaaabbbbccdd"
+// let str2="ababababcdcd"
+
+// function anagram(str,str2){
+//   let obj={};
+//  if(str.length===str2.length){
+
+//   for(let i=0;i<str.length;i++){
+//     if(str[i] in obj){
+//       obj[str[i]]+=1
+//     }else{
+//       obj[str[i]]=1
+//     }
+//    }
+  
+//   for(let j=0;j<str2.length;j++){
+//     if(str2[j] in obj){
+//       obj[str2[j]]-=1
+//     }
+
+//     else{
+//       obj[str2[j]]=1
+//     }}
+// }
+// // console.log(obj)
+
+// else{
+//   return "no its not anagram"
+// }
+
+//  for(let keys in obj){
+//   if (obj.hasOwnProperty(keys) && obj[keys] !== 0) {
+//       return "no its not anagram";
+//     }
+//   }
+//   return "yes this is anagram";
+// }
+
+// console.log(anagram(str,str2))
+
+
+// --------------------------------------------------
+
+// //swap without 3rd variable
+// let a=10; 
+// let b=20;
+//  [b,a]=[a,b]
+// console.log({a})
+// console.log({b})
+// -----------------------------------------
+
+//day 3 
+
+// // To check the string or number is palindrome or not( ex: 121,madam,anna) using reverse method
+// function shn(input) {
+//   let str = input.toString(); // convert number to string if input is a number
+//   let reversedStr = '';
+  
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reversedStr += str[i];
+//   }
+
+ 
+//   if (str === reversedStr  && str.length===reversedStr.length) {
+//     return "yes, this is a palindrome";
+//   } else {
+//     return "no, this is not a palindrome";
+//   }
+// }
+
+// console.log(shn(121));  // it will be "madam" or 121 checking palandrom in one function 
+
+//  --------------------------------------------------------------------------
+
+//To find longest word from a string using (for of Loop) means iterate by an elements not by indexing
+
+// let str =" my name is shankar sahuuuuuuu"
+// function longestWord(string){
+ 
+//    var arr= string.split(' ')
+//    var empty=""
+//    for(var i=0; i<arr.length; i++){
+      
+//         if (arr[i].length > empty.length)
+//         {
+//             empty=arr[i];
+//         }
+//    }
+//    return empty
+// }
+// console.log(longestWord(str))
+
+// -------------------------------------------------
+//inbuild method
+
+// function longestWord(str) {
+//   let words = str.split(' '); 
+//   let longestWord = words.reduce(((longest, currentWord)=> {
+
+// if(currentWord.length > longest.length){
+//   return currentWord
+// }
+// else{
+//   return longest
+// }
+  
+//   }),'');
+//   return longestWord;
+// }
+
+// console.log(longestWord(" my name is shankar sahuuuuuuu")); 
+// ---------------------------------------------------------------------
+//To find longest common string from array of strings     ---  DAY 4
+// let arr = ["google","go",  "gosh"];
+//   const check = (arr) => {
+//     for (let i = 0; i < arr[0].length; i++) {
+//       console.log(arr[i],"arr i")
+//       for (let j = 1; j < arr.length; j++) {
+//         console.log(arr[j],"j")
+//         if (arr[0][i] !== arr[j][i]) {
+//           return arr[0].slice(0, i);
+//         }
+//       }
+//     }
+//     return arr[0]
+//   };
+//   console.log(check(arr));
+
+
+
+
+
+
+
+
+// function longestCommonString(){
+//  let  array=["google","go","gosh"]
+//   var arr = array.sort()  //[ "go", "google", "gosh" ]
+//   console.log({arr})
+//   var i=0;
+//   while(arr[0].length>0 && arr[0].charAt(i)===arr[arr.length-1].charAt(i)){
+//     i++;
+//   }
+//   console.log(arr[0].substring(0,i)) // "go"
+//   return arr[0].substring(0,i)
+// }
+// longestCommonString() 
+// ---------------------------------------------------------------------
+//To find vowels and its count in a given string
+
+// let str="shankareio"
+// let sp = str.split("")
+// console.log(sp)
+// function chkVowl(str){
+//   let count =0;
+//   let empty=[];
+//     for(let i=0;i<=sp.length;i++){
+//       if(sp[i]==="a"||sp[i]==="e"||sp[i]==="i"||sp[i]==="o"||sp[i]==="u"){
+//         count++
+//       empty.push(sp[i])
+//       }
+//     }return `${empty+count}`
+// }
+// console.log(chkVowl(str))
+// --------------------------------------------
+//To find character occurance from the string
+// let str="ramraaaarmarmamrmararr";
+// function checkOccurence(str,word){
+//   let count=0;
+//   for(let i=0;i<=str.length;i++){
+//     if(str[i]===word){
+//       count++
+//     }
+//   }return `${word} is occure ${count} time`
+// }
+// console.log(checkOccurence(str,"r"))
+
+// ----------------------------------------------------------
+//   Day 5
+// function findPair(arr){
+// let empty=[];
+// for(let i=0;i<=arr.length;i++){
+//   for(let j=i+1;j<=arr.length;j++){
+//     if (arr[i]+arr[j]===0){
+//        empty.push(arr[i],arr[j])
+     
+//     } 
+//   } break
+// }return empty
+
+// }
+// console.log(findPair([-5,-4,-3,-2,-1,0,1,2,3,4,5]))
+// -----------------------------------------------------------
+
+// // // To find the largest pair of the 2 elements using indexing with unsorted elements
+// function shn(numbers){
+//     const num = numbers.sort((a, b) => b - a);
+//     console.log(num)
+//     return num[0] + num[1];
+// }
+// const result = shn([9,7,8,4,5,6,1,2,3])
+// console.log(result)
+// --------------------------------------------------------------------
+// Fibonacci Series (0,1,1,2,3,5,8,13....) where keeping in array
+// function Fibonacci(n) {
+// let arr = [0, 1]
+//   for (let  i = 1; i < n; i++) 
+//     arr.push(arr[i] + arr[i - 1])
+
+//   return arr
+// }
+// console.log(Fibonacci(3))
+// -------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ----------------------------------------------------------------------
 // question : --Given an array A of n positive numbers. The task is to find the first Equilibrium Point in an array. 
 // Equilibrium Point in an array is a position such that the sum of elements before it is equal to the sum of elements after it.
 //input =[1, 3, 5, 2, 2]             find the postion of that perticular position of an elemnt 
 
-function equlibrium(array) {
-  for (let i = 0; i < array.length; i++) {
-    let emptyForLeftSide = 0;
-    let emptyForRightSide = 0;
+// function equlibrium(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     let emptyForLeftSide = 0;
+//     let emptyForRightSide = 0;
 
-    for (let j = 0; j < i; j++) {
-      emptyForLeftSide += array[j];
-    }
+//     for (let j = 0; j < i; j++) {
+//       emptyForLeftSide += array[j];
+//     }
 
-    for (let j = i + 1; j < array.length; j++) {
-      emptyForRightSide += array[j];
-    }
+//     for (let j = i + 1; j < array.length; j++) {
+//       emptyForRightSide += array[j];
+//     }
 
-    if (emptyForLeftSide === emptyForRightSide) {
-      return i + 1;
-    }
-  }
+//     if (emptyForLeftSide === emptyForRightSide) {
+//       return i + 1;
+//     }
+//   }
 
   
-}
-console.log(equlibrium([1, 3, 5, 2, 2]));
+// }
+// console.log(equlibrium([1, 3, 5, 2, 2]));
 
 
 
@@ -46,7 +382,7 @@ console.log(equlibrium([1, 3, 5, 2, 2]));
 
 
 // ----------------------------------------------------------
-// const input = sumOfNestedArrayElements([1, 2, [3, [4], [5, 6]], [7]]);
+// // const input = sumOfNestedArrayElements([1, 2, [3, [4], [5, 6]], [7]]);
 
 // let arr=[1, 2, [3, [4], [5, 6]], [7]]
 // let arr2= arr.flat(2)
@@ -511,8 +847,27 @@ console.log(equlibrium([1, 3, 5, 2, 2]));
   // console.log(unique) //output: [55, 44, 67, 8, 65, 1, 2, 3, 34, 5]
   // console.log(unique.length) //output: 10
   // ------------------------------------------------------------------------------
-  // // FInd duplicate string in an array
+  // // // FInd duplicate string in an array
   // var arr = [55,"shankar","shan","shke","shankar","shankar", 47]
   // let opration =arr.filter((value,index,arrr)=>arrr.indexOf(value)===index)
   // console.log(opration)
+// -------------------------------------------------------------------------------
+// let arr=[55,"shankar","shan","shke","shankar","shankar", 47,47]
+// function shn(arr){
+//   let empty=[]
+//   let duplicate=[]
+
+//  for(let i=0;i<=arr.length-1;i++){
+//     if(empty.includes(arr[i])){
+//   duplicate.push(arr[i])
+//     }
+//     else{
+//       empty.push(arr[i])
+//     }
+//  }return duplicate
+// }
+// console.log(shn(arr))
+// --------------------------------------------------------
+
+
 </script>

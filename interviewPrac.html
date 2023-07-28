@@ -5,140 +5,1901 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">//css
+
+   
   </head>
   <body>
     <div id="myElement">hello</div>
+
   </body>
 </html>
 
 <script>
 
-let obj
+// ------------------------------------------
+// var array = [1, 2, 3, 4, 5]
+// for(var i = 0; i < array.length; i++) {
+  
+//     setTimeout(() => {
+//     console.log(i)
+//   }, 1000);
+ 
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let arr = [{prodA : ["bike", "scooter"],prodB : "itemA"},                                                     //most importent
-//            {prodA : ["utensils", "washing machine"],  prodB : "itemB"},
-//            {prodA : ["car", "train"],prodB : "itemA"},
-//            {prodA : ["sofa-set", "clothes"],prodB : "itemB"},]
-
-
-//    let empty=[];
-//    let obj={};
-//    for(let i=0;i<arr.length;i++){
-//     let current =arr[i]
+  // -------------------------------------------------------------------
+// const inputArr = [1, 10, 7, 2, 4, 9];  
+// let find=5   //find closest number
+// for(let i= 0;i<=inputArr.length-1;i++){
+//   if(inputArr[i]+1===find||inputArr[i]+2===find||inputArr[i]-1===find||inputArr[i]-2===find ){
+//     console.log(inputArr[i])
+//   }
+// }
+// -------------------------------------------------------------------
+// const companies = [
+//     { name: "Company A", id: 1 },         //if Company A come again with same id it's key will only  but key is diffrent then +1
+//     { name: "Company B", id: 2 },
+//     { name: "Company C", id: 3 },
+//     { name: "Company A", id: 4 },
+//     { name: "Company B", id: 2 },
     
-//     if(obj.hasOwnProperty(current.prodB)){
-//       continue
+//   ];
+
+//   const out = {
+//     "Company A": 2,
+//     "Company B": 1,
+//     "Company C": 1,
+//   };
+
+  // let obj = {};
+  // let arr =[]
+  // for (let i = 0; i < companies.length; i++) {
+
+  //   if (Object.keys(obj).includes(companies[i].name) && !arr.includes(companies[i].id)) {
+  //     obj[companies[i].name]++;
+  //   } else {
+  //     obj[companies[i].name] = 1;
+  //   }
+  //   // console.log(obj,"obj")
+  //   arr.push(companies[i].id)
+  // }
+  // console.log(obj);
+
+  // ----------------------------------------
+// let x=0;
+// console.log(x++) //0
+// console.log(x++) //1
+// ------------------------------------------------
+// let x=1;
+// // console.log(++x) //2
+// console.log(x++) //1
+// ------------------------------------------
+//   let obj={
+//     name:"shankar",
+//     lname:"sahu",
+//     hi:"hi3",
+//     yo:"ji"
+//   }
+// Object.entries(obj).forEach(([key,value])=>{
+//   console.log( key,value)
+// })
+
+  // ------------------------------------------------
+// let start="start"
+
+//   console.time(start)
+
+//   console.timeEnd(start)
+// ---------------------------------------------
+// optional chaining 
+// let obj={
+//   name:"shankar",
+//   lname:"sahu",
+//   nes:{
+//     add:"jbp"
+//   }
+// }
+// console.log(obj.city?.landmark)
+// -----------------------------------------
+// let arr=["hi","hi2","hi3"]
+// const {0:Firstvalu,2:lastValue}=arr;   //advance destructuring
+// console.log(lastValue)
+
+
+  // -----------------------------------------
+// let arr=[1,2,3,4,5,6]        //fill
+// let final=arr.fill("9",4,6)
+// console.log(final)
+  // --------------------------------------------------------------------------------------------------
+// const companies = [
+//     { name: "Company A", id: 1 },
+//     { name: "Company B", id: 2 },
+//     { name: "Company C", id: 3 },
+//     { name: "Company A", id: 4 },
+//     { name: "Company B", id: 2 },
+//   ];   
+ 
+
+//   const output = {
+//     "Company A": 2,
+//     "Company B": 1,
+//     "Company C": 1,
+//   };
+
+// const input = [
+//   { name: "Company A", id: 1 },
+//   { name: "Company B", id: 2 },
+//   { name: "Company C", id: 3 },
+//   { name: "Company A", id: 4 },
+//   { name: "Company B", id: 2 },
+// ];
+
+// const output = {};
+
+// for (let i = 0; i < input.length; i++) {
+//   const companyName = input[i].name;
+//   const companyId = input[i].id;
+
+//   if (output.hasOwnProperty(companyName)) {
+//     if (!output[companyName].ids.includes(companyId)) {
+//       output[companyName].count += 1;
+//       output[companyName].ids.push(companyId);
 //     }
-//     for(let j = i+1;j<arr.length;j++){
-//       if(arr[i].prodB===arr[j].prodB){
-//         current.prodA=[...current.prodA,...arr[j].prodA]
-//         // or 
-//         // current.prodA=current.prodA.concat(arr[j].prodA)
+//   } else {
+//     output[companyName] = {
+//       count: 1,
+//       ids: [companyId]
+//     };
+//   }
+// }
+
+// // Convert the output to the desired format
+// const formattedOutput = {};
+// for (const companyName in output) {
+//   formattedOutput[companyName] = output[companyName].count;
+// }
+
+// console.log(formattedOutput);
+
+
+
+
+// ------------------------------------------------------
+//   const profile = [
+//   {
+//     id: 1,
+//     name: "Ashwini",
+//   },
+//   {
+//     id: 10,
+//     name: "Vishal",
+//   },
+// ];
+
+
+
+// const orders = [
+//   {
+//     userId: 1,
+//     productId: 101,
+//     productName: "Samsung Galaxy s2",
+//   },
+//   {
+//     userId: 1,
+//     productId: 102,
+//     productName: "Samsung Galaxy Watch",
+//   },
+//   {
+//     userId: 10,
+//     productId: 103,
+//     productName: "Samsung LED TV",
+//   },
+// ];
+
+
+
+// const finalDetails = profile.reduce((acc, user) => {
+//   const userOrders = orders.filter((order) => order.userId === user.id).map(({ productId, productName }) => ({ productId, productName }));
+//     acc.push({
+//     userId: user.id,
+//     name: user.name,
+//     orders: userOrders,
+//   });
+
+//   return acc;
+// }, []);
+
+// console.log(finalDetails);
+
+
+
+//output 
+// const finalDetails = [
+//   {
+//     userId: 1,
+//     name: "Ashwini",
+//     orders: [
+//       {
+//         productId: 101,
+//         productName: "Samsung Galaxy s2",
+//       },
+//       {
+//         productId: 102,
+//         productName: "Samsung Galaxy Watch",
+//       },
+//     ],
+//   },
+
+
+//   {
+//     userId: 10,
+//     name: "Vishal",
+//     orders: [
+//       {
+//         productId: 103,
+//         productName: "Samsung LED TV",
+//       },
+//     ],
+//   },
+// ]
+  // -------------------------------------------------
+//leetcode 198 house robe
+// let arr=[1,2,3,1]
+
+// var rob = function(arr) {
+//   let sum=0
+//     for(let i=0;i<=arr.length-1;i++){
+//       if(i%2===0){
+//         sum+=arr[i]
+//       }
+//     }return sum
+//   };
+// console.log(rob(arr))
+// ---------------------------------------------------
+  // advance teqnique 
+// let c =console.log.bind(document) //now c is act like a console 
+// --------------------
+
+// function test(pera1,pera2){     //even if u not pass any argument
+// let name =pera1 || "shankar"
+// let age =pera2 || 25
+// console.log(name)
+// console.log(age)
+// }
+// test()
+// -------------------
+// instead of using if else 
+// let value=true
+// // if(value){
+// //   console.log("print")
+// // }
+// // or 
+// value && console.log("print2")
+// ---------------------------------------------------
+// leetcode no. 5
+
+// let str="hyjejio";
+// function shn(){
+//   for(let i=0;i<=str.length-1;i++){
+//     for(let j=i+1;j<=str.length-1;j++){
+//       if(str[i]===str[j]){
+//         return j
 //       }
 //     }
-//     obj[current.prodB]=true
-//     empty.push(current)
-//    }
-// console.log(empty)
+//   }
+// }
+// console.log(shn(str))
+// function shn(){
+//   hi="hi"
+// }
+// console.log(window.hi)
+  // --------------------------------------------------------------------------
+  // // find 3ed highest value 
+
+  // let arr = [1, 2, 3, 3, 3, 4, 3, 5, 6, 15, 15, 18, 12];
+  // // k th lagest ex k=3
+  // let k = 3;
+  // function kthLargest(arr, k) {
+  //   for (let i = 0; i < arr.length; i++) {
+  //     for (let j = 0; j < arr.length; j++) {
+  //       if (arr[j] < arr[j + 1]) {
+  //         let x = arr[j];
+  //         arr[j] = arr[j + 1];
+  //         arr[j + 1] = x;
+  //       }
+  //     }
+  //   }
+  //   console.log(arr);
+  //   // let output = arr.length - k;  //[18, 15, 15, 12, 6, 5, 4, 3, 3, 3, 3, 2, 1]
+  //   let match = 0;
+  //   for (let i = 0; i < arr.length - 1; i++) {
+  //     // console.log(i);
+  //     if (arr[i] != arr[i + 1]) {
+  //       //18!=15 15==15
+
+  //       match++; //1 1 2 3
+  //     }
+  //     if (match === k) {
+  //       return arr[i];
+  //     }
+  //   }
+  //   return -1;
+  //   // console.log(arr[k - 1]);
+  //   // console.log(arr);
+  // }
+  // console.log(kthLargest(arr, k));
+  // // kthLargest(arr, k);
 
 
 
-         
-          // The output should be like this-
-// [
-// {prodA : ["bike", "scooter",  "car", "train"],
-// prodB : "itemA"},
-// {prodA : ["utensils", "washing machine", "sofa-set", "clothes"],
-// prodB : "itemB"}
-// ]
+// -------------------------------------------------------------
+// const numbers = [1, 2, 3, 4, 5];
 
+// numbers.forEach((num) => {
+//   if (num % 2 === 0) {
+//     console.log(`${num} is even`);
+//   } else {
+//     console.log(`${num} is odd`);
+//   }
+// });
+
+// console.log(numbers)
+  // --------------------------------------------------
+// let a=50
+// ((a)=>console.log(a))(a)  //not working
+
+
+// ------------------------------------------------------
+// Class in javascript 
+
+// class myObj{
+//   constructor(brand,color){
+//            this.brand= brand;
+//            this.color=color
+//   }
+//   newFunc(){
+//    console.log( `i drived ${this.brand}with${this.color}color`)
+//   }
+// }
+// let cl= new myObj("lambo","black")
+// console.log(cl.newFunc())
 
 // or 
 
-
-// let result = [];
-
-// // Iterate over each object in arr
-// arr.forEach((obj) => {
-//   // Check if a result object already exists with the same prodB value
-//   let resultObj = result.find((r) => r.prodB === obj.prodB);
-//   // If not, create a new result object and add it to the result array
-//   if (!resultObj) {
-//     resultObj = { prodA: [], prodB: obj.prodB };
-//     result.push(resultObj);
+// let obj={
+//   brand:"lambo",
+//   color:"black",
+//   funct:function(){
+//   return  this.brand+"  "+this.color
 //   }
-//   // Add the prodA array of the current object to the result object's prodA array
-//   resultObj.prodA.push(...obj.prodA);
-// });
+// }
 
-// console.log(result);
+// console.log(obj.funct())
+
+  // ------------------------------------------------
+ //leet code 345
+//  function reverseStr(s){
+//     let blank = [];
+//     let splitStr = s.split("");
+//     let count = splitStr.length - 1;
+//     for (let i = 0; i <= splitStr.length - 1; i++) {
+//       if (["a", "e", "i", "o", "u","A","E","I","O","U"].includes(splitStr[i])) {
+//         console.log(splitStr[i], i);
+//         for (let j = count; j >= i; j--) {
+//           if (["a", "e", "i", "o", "u","A","E","I","O","U"].includes(splitStr[j])) {
+//             blank[i] = splitStr[j];
+//             blank[j] = splitStr[i];
+//             count=j-1
+//             console.log(blank, "before",count);
+//             break;
+//           }
+//         }
+//       } else {
+//         blank[i] = splitStr[i];
+//       }
+//     }
+//     return blank.join("");
+//   }
+// console.log(reverseStr("leetcode"))
+// -----------------------------------
+// var canPlaceFlowers = function(flowerbed, n) {
+//   for (let i = 0; i < flowerbed.length && n !== 0; i++) {
+//     if (
+//       flowerbed[i] === 0 && flowerbed[i - 1] !== 1 && flowerbed[i + 1] !== 1) {
+//        n--;
+//        i++;
+//     }
+      
+   
+//   }
+//   return n === 0;     
+// };
+
+// console.log(canPlaceFlowers([1,0,0,0,1],1))
+
+// ---------------------------------------------------
+// //let arr= [2,3,5,1,3,]             leetcode 1431
+// * @param {number[]} candies
+//  * @param {number} extraCandies
+//  * @return {boolean[]}
+//  */
+// var kidsWithCandies = function(candies, extraCandies) {
+       
+//       let highestCandy = Math.max(...candies);
+//     console.log(highestCandy)
+//     let ans = [];
+//     for(let i = 0; i < candies.length; i++){
+//         let maximum = candies[i]+extraCandies;
+//         // console.log(maximum)
+//         if(maximum >= highestCandy){
+//             ans.push(true); 
+//             // console.log(ans) 
+//         }
+//         else{
+//             ans.push(false);
+//         }
+//     }
+//     return ans;
 
 
-// run a loop cheacking if prodB="itemA" === prodB=itemA
+// };
+  // ---------------------------------------------------
+//sorting array without using inbuilt method
 
-// push in to blank array
+// let arr=[5,4,8,9,0,6,7]
+// function sorting(arr){
+//   for(let i=0;i<arr.length;i++){
+//     for(let j=i+1;j<arr.length;j++){
+//       if(arr[i]>arr[j]){
+//         let NewVar=arr[i];
+//         arr[i]=arr[j];
+//         arr[j]=NewVar;
+//       }
+//     }
+//   }return arr
 
-// Output:
-// [
-//   { prodA: [ 'bike', 'scooter', 'car', 'train' ], prodB: 'itemA' },
-//   { prodA: [ 'utensils', 'washing machine', 'sofa-set', 'clothes' ], prodB: 'itemB' }
-// ]
+
+// }
+// console.log(sorting(arr))
+// -----------------------------------------------------------
+
+// let str="hello"
+// let config=str.__proto__.__proto__.__proto__
+// console.log(config)
+// -------------------------------------------------------
+
+// let arr = [2,3,-2,4] //[2,3][-2,4] find whose sum is max
+
+// function shn(arr){
+//   let empty=[]
+// for(let i=0;i<=arr.length-1;i++){
+//   if([i]%2==0){
+//     empty.push([arr[i]+arr[i+1]])
+//   }
+  
+// }
+// // return empty
+// let final=empty.flat()
+// let result=Math.max(...final)
+// console.log(result)
+
+// }
+// console.log(shn(arr))
 // -----------------------------------------------------------------
 
 
-//https://medium.com/@eishta/javascript-tricky-questions-functions-fe2e54415927
-// greeting();
-// var greeting =function(){
-//   console.log("firt one")
+
+
+
+// ----------------------------------------
+// let flowerbed = [1, 0, 0, 0, 1];
+// let n = 1;
+
+// function placeFlowers(flowerbed, n) {
+//   let start = 0;
+//   let count = 0;
+//   while (start < flowerbed.length) {
+//     if (flowerbed[start] == 1) {
+//       start = start + 2;
+
+//       count = 0;
+//       continue;
+//     }
+
+//     count = count + 1;
+
+//     if (
+//       count >= 2 ||
+//       (flowerbed[start] == 0 && flowerbed.length - 1 == start)
+//     ) {
+//       n = n - 1;
+//       count = 0;
+//     }
+
+//     start++;
+//   }
+//   if (n <= 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
 // }
-// greeting();
-// function greeting(){
-// console.log("second one")
+// console.log(placeFlowers(flowerbed, n));
+  // ---------------------------------------------------------------
+//   let arr =    [1,5,3,1,2,3]      //[1,7,3,6,5,6]     //leet code 724
+
+//   var pivotIndex = function(nums) {
+//        let first = 0;
+//     for (let i = 0; i < nums.length; i++) {
+//       if (i === 0) {
+//         first = 0;
+//       } else {
+//         first += nums[i - 1];
+//       }
+//       let second = 0;
+//       for (let j = i + 1; j < nums.length; j++) {
+//         second += nums[j];
+//       }
+//       if (first === second) {
+//         return i;
+//       }
+
+//       if (i === nums.length - 1) {
+//         if (first === 0) {
+//           return 0;
+//         } else {
+//           return -1;
+//         }
+//       }
+//     }
+// };
+// console.log(pivotIndex(arr))
+
+// ----------------------------------------------------------------
+//   let arr=  [9,9,9]  //[ 1, 9, 9, 9, 9 ] //output =[1,0,0,0] array me [9,9,9] h to 1 plus add krke isi form me return krna h 
+//   // let arr=  [9,9,9,9,9,9,9,9,9,9,9,9,9,9,9] 
+// let op=arr.join("")
+// console.log({op})
+// let parse=parseInt(op)
+// parse++
+// console.log({parse}) //number
+// // let arrNew=Array(parse)
+// // let arrnew=[parse]
+// let st=parse.toString()  //string
+// console.log({st})
+// let op2=[...st]
+// console.log({op2})
+// let map=op2.map(Number);
+
+
+// console.log(map)
+
+
+
+
+// ------------------------------------------------------------------------
+// const input = ["John", "Peter", "Sally", "Jane"];  //converting arr to obj
+// let obj={}
+// for(let i=0;i<input.length;i++){
+//   obj[i]=input[i]
 // }
+// console.log(obj)
 
-// greeting()
+  // ----------------------------------------------------------
+  // //leet coded 55
 
 
+//   * @param {number[]} nums
+//  * @return {boolean}
+//  */
+// let arr =[ 2, 6, 0, 0, 0, 3, 1, 0 ] // [ 2, 2, 4, 0, 0, 1, 3, 0, 2 ]  //  [2, 3, 1, 1, 4]; //   [3,2,1,0,4]  // [4,1,2,3,4]         //Output: true //// Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+
+// var canJump = function(nums) {
+//   let ZeroIndx = nums[0];
+//     let lastIndx = nums.length - 1; //  4 index
+//     let empty;
+//     let empty2;
+//     //  console.log(ZeroIndx)
+//     for (let i = 0; i < nums.length; i++) {
+    
+//    if(nums[i]===0){
+//     return false
+//    }
+//    else if(nums[0]===lastIndx){
+//     return true
+//    }
+
+//      else if (i == ZeroIndx) {
+//     empty  =    nums[i+nums[i]]
+//     empty2  =  i;
+//   }
+//     else if (nums[i]!==0 && empty2<lastIndx){
+//     if (i+nums[i]>=lastIndx ){
+//       return true
+//     }
+   
+   
+      
+    
+//   //  return  nums[i+empty]
+//     }
+//     }
+// };
+ 
+//    console.log(canJump(arr))
+      
+    
+ 
+
+  // -----------------------------------------------------------------------------
+
+  // ------------------------------------------------------------
+  //find the power of n by recursion
+
+  // function recursion(value, times) {
+  //   if (times === 0) {
+  //     return 1;
+  //   } else {
+  //     return value * recursion(value, times - 1);
+  //   }
+  // }
+
+  // console.log(recursion(3,5));
+
+  // ---------------------------------------------------------------------
+  // // //leetcode no. 2628   by ankit
+  // let o1 = {"x":1,"y":2}
+  // let o2 = {"x":1,"y":2}
+  // // console.log(JSON.stringify(o1)==JSON.stringify(o2))
+  // // console.log(JSON.stringify(o1)==JSON.stringify(o2))
+
+  // var areDeeplyEqual = function (o1, o2) {
+  //   console.log(o1,"o1")
+  //   console.log(o2,"o2")
+  //   if ((typeof o1 !== "object" && typeof o2 !== "object") || !o1 || !o2) {
+  //     return o1 === o2;
+  //   }
+
+  //   if (Array.isArray(o1) && Array.isArray(o2) && o1.length !== o2.length) {
+  //     return false;
+  //   }
+
+  //   if (Object.keys(o1).length !== Object.keys(o2).length) {
+  //     return false;
+  //   }
+
+  //   for (let key in o1) {
+  //     if (o1.constructor.name !== o2.constructor.name) {
+  //       return false;
+  //     }
+
+  //     if (!o2.hasOwnProperty(key) || !areDeeplyEqual(o1[key], o2[key])) {
+  //       return false;
+  //     }
+  //   }
+
+  //   return true;
+  // };
+
+  // console.log(areDeeplyEqual({ 0: 1 }, [1]));
+// -------------------------------------------------------
+// let arr=[1,3,10,11,14]     //find index of 13 elements 
+// let find=13
+
+// function shn(arr,find){
+//   let empty =[]
+//   for(let i=0;i<=arr.length-1;i++){
+//     for(let j=i+1;j<=arr.length-1;j++){
+//       if(arr[i]+arr[j]===find){
+//        empty.push(i,j)
+       
+//       }
+//     }
+//   } return empty
+// }
+// console.log(shn(arr,find))
+
+// with one loop
+// ---------------------------------------------
+// let arr=[1,3,10,11,14] 
+// let find =13;
+// let empty =[];
+// let obj={};
+// for(let i=0;i<=arr.length-1;i++){
+//   let temp= find-arr[i]         //12,10,3,2,-1
+  
+//   if(obj[temp]){           //10 true in obj = 
+//     console.log(obj[temp],i); 
+//     break
+//   }
+//   obj[arr[i]]=i          //1:0,3:1,10:2,11:3,14:4
+  
+ 
+// }
+// ---------------------------------------------------------------------
+// let str="hello"   //reverse through recursion
+// function shn(str){
+//  if(str.length===0) return "";
+//  return str[str.length-1]+shn(str.slice(0,str.length-1))
+
+// }
+// console.log(shn(str))
+  // --------------------------------------------------------------------------
+  // write a logic to convert number to string
+  //  example = 1  output "one",
+  //                    22 output "twenty two"
+
+  // function convertNumberToString(num) {
+  //   const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  //   const tens = ['', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+  //   const teens = ['', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+
+  //   if (num === 0) {
+  //     return 'zero';
+  //   }
+
+  //   let str = '';
+  //   if (num >= 100) {
+  //     str += ones[parseInt(num / 100)] + ' hundred '; // 123/100 = 1 + hundred
+  //     console.log(str,"str")
+  //     num = num % 100;//23
+  //     console.log(num,"num")
+  //   }
+  //   if (num >= 20) {
+  //     str += tens[Math.floor(num / 10)] + ' ';
+  //     num = num % 10;
+  //   }
+  //   if (num >= 11 && num <= 19) {
+  //     str += teens[num % 10] + ' ';
+  //     num = 0;
+  //   }
+  //   if (num >= 1 && num <= 9) {
+  //     str += ones[num] + ' ';
+  //   }
+
+  //   return str.trim();
+  // }
+
+  // console.log(convertNumberToString(1)); // "one"
+  // console.log(convertNumberToString(10)); // "ten"
+  // // console.log(convertNumberToString(21)); // "twenty one"
+  // // console.log(convertNumberToString(100)); // "one hundred"
+  // console.log(convertNumberToString(123)); // "one hundred twenty three"
+  // ---------------------------------------------------------------------------------
+
+  // let arr=[
+  //   {name:"shankar",place:"jabalpur"}, //0
+  //   {name:"gaurav",place:"bhopal"},    //1
+  //   {name:"shivam",place:"jabalpur"},  //2
+  //   {name:"ram",place:"bhopal"},         //3
+  //   {name:"aakash",place:"jabalpur"},       //4
+  // ]
+  // // output =[
+  // //   {place:"jabalpur",name:["shankar","shivam","aakash"],count:3} //by me
+  // // ]
+  // function shn(place){
+
+  //   let nameBox =[];
+  //   let count ;
+  //   let opration =arr.map((data)=>{
+  //      if(data.place===place){
+  //       nameBox.push(data.name)
+  //       count= nameBox.length
+  //       console.log(count,"count")
+  //      }
+  //      return nameBox
+  //   })
+
+  // console.log({place,nameBox,count})
+  // }
+
+  // shn("jabalpur")
+
+  // ---------------------------------------------------------
+
+  // let output = [];
+
+  // for (let i = 0; i < arr.length; i++) {
+  //   let found = false;
+  //   for (let j = 0; j < output.length; j++) {
+  //     if (output[j].place === arr[i].place) {
+  //       output[j].name.push(arr[i].name);
+  //       output[j].count++;
+  //       found = true;
+  //       break;
+  //     }
+  //   }
+  //   if (!found) {
+  //     output.push({place: arr[i].place, name: [arr[i].name], count: 1});
+  //   }
+  // }
+
+  // console.log(output);
+
+  // ------------------------------------------------------------------------
+
+  // let arr=[2,7,11,4,-2]   //  outpout = [20,15,11,18,24]  total krna jis index pe h usko chor k
+
+  // // // // with one loop
+
+  // function shn(arr) {
+  //   let sum = 0;
+
+  //   let output = [];
+
+  //   for (let i = 0; i < arr.length; i++) {
+  //     sum += arr[i];
+
+  //   }
+  // for(let i=0;i<arr.length;i++){
+
+  //   output.push(sum-arr[i])
+  // }
+  //   return output;
+  // }
+  // console.log(shn(arr)); // Output: [20, 15, 11, 18, 24]
+
+  // --------------------------------------
+  // function shn(arr){                     //[2,7,11,4,-2]                                 // // with two loop
+
+  //   let empty=[]
+  //   for (let i = 0; i < arr.length; i++) {
+  //   let sum = 0;
+  //   for (let j = 0; j < arr.length; j++) {
+  //     if (i !== j) {
+  //       console.log(j,"j")
+  //       sum += arr[j];
+  //     }
+  //   }
+  //   empty.push(sum);
+  // }
+  // return empty
+  // }
+  // console.log(shn(arr))
+
+  // --------------------------------------------------
+
+  // ---------------------------------------------------------
+  // let arr= [ [1, 3], [2, 4], [6, 9], [8, 10] ]           //Output:- [ [ 1, 4], [6, 10] ]  // if 2 is coming b/w 1-3 and if 2 in the another array  print 1 and 4 first array 1st value second array highest value
+  // // let arr=[ [0, 3], [ 4, 8 ],  [ 6, 10], [ 8,  14 ], [18,  21]  ]     //// output = [[0,3],[4,8],[6,14],[18,21]]
+  // // console.log(arr[1][0])
+  // // arr.sort((a, b) => a[0] - b[0]);
+  // console.log(arr,"arr")
+  // let empty=[]
+  // function interval(arr){
+  // for(let i=0;i<arr.length;i++){
+  //   if(arr[i][1]<arr[i+1][0]){
+  //     empty.push(arr[i][0],arr[i+1][1])
+  //   }
+  //  else{
+  //   empty.push(arr[i][0,1])
+  //  }
+
+  // }return empty
+  // }
+  // console.log(interval(arr))
+
+  // ---------------------------------------
+  // let empty=[];
+  // function interval(arr){
+  // let flat=arr.flat(Infinity)    //[ 0, 3, 4, 8, 6, 10, 8, 14, 18, 21 ]
+  // for(let i=0;i<=flat.length-1;i++){
+
+  //   if(flat[i+1]>flat[i+2]){
+  // empty.push(flat[i],flat[i+3])        // //  incorrect need to correct
+  //   }
+  // else{
+
+  // }
+  // }
+  // }
+  // console.log(interval(arr))
+
+  // ------------------------------------------------------
+  // let arr=[ [0, 3], [ 4, 8 ],  [ 6, 10], [ 8,  14 ], [18,  21]  ] // // output = [[0,3],[4,8],[6,14],[18,21]]
+  // // console.log(arr[1][1])
+  // // let arr2=arr[1]
+  // // console.log(arr2[1])
+  // for(let i=0;i<arr.length-1;i++){
+  //           if(arr[i][1]>=arr[i+1][0]){
+  //                     arr[i+1][0]=arr[i][0];
+
+  //           }
+  //           // if(arr[i][1]=arr[i+1]){
+
+  //           // }
+  // }
+  // console.log(arr)
+
+  // ---------------------------------------------------------
+  //   //object destructuring something like this 
+// const colorCode=["red","white","gree","yellow"]
+// const{0:firstValaIndex,3:lastValaIndex}=colorCode
+// console.log(firstValaIndex) //red
+  // -------------------------------------------
+
+  // let arr=[1,5,4,7,8,9]
+  // let [,,,...restValue] =arr
+  // console.log(restValue) //7,8,9
+
+ 
+  // ---------------------------------------------
+//   let lable="hello"             //how you can check timing to execute code
+// console.time(lable)             //timing start from here 
+
+
+// let empty =[];
+// for(let a=0;a<25000;a++){
+//    empty.push(a)
+// }
+// let maping =empty.map((data)=>data*2)                //taking 3ms to execute both the loop
+// console.log(maping)
+
+
+
+
+//   let lable2="hello"
+
+// console.timeEnd(lable2)           //to here
+// ---------------------------------------------------
+// let obj={
+//     name:"shankar",
+//     lname:"sahu",
+//     age:25
+//   }
+//   Object.entries(obj).forEach(([key,value])=>console.log(key,value))
+// ------------------------------------------------------------
+// let name ="shankar"
+// console.log({name}) name:"shankar"
+  // ----------------------------------------------
+//   let obj={
+//     name:"shankar",
+//     lname:"sahu",
+//     age:25
+//   }
+// let {name,...restDetails}=obj
+// console.log(restDetails)       // -- cool    its help you to avoide delete keyword
+// -----------------------------------------------------------------
+  // let obj={
+  //   name:"shankar",
+  //   lname:"sahu",
+  //   age:25
+  // }
+  // let Format =JSON.stringify(obj,null,2)    //it will give u jason with exact line 
+  // console.log(Format)
+
+  // ---------------------------------------------------------
+//   // creating prototype of even number function 
+//   Array.prototype.EvenFunc=function(){
+//    return  this.reduce((dependenci, data)=> dependenci+(data%2==0 ? 0:1),0)
+//   }
+// let arr=[1,2,3,4,5,6,7,8,9,10]
+// console.log(arr.EvenFunc())
+
+  // -------------------------------------------------------------
+  /**
+   * @param {number} n
+   * @return {string}
+   */
+  //  var countAndSay = function(n) {
+  //     if (n === 1) return '1'; // base case
+  //     // console.log(n,"n") //5,4,3,2
+  //     let prev = countAndSay(n-1); //5,4,3,2
+  //     // console.log(prev,"pre")     //1
+  //     let res = '', count = 1;
+  //     for (let i = 0; i < prev.length; i++) {
+  //         if (prev[i] === prev[i+1]) { // same digit as previous one
+  //             count++;
+  //         } else { // different digit
+  //             res += count + prev[i]; // this one satisfy first 1 1
+  //             // console.log(res,"resss")
+  //             count = 1; // reset count
+
+  //             // console.log(count,"count")
+  //         }
+  //     }
+
+  //     return res;
+  // };
+  // console.log(countAndSay(5))
+  // ---------------------------------------------------------
+  // let arr= [5, 10, 3, 6, 2]    //find maximum
+  // let s =arr.sort((a,b)=>a-b);
+  // console.log(s[s.length-1])
+
+  // or
+
+  // function findMax(arr) {
+  //   let max = 0;
+  //   for (let i = 1; i < arr.length; i++) {
+  //     if (arr[i] > max) {
+  //       max = arr[i];
+  //     }
+  //   }
+  //   return max;
+  // }
+
+  // // example usage
+  // let arr = [5, 10, 3, 6, 12];
+  // console.log(findMax(arr)); // output: 10
+
+  // -------------------------------------------------
+  // function shn(arr){
+  //   let max =0
+  // for(let i=0;i<arr.length;i++){
+  //   max=arr[i]
+  //   if(arr[i]>max){
+  //     return max
+  //   }
+
+  // }
+  // }
+  // console.log(shn(arr))
+
+  // ------------------------------------------------
+  // for (var i = 0; i < 10; i++) {
+  //     console.log("Inside Loop: ", i);
+  //   }
+
+  //   console.log("Outside Loop: ", i);
+
+  //   for (let i2 = 0; i2 < 10; i2++) {
+  //     console.log("Inside Loop:i2 ", i2);
+  //   }
+
+  //   console.log("Outside Loop: ", i2);
+
+  // -------------------------------------------------
+  // function recursion (number){
+
+  //   if (number < 0){
+  //     return  0
+  //   }
+  //   else{
+
+  //    return number+ recursion (number-1)
+
+  // }
+  // }
+  // console.log(recursion(5))
+  // //5+4+3+2+1
+
+  // ----------------------------------------------------------
+  // let hero = {
+  //     powerLevel: 99,
+  //     getPower(){
+  //       return this.powerLevel;
+  //     }
+  //   }
+
+  //   let getPower = hero.getPower;
+
+  //   let hero2 = {powerLevel:42};
+  //   console.log(getPower())    //undefined (think why undefined)
+
+  // -----------------------------------------------------------------------
+  // Given the following array: [2,3,4,5,7]
+  // Perform 3 right rotations:
+  // First rotation : [7,2,3,4,5] , Second rotation : [5,7,2,3,4] and, Third rotation: [4,5,7,2,3]
+
+  // return [4,5,7,2,3]
+
+  // function rotateRight(arr,rotations){
+  //   if(rotations == 0) return arr;
+  //   for(let i = 0; i < rotations;i++){
+  //     console.log(rotations,"rotaion")
+  //     let element = arr.pop();
+  //     // console.log(element,"ele")
+  //     arr.unshift(element);
+  //   }
+  //   return arr;
+  // }
+  // console.log(rotateRight([2, 3, 4, 5, 7], 3)); // Return [4,5,7,2,3]
+  // console.log(rotateRight([44, 1, 22, 111], 5)); // Returns [111,44,1,22]
+
+  // -------------------------------------------------------
+  // // convert obj into array
+
+  // let obj = { id: "1", name: "user22", age: "26", work: "programmer" };
+  // //let op =Object.values(obj)            //  all the key i'll get in array
+  // // let op =Object.entries(obj)
+  // let flat = op.flat(Infinity)
+  // console.log(flat)
+// --------------------------------------------------------/
+//   let str="aaaabbcaabbaa";  //output ="a4b2c1a2b2a2"
+
+// function shn(str){
+//   let count=1;
+//   let empty="";
+
+// let arr=str.split("")
+// for(let i=0;i<arr.length;i++){
+//   if(arr[i]===arr[i+1]){
+//     count+=1
+//   }
+//   else{
+//     empty+=arr[i]+count
+//     count =1
+//   }
+// }return empty
+
+
+// }
+// console.log(shn(str))
+  // ----------------------------------------
+  //let code 33
+  // let arr = [4,5,6,7,0,1,2],   target =6  //4
+  // // let arr = [4,5,6,7,0,1,2],   target =3  //-1
+  // // let arr = [1],   target =0  //-1
+
+  // var search = function(arr, target) {
+  //   let start = 0;
+  //   let end = arr.length - 1;
+
+  //   while (start <= end) {
+  //     const mid = parseInt((start + end) / 2);
+
+  //     if (arr[mid] === target) {
+  //       return mid;
+  //     }
+
+  //     // If the start half of the array is sorted
+  //     if (arr[start] <= arr[mid]) {
+  //       // If the target is within the start half
+  //       if (target >= arr[start] && target < arr[mid]) {
+  //         end = mid - 1;
+  //       } else {
+  //         start = mid + 1;
+  //       }
+  //     }
+
+  //     else { // If the end half of the array is sorted
+  //       // If the target is within the end half
+  //       if (target > arr[mid] && target <= arr[end]) {
+  //         start = mid + 1;
+  //       } else {
+  //         end = mid - 1;
+  //       }
+  //     }
+  //   }
+
+  //   return -1; // Target not found
+  // };
+
+  // console.log( search(arr,target))
+
+  // -----------------------------------------------
+  //recursion
+  // function print (n){
+
+  //   if (n > 10){
+  //     return
+  //   }
+  //     console.log(n)
+  // print(n+1)
+
+  // }
+  // print(0)
+  // ------
+  // function print(n){
+  //   if(n<0){
+  //     return
+  //   }
+  // console.log(n)
+  //   print(n-1)
+  // }
+  // print(10)
+
+  // ---------------------------------------------------------
+  //recursion by binary search
+
+  // function binarySearch(arr, target, left = 0, right = arr.length - 1) {
+  //   if (left > right) {
+  //     return -1;
+  //   }
+
+  //   const mid = Math.floor((left + right) / 2);
+
+  //   if (arr[mid] === target) {
+  //     return mid;
+  //   } else if (target < arr[mid]) {
+  //     return binarySearch(arr, target, left, mid - 1);
+  //   } else {
+  //     return binarySearch(arr, target, mid + 1, right);
+  //   }
+  // }
+
+  // console.log(binarySearch([1, 2, 3, 4, 5, 6], 4)); // Output: 3
+
+  // ----------------------------------------------------------------------
+  // Leet code no.28
+  // let haystack = "sadbutsad"
+  // let needle = "sad";
+  // var strStr = function(haystack, needle) {
+  //   const h = haystack.length, n = needle.length;
+  //   if (n === 0) return 0;
+  //   if (h< n) return -1;
+  //   const map = {};
+  //   for (let i = 0; i < n; i++) {
+  //     map[needle[i]] = i;
+  //   }
+  //   let i = 0;
+  //   while (i <= h - n) {
+  //     let j = n - 1;
+  //     while (j >= 0 && haystack[i+j] === needle[j]) {
+  //       j--;
+  //     }
+  //     if (j < 0) {
+  //       return i;
+  //     } else {
+  //       const k = map[haystack[i+j]];
+  //       i += Math.max(1, j - k);
+  //     }
+  //   }
+  //   return -1;
+  // };
+
+  // console.log(strStr(haystack,needle))
+
+  // -----------------------------------------
+ 
+// let arr=[1, 2, [3, [4], [5, 6]], [7]]     //need to add all number and give output =28;
+// let empty =[];
+// let count =0;
+// function shn(arr){
+  
+//  for(let i=0;i<arr.length;i++){
+//   if(Array.isArray(arr[i])){
+//     shn(arr[i])
+//   }else{
+//    empty.push(arr[i])
+//    count+=arr[i]
+//   }
+//  }return count
+// }
+// console.log(shn(arr))
 // -------------------------------------------------------------------
-// Write a function in Vanilla Js that takes 2 arrays of integers and returns 
-// an array of distinct integers i.e the integers should appear only once among the input arrays.
-//  Example: [1,2,3,4,5], [2,3,4] => [1,5].
 
-// let arr1= [1,2,3,4,5]
-// let arr2= [2,3,4]
-// // output // [1,5]
-// function distinct(data1,data2){
-// let rest=[...data1,...data2]
-// let UsingSet=new Set(rest)
-// if(let a=0;a<=UsingSet;a++){
-
+// var array = [1,0,2,0,0,9,0,6,7];
+// function shn(arr){
+//   let empty=[];
+//  for(let i=0;i<arr.length;i++){
+//   if(arr[i]===0){
+//     empty.push(arr[i])
+//   }
+//   else{
+//     empty.unshift(arr[i])
+//   }
+//  }return empty
 // }
-// return UsingSet
-// }
-// console.log(distinct(arr1,arr2))   //need to complete
+// console.log(shn(array))
+
+// // or 
+
+// const input = [1, 0, 2, 0, 0, 9, 0, 6, 7];
+
+// let opration =input.filter((data)=>data !==0).concat(input.filter((data2)=>data2===0))
+
+// console.log(opration);
+// ------------------------------------------------------------------------
+// let arr= ['bag', 'gab', 'foo', 'abg', 'oof', 'ofo']         //output =  [["bag", "gab", "abg"], ["foo", "oof", "ofo"]]
+//  function shn(arr){
+//   let obj={}
+//  for(let i=0;i<arr.length;i++){
+//   let sort=arr[i].split("").sort().join("")
+
+//   console.log(sort)
+//  }
+
+
+//  }
+// console.log(shn(arr))
+  // -----------------------------------------------------------
+  //let arr =       [13,1,2,3,4]  //     [6,7,8,9,10,11,12,13,1,2,3,4]      //[6,7,8,9,1,2,3,4]    //  //[6,7,8,9,1,2,3,,4,5]
+
+  // function shn(arr) {
+  //   let start = 0;
+  //   let end = arr.length - 1;
+
+  //   while (start <= end) {
+  //     // console.log(start,"start")
+  //     // console.log(end,"end")
+  //     let mid = parseInt((start + end) / 2);
+
+  //     if ( arr[mid - 1]<=arr[mid] && arr[mid + 1] <= arr[mid] )   {
+  //           return arr[mid];
+  //     }
+  //    if (arr[mid - 1] > arr[mid]) {
+  //      end = mid - 1;
+  //     }
+
+  //     else {
+  //       start = mid + 1;
+
+  //     }
+
+  //   }}
+  // console.log(shn(arr)); // Output: 13
+  // ----------------------------------------------------
+  // or
+  // console.log(Math.max(...arr),"arr")
+  // ------------------------------------------------------------
+  // or
+  //[13,1,2,3,4]
+  // let arr=  [6,7,8,9,10,11,12,13,1,2,3,4]//  [13,1,2,3,4] //  [6,7,8,9,1,2,3,4,5] //  [6,7,8,9,10,11,12,13,1,2,3,4]     //[6,7,8,9,1,2,3,4]
+
+  // function shn(arr) {
+  //     let start = 0;
+  //     let end = arr.length - 1;
+
+  //     while (start <= end) {
+  //       let mid = parseInt((start + end) / 2);
+
+  //       if (arr[mid - 1] <= arr[mid] && arr[mid + 1] <= arr[mid]) {
+  //         return arr[mid];
+  //       }
+
+  //       if (mid === 0 && arr[mid] >= arr[mid + 1]) {
+  //         return arr[mid];
+  //       }
+
+  //       if (arr[start] === arr[mid] && arr[end] === arr[mid]) {
+  //         start++;
+  //         end--;
+  //         // console.log(start)
+  //       } else if (arr[mid] >= arr[start]) {
+  //         start = mid + 1;
+  //       } else if (arr[mid] <= arr[end]) {
+  //         end = mid - 1;
+  //       }
+  //     }
+
+  //   }
+
+  //   console.log(shn(arr))
+
+  // -----------------------------------------------------------------------
+  //  //Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+  // //If target is not found in the array, return [-1, -1].
+  // let arr = [5,7,7,8,8,10];
+  // let target=8;
+
+  // // Input: nums = [5,7,7,8,8,10], target = 6      //satisfy thease consitions also
+  // // Output: [-1,-1]
+
+  // // Input: nums = [], target = 0
+  // // Output: [-1,-1]
+
+  // function shn(arr,target){
+  //   let empty=-1;
+  //   let empty2=-1;
+  //   for(let i=0;i<arr.length;i++){
+  //     if(arr[i]===target){                //for avoide 4,4
+  //      if(empty===-1){                   //because after first value the value of empty is 3 , when next 8 come but here empty to 3 ka index le k betha h to empty2 me value store hojaygi
+  //       empty=i
+  //       console.log(empty,"empty")
+  //      }empty2=i
+  //      console.log(empty2,"empty2")
+  //     }
+
+  //     }
+
+  // if(empty===-1){
+  //   return [empty,empty2]
+  // }
+
+  //     return [empty,empty2]
+  //   }
+  //   console.log(shn(arr,target))
+
+  // ----------------------------------------------------
+  // const arr = [6,7,8,9,10,11,12,13,1,2,3,4];
+  // function shn(arr){
+  // for(let i=0;i<arr.length;i++){
+  //   if(arr[i]>arr[i+1]){
+  //     console.log(arr[i])
+  //   }
+  // }
+  // }
+  // console.log(shn(arr))
+
+  // ---------------------------------------------------
+
+  // ------------------------------------------------------
+  // let n = 00000000000000000000000000001011
+  // // // console.log(n,"n")
+
+  // // // Output: 3
+  // // // Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
+  // // //
+
+  // var hammingWeight = function(n) {
+  // let  count =0;
+  // while(n!==0){
+  //     count+=n&1;
+  //     console.log(count,"count")
+  //     n=n>>>1
+  //     console.log(n,"n")
+  // }return count
+  // };
+  // console.log(hammingWeight(n))
+
+  // ------------------------------------------------------------------------
+  // // let arr = [ 7,1,5,3,6,4]
+  // // Output: 5
+  // // Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+  // // Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+  // let arr = [ 7,1,0,5,3,6,4]
+  // var maxProfit = function(arr) {          //with one loop with (palak)  if 0 aajay to code will messed up
+  //    let min = arr[0];   //7
+  //   let maxDiff = 0;
+
+  //   for (let i = 1; i < arr.length; i++) {
+  //     if (arr[i] < min) {   //1 < 7
+  //       min = arr[i];    // here we find best day to buy  min =1
+  //       console.log(min,"min")
+  //     } else {
+  //       let diff = arr[i] - min;
+  //       console.log(diff,"diff")
+  //       if (diff > maxDiff) {
+  //         maxDiff = diff;
+  //       }
+  //     }
+
+  //   }
+
+  //   if (maxDiff === 0) {
+  //     return 0;
+  //   } else {
+  //     return maxDiff;
+  //   }
+  // }
+  // console.log(maxProfit(arr))
+
+  // --------------------------------------------------------------------
+
+  // var maxProfit = function(prices) {     //but need to with single loop
+  //      let empty =0;
+  //  for(let i =0;i<prices.length;i++){
+  //   for(let j=i+1 ;j<prices.length;j++){
+  //     let profit =prices[j]-prices[i]
+  //     console.log(profit,"profit")
+  //     if(profit>empty){
+  //       empty=profit
+  //     }
+  //   }
+  //  }return empty
+  // };
+  // console.log(maxProfit(arr))
+
+  // -------------------------------------------------------------------
+  // const obj = {
+  //   "firstName": "Jay",
+  //   "lastName": "Pratap",
+  //   "automobile.make": "Honda",
+  //   "automobile.model": "Civic",
+  //   "automobile.revisions.0.miles": 10150,
+  //   "automobile.revisions.0.code": "REV01",
+  //   "automobile.revisions.0.changes": "",
+  //   "automobile.revisions.1.miles": 20021,
+  //   "automobile.revisions.1.code": "REV02",
+  //   "automobile.revisions.1.changes.0.type": "asthetic",
+  //   "automobile.revisions.1.changes.0.desc": "Left tire cap",
+  //   "automobile.revisions.1.changes.1.type": "mechanic",
+  //   "automobile.revisions.1.changes.1.desc": "Engine pressure regulator",
+  //   "visits.0.date": "2015-01-01",
+  //   "visits.0.dealer": "DEAL-001",
+  //   "visits.1.date": "2015-03-01",
+  //   "visits.1.dealer": "DEAL-002"
+  // };
+  // const output=  {
+  //   "firstName":"Jay",
+  //   "lastName":"Pratap",
+  //   "automobile":{
+  //      "make":"Honda",
+  //      "model":"Civic",
+  //      "revisions":[
+  //         {
+  //            "miles":10150,
+  //            "code":"REV01",
+  //            "changes":""
+  //         },
+  //         {
+  //            "miles":20021,
+  //            "code":"REV02",
+  //            "changes":[
+  //               {
+  //                  "type":"asthetic",
+  //                  "desc":"Left tire cap"
+  //               },
+  //               {
+  //                  "type":"mechanic",
+  //                  "desc":"Engine pressure regulator"
+  //               }
+  //            ]
+  //         }
+  //      ]
+  //   },
+  //   "visits":[
+  //      {
+  //         "date":"2015-01-01",
+  //         "dealer":"DEAL-001"
+  //      },
+  //      {
+
+  //         "date":"2015-03-01",
+  //         "dealer":"DEAL-002"
+  //      }
+  //   ]
+  // }
+
+  // --------------------------------------------------
+
+  // let obj2={
+  //   name:"shankar",
+  //   description:[
+  //     {
+  //       age:25,
+  //       height:"5'9",
+  //       weight:75
+  //     }
+  //   ],
+  //   detail:[{
+  //     city:"jabalpur"
+  //   }]
+
+  // }
+
+  // console.log(obj2.description[0].age)
+
+  // -----------------------------------------------------------
+  // // Solve this question by binary search algorithm.
+  // // Given a sorted array A of size N. Find number of elements which are less than or equal to B.
+
+  // let  arr = [1, 3, 4, 4, 6]   // Answer : - 4   // // Input :- A = [1, 2, 5, 5]  //  B = 3   //// Answer: - 2
+  //  let B = 4;
+
+  // function shn(arr,B){
+  //   let start =0;
+  // let end =arr.length-1
+  //  while(start<end){
+  //   let mid =parseInt((start+end)/2);
+
+  //   if(arr[mid]===B || arr[mid]===B-1){
+  //     return arr[mid]
+  //   }
+  //  }
+  //  if(arr[mid]>B){
+  //   end= mid-1
+  //  }
+  //  else{
+  //       start =mid+1
+  // } return "********"
+  // }
+  // console.log(shn(arr,B))
+  // -----------------------------------------------------
+
+  // Question no.2:-
+
+  // Given a sorted array A and a target value B, return the index if the target is found.
+  // If not, return the index where it would be if it were inserted in order.
+
+  // Input 1:
+  //  A = [1, 3, 5, 6]
+  // B = 5
+  // answer= 2
+
+  // input :- 2
+  //  A = [1, 3, 5, 6]
+  // B = 2
+  // answer = 1
+
+  // By Binary Search
+  // -------------------
+
+  // let arr= [1, 3, 5, 6];
+  // let find =2
+
+  // function shn(arr, find) {
+  //     let start = 0;
+  //     let end = arr.length - 1;
+
+  //     while (start <= end) {
+  //        let mid = parseInt((start + end) / 2);
+
+  //         if (arr[mid] === find) {
+  //             return mid;
+  //         }  if( arr[mid] < find) {
+  //             start = mid + 1;
+  //         } else {
+  //             end = mid - 1;
+  //         }
+  //     }
+
+  //     return start;
+  // }
+  // console.log(shn(arr,find))
+
+  // ---------------------------------------------------------------------
+  // Binary search
+  // let arr=[1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+  // let find = 13;
+
+  // function shn(arr,find){
+
+  //   let start =0;
+  //   let end =arr.length-1;
+
+  //   while(start<=end){      //start =7 //3 step
+  //     let mid  = parseInt((start+end)/2);  // mid= 6 (1'st step),  4'th step =(7+12/2 =9 round figure now mid ka index =9)
+  //     console.log(mid,"mid")   //convertt decimal into number
+  //     if(arr[mid]===find){    //5th step =(arr[mid] h jo uspe mid ka index 9 h to array k 9th index ki value check kr)
+  //       console.log(arr[mid],"arr[mid]")
+  //       return mid
+  //     }
+  //     if(arr[mid]>find){     //6th step (arr k 9 index ki value badi h find ki value ) to else
+  //       end =mid -1
+  //     }else{
+  //       start =mid+1     //  7    ----2 step  ,,,  7th step mid ki value = 10 kro
+  //     }
+  //   } return "not availabe"
+
+  // }
+  // console.log(shn(arr,find))
+
+  // ---------------------------------------------------------------
+
+  // Write a function to print Fibonacci series until number 👎
+  // Note:- Fibonacci series is a series that generates subsequent series of numbers by the addition of the
+  // two previous numbers. The first two terms of the Fibonacci series are zero and one, respectively.
+  // And the next terms are the addition of the two previous terms
+
+  // let num =45;
+  // // // output:- [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+  // let num2 =96;
+  // // // output:- [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+  // let num3 =184;
+  // // output:- [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+
+  // let num4 =5;
+  // // output:- [ 0, 1, 1, 2, 3, 5]
+
+  // function shn(value) {
+  //   let finalArray = [0, 1];             //this is constant inside the array other value is going to add after them
+  //     let One = 1;
+  //   for (let i = 2; One <= value; i++) {
+  //      One = finalArray[i - 1] + finalArray[i - 2];
+  //      console.log(One,"One")
+  //     if (One <= value) {
+  //       finalArray.push(One);
+  //     }
+  //   }
+
+  //   return finalArray;
+  // }
+  // console.log(shn(3));
+
+  // -----------------------------------------------------------------------
+  // let str = "babad"
+  // // Output: "bab"
+  //  // // Explanation: "aba" is also a valid answer.
+
+  //  var longestPalindrome = function(s) {
+
+  //   let result='';
+  //    for(let i=0;i<s.length;i++){
+  //        let curr1=find(s,i,i);
+  //        let curr2=find(s,i,i+1);
+  //        let longest=curr1.length>curr2.length?curr1:curr2;
+  //        console.log(curr1,curr2)
+  //        result=longest.length>result.length?longest:result;
+  //    }
+  //    return result;
+  // };
+
+  // function find(s,i,j){
+  //    while(i>=0 && j<s.length && s[i]===s[j] ){
+  //        i--;
+  //        j++;
+  //    }
+  //    return s.slice(i+1,j);
+  // }
+
+  // console.log(longestPalindrome(str))
+
+  // --------------------------------------------------------------------------------
+
+  //JavaScript program to swap two variables
+
+  // let a = prompt('Enter the first variable: ');
+  // let b = prompt('Enter the second variable: ');
+
+  // let temp; 
+
+  // //swap variables
+  // temp = a;
+  // a = b;
+  // b = temp;
+
+  // console.log(`The value of a after swapping: ${a}`);
+  // console.log(`The value of b after swapping: ${b}`);
+
+  // -----------------------------------------------------------------------
+  // let str="javascript";   // any charecter repeate in javascript like "a" is repeting so true ,paython it will be false
+
+  // let obj={};
+  // function shn(str){
+  //   for(let a=0;a<str.length;a++){
+  //   obj[str[a]]=true
+  // }
+  // let key= Object.keys(obj)
+  // if(str.length !== key.length ){
+  //   return true
+  // }else{
+  //  return false
+  // }
+  // }
+  // console.log(shn(str))
+
+  // ------------------------------------------------------
+  // remove doplicate number in an array
+
+  // let arr= [1,2,3,1,3,4,7,7,8]
+
+  // function shn(){
+
+  //   let empty=[];
+  //   arr.forEach((data)=>{
+  //     if(! empty.includes(data)){
+  //     empty.push(data)
+  //     }
+  //   })
+  // return empty
+
+  // }
+  // console.log(shn(arr))
+
+  // or
+
+  // let emptyObj={};             //easy
+  // for (let i=0 ;i<arr.length;i++){
+  //      emptyObj[arr[i]]=1 ;
+  //     // console.log(emptyObj,"hhh")
+  //     }
+  //     console.log(emptyObj);
+  //     let finalResult= Object.keys(emptyObj);
+  //     console.log(finalResult)
+
+  // --------------------------------------------------------------------
+  // let arr = [{prodA : ["bike", "scooter"],prodB : "itemA"},                                                     //most importent
+  //            {prodA : ["utensils", "washing machine"],  prodB : "itemB"},
+  //            {prodA : ["car", "train"],prodB : "itemA"},
+  //            {prodA : ["sofa-set", "clothes"],prodB : "itemB"},]          
+
+  // // The output should be like this-
+  // // [
+  // // {prodA : ["bike", "scooter",  "car", "train"],
+  // // prodB : "itemA"},
+  // // {prodA : ["utensils", "washing machine", "sofa-set", "clothes"],
+  // // prodB : "itemB"}
+  // // ]
 
 
 
+  //    let empty=[];
+  //    let obj={};
+  //    for(let i=0;i<arr.length;i++){
+  //     let current =arr[i]
 
+  //     if(obj.hasOwnProperty(current.prodB)){
+  //       continue
+  //     }
+  //     for(let j = i+1;j<arr.length;j++){
+  //       if(arr[i].prodB===arr[j].prodB){
+  //         current.prodA=[...current.prodA,...arr[j].prodA]
+  //         // or
+  //         // current.prodA=current.prodA.concat(arr[j].prodA)
+  //       }
+  //     }
+  //     obj[current.prodB]=true
+  //     empty.push(current)
+  //    }
+  // console.log(empty)
 
+  // The output should be like this-
+  // [
+  // {prodA : ["bike", "scooter",  "car", "train"],
+  // prodB : "itemA"},
+  // {prodA : ["utensils", "washing machine", "sofa-set", "clothes"],
+  // prodB : "itemB"}
+  // ]
 
+  // or
 
+  // let result = [];
 
+  // // Iterate over each object in arr
+  // arr.forEach((obj) => {
+  //   // Check if a result object already exists with the same prodB value
+  //   let resultObj = result.find((r) => r.prodB === obj.prodB);
+  //   // If not, create a new result object and add it to the result array
+  //   if (!resultObj) {
+  //     resultObj = { prodA: [], prodB: obj.prodB };
+  //     result.push(resultObj);
+  //   }
+  //   // Add the prodA array of the current object to the result object's prodA array
+  //   resultObj.prodA.push(...obj.prodA);
+  // });
 
+  // console.log(result);
+
+  // run a loop cheacking if prodB="itemA" === prodB=itemA
+
+  // push in to blank array
+
+  // Output:
+  // [
+  //   { prodA: [ 'bike', 'scooter', 'car', 'train' ], prodB: 'itemA' },
+  //   { prodA: [ 'utensils', 'washing machine', 'sofa-set', 'clothes' ], prodB: 'itemB' }
+  // ]
+  // -----------------------------------------------------------------
+
+  //https://medium.com/@eishta/javascript-tricky-questions-functions-fe2e54415927
+  // greeting();
+  // var greeting =function(){
+  //   console.log("firt one")
+  // }
+  // greeting();
+  // function greeting(){
+  // console.log("second one")
+  // }
+
+  // greeting()
+  // ---------------------------------------------------------------
+  // Syntax  Array.from()
+  // Array.from(arraylike, mapFunc, thisArg)
+
+  // let newArray = Array.from("shankar");
+
+  // console.log(newArray);
+
+  // let arrayLike = {0: 1, 1: 2, 2: 3, length: 3};
+  // let newArray = Array.from(arrayLike);
+
+  // console.log(newArray); // [1,2,3]
+
+  // let arrayLike = {0: 1, 1: 2, 2: 3, length: 3};
+  // let newArray = Array.from(arrayLike, x => x * 2);
+
+  // console.log(newArray); // [2,4,6]
+
+  //How to Create a Sequence of Numbers with the .from() Method
+
+  // let newArray = Array.from({ length: 7 }, (value, index) => index);
+
+  // console.log(newArray); // [0,1,2,3,4,5,6]
+
+  // -------------------------------------------------------------------
+  // Write a function in Vanilla Js that takes 2 arrays of integers and returns
+  // an array of distinct integers i.e the integers should appear only once among the input arrays.
+  //  Example: [1,2,3,4,5], [2,3,4] => [1,5].
+
+  // let arr1= [1,2,3,4,5]
+  // let arr2= [2,3,4]
+  // // output // [1,5]
+  // function distinct(data1,data2){
+  // let rest=[...data1,...data2]
+  // let UsingSet=new Set(rest)
+  // if(let a=0;a<=UsingSet;a++){
+
+  // }
+  // return UsingSet
+  // }
+  // console.log(distinct(arr1,arr2))   //need to complete
 
   // --------------------------------------------------------------------d
   // let a=[2,4,5,6,7]
@@ -152,14 +1913,15 @@ let obj
   // console.log(output); // [3, 7, 9, 6, 7]
 
   // ---------------------------------------------------------------------
-  //     // //Grouping of an Anagram
+  // //     // //Grouping of an Anagram
   // const input = ["bag", "gab", "foo", "abg", "oof", "ofo"]; //   Output    [ ["bag", "gab", "abg"],["foo", "oof", "ofo"] ];
   // function groupAnagrams(strs) {
   //   let result = {};
   //   for (let word of strs) {
   //     // console.log(word,"word")
+  //     // console.log(strs,"strs")
   //     let sorted = word.split("").sort().join("");
-  //     // console.log(sorted,"sor")
+    
   //     if (result[sorted]) {
   //       result[sorted].push(word);
   //       // console.log(result, "resu");
@@ -167,17 +1929,41 @@ let obj
   //       result[sorted] = [word];
   //       // console.log(result, "resuElse");
   //     }
-  
+
   //   }
-   
+
   //   return Object.values(result);
   // }
   // console.log(groupAnagrams(input));
 
   // // Write an algo, follow 7 step approach & complete it & share your code, algo & repo with me.
   // -------------------------------------------------------------------------
+  
+
+
+
+// function removeDuplicates(str) {
+//   let result = '';
+//   for (let i = 0; i < str.length; i++) {
+//     if (result.indexOf(str[i]) === -1) {
+//       result += str[i];
+//     }
+//   }
+//   return result;
+// }
+
+// const input = 'priya riya supriya';
+// const output = removeDuplicates(input);
+
+// console.log(output); // 'priya s'
+
+
+
+
+
+  // ------------------------------------------------------------------------
   // // Best Time to Buy and Sell Stock // description:  suppose day 2 me 1 k rate pr uthaya or 5th day me 6 k rate me bech kr 5 ka profit mila need to get out put 5
-  // let arr = [7,1,15,55,65,5,3,6,4]
+  // let arr =  [7,1,5,3,6,4]
 
   // function maxProfit(data) {
   //     let empty=0 ;
@@ -189,9 +1975,7 @@ let obj
   //       if (profit > empty) {
   //              empty=profit
   //       }
-  //       else {
-  //         empty="no profit"
-  //       }
+      
   //         }
   //     }
   //  return empty
@@ -199,12 +1983,40 @@ let obj
 
   // console.log(maxProfit(arr))
   // ----------------------------------------------------------------------------
+//   let prices = [7,1,5,3,6,4]            //with one loop
+// var maxProfit = function(prices) {
+//    let min = prices[0];  
+//   let maxDiff = 0;
+
+//   for (let i = 1; i < prices.length; i++) {
+//     if (prices[i] < min) {
+//       min = prices[i];
+//     } else {
+//       let diff = prices[i] - min;
+//       if (diff > maxDiff) {
+//         maxDiff = diff;
+//       }
+//     }
+//   }
+
+//   if (maxDiff === 0) {
+//     return 0;
+//   } else {
+//     return maxDiff;
+//   }
+// }
+// console.log(maxProfit(prices))
   // -----------------------------------------------------------------------------
   // // //Logical questions
 
+  // The first element is '9', which is parsed in base 10, resulting in the number 9.
+  // The second element is '10'. When parseInt is called with a radix of 1, it fails to parse the number and returns NaN.
+  // The third element is '11', which is parsed in base 2 (because parseInt sees the second argument as 1, which is not a valid radix). The binary representation of 11 is 3, so this is the resulting number.
+  // Therefore, the resulting array is [9, NaN, 3].
+
   // const numbers = ['9', '10', '11'].map(parseInt);
 
-  // console.log(numbers);
+  // console.log(numbers);   //[ 9, NaN, 3 ]
 
   // const obj = {};
 
@@ -216,7 +2028,7 @@ let obj
   // delete obj.myCompany;
   // console.log(obj.myCompany);
 
-  // function foo(a, b = 10, c) {
+  // function foo(a, b = 10, c) {     //because of b value created thats why funct sirf b k value ka index count krrha h count krrha h
   //  console.log(foo.length);
   // }
 
@@ -231,10 +2043,10 @@ let obj
   // console.log(ends)
   // console.log(endss)
 
-  // //Repeat
+  //Repeat
   // let str="hello my name is shankar";
   // let rep=str.repeat(5)       //it simply repeat the element without loop
-  // console.log(rep)
+  // console.log(rep,"rep")
 
   // // CharAt
   // let str="hello my name is shankar"
@@ -246,15 +2058,17 @@ let obj
   // let search=str.search("name")         //this is simply show the index of string
   // console.log(search)
 
-  // //Match
+  //Match
   // let str="hello my name is shankar";
   // let to=str.match(/shankar/)        //this math the if this string match the given string or not
   // console.log(to)
+  // console.log(str)
 
-  // //Trim
+  //Trim
   // let str="      hello my name is shankar         "    // this method is going to remove the space from start and end
   // let trim=str.trim()
   // console.log(trim)
+  // console.log(str)
   // ----------------------------------------------------------------
   // for(var a=0;a<3;a++){
   //     const log=()=>{
@@ -263,17 +2077,21 @@ let obj
   //     setTimeout(log,100)   //output 3 3 3
   // }
   // ----------------------------------------------------------
-  //Write a function to find the longest common prefix string amongst an array of strings.
-  // If there is no common prefix, return an empty string "".
+  // //  Write a function to find the longest common prefix string amongst an array of strings.
+  //  //If there is no common prefix, return an empty string "".
 
   // let str = ["flower","flow","flight"]
+
   // var longestCommonPrefix = function (strs) {
+  //   // console.log(str[0],"str0")
   //     for (let j = 0; j < strs[0].length; j++) {
+  //       console.log(str[0][j])
+  //       console.log(str[0],"str0")
   //         for (let i = 0; i < strs.length; i++) {
   //             // console.log(strs[0][j],"[0],[j]")
   //             if (strs[0][j] !== strs[i][j]) {
-  //             //   console.log(  strs[0][j],"strs[0][j]")
-  //             //   console.log(  strs[i][j],"strs[i][j]")
+  //               // console.log(  strs[0][j],"strs[0][j]")
+  //               // console.log(  strs[i][j],"strs[i][j]")
   //                 return strs[0].substring(0, j);
   //             }
   //         }
@@ -281,12 +2099,143 @@ let obj
   //     return strs[0];
   // };
   // console.log(longestCommonPrefix(str))
+  // ---------------------------------------------------------------------
+
+  // -----------------------------------------------------------------------
+  // //grouping of anagram
+  // let str =["eat","tea","tan","ate","nat","bat"]
+  // function groupingAnaGram(str){
+  //     let sorted=str.map((data)=>data.split("").sort().join(""));//[ "aet", "aet", "ant", "aet", "ant", "abt" ]
+  //     console.log(sorted)
+  //     let map={};
+  //     for(let i=0;i<=str.length-1;i++){
+
+  //       if(!map[sorted[i]]){
+  //         map[sorted[i]]=[str[i]]    //jo keys h sorted vali vo to unique hi rhengi unke ander hi str vali jati jayngi
+  //         // console.log(map,"map")
+  //       }
+        
+  //       else{
+  //         map[sorted[i]].push(str[i])    // 
+  //       }
+       
+  //     }return Object.values(map)
+
+  // }
+  // console.log(groupingAnaGram(str))
+  // ---------------------------------------------------------------------------
+  // grouping of anagram
+  // let str =["eat","tea","tan","ate","nat","bat"]
+  //  function shn(str){
+  //   let mapp=str.map((data)=>data.split("").sort().join("")) //[ "aet", "aet", "ant", "aet", "ant", "abt" ]
+  //   let obj={};
+  //   for(let i=0;i<=str.length-1;i++){
+  //       if(obj[mapp[i]]){
+  //         obj[mapp[i]].push(str[i])   //or baki jo repate ho rhi h vo previos same key k ander store hoti jayngi
+
+  //       }
+  //       else{
+  //         obj[mapp[i]]=[str[i]]    //jo keys h sorted vali vo to unique hi rhengi unke ander hi str vali jati jayngi
+  //       }
+  //   }return Object.values(obj)
+  //  }
+  // console.log(shn(str))
+// ---------------------------------------------------------------
+//Spiral Matrix Printing | Print the elements of a matrix in spiral form
+// Input
+var input = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+];
+
+let arr=[]
+  const spiral=(input)=>{
+      
+    arr.push(input.shift())// arr.push([1,2,3,4])
+  
+    // console.log(arr,"arr")
+    // console.log(input,"inp")
+
+    for(let i=0;i<input.length;i++){
+        arr.push(input[i].pop())   //8,12,16
+    }
+    // console.log(arr,"arr")
+    // [[5,6,7],[9,10,11],[13,14,15]]
+    
+    arr.push(input.pop().reverse())// [13,14,15] =>reverse(), [15,14,13]=> arr.push([15,14,13])
+
+// [[5,6,7],
+//[9,10,11]]
+
+    for(let i=input.length-1;i>=0;i--){
+        arr.push(input[i].shift())//  arr.push([9,10,11].shift())  =>  exracting 9  same as 5 
+    }
+
+    if(input.length>0){                //remain [[6,7],[10,11]] recursion
+        return spiral(input)
+    }
+    console.log(input,"inp")
+    return arr.flat()
+  }
+  
+  console.log(spiral(input))
+// --------------------------------------------------------------------------------
+
+// let str="d2saaf"// dsa1fa
+// function shn(str){
+//   let str2=str.split("")  //[ "d", "s", "a", "1", "f", "a" ]
+//     let map=str2.map(Number) //[ NaN, NaN, NaN, 1, NaN, NaN ]
+//     let storeNumber;   //1
+//     for(let i=0;i<=map.length-1;i++){
+//      if(!isNaN(map[i])){
+//       storeNumber=map[i]
+//      }
+//     }
+//     let forReverse=[];  //[ "a", "s", "d" ]
+//    for(let i=0;i<=str2.length-1;i++){
+//     if(str2[i]==storeNumber){
+//       forReverse.reverse()
+//       break;
+//     }
+    
+//     else{
+//       forReverse.push(str2[i])
+//     }
+//    }
+//    let forReverse2=[];
+//   for(let i=str2.length-1;i>=0;i--){
+       
+//     if(str2[i]==storeNumber){
+      
+//       break;
+//     }
+    
+//     else{
+//       forReverse2.push(str2[i])
+//     }
+//    }
+//    let final =[...forReverse,storeNumber,...forReverse2].toString()
+
+//    return final
+
+//   }
+
+
+
+
+// console.log(shn(str))
+
+
+
+
 
   // -------------------------------------------------------------------------
   // * Given a string that contains words separated by digits(0-9). Reverse words in place
   // * Eg: asd1fa -> dsa1af
 
-  // let str = "dsa1fa";
+  // let str = "dsa1af"; // //d2saaf
   //   let blank = [];
   //   let after;
   //   for (let i = 0; i < str.length; i++) {
@@ -309,9 +2258,10 @@ let obj
   //   console.log(final);
 
   // ------------------------------------------------
-  //  //pyramid star pattern    u can  reverse the loop for reverse pyramid
+  // //  //pyramid star pattern    u can  reverse the loop for reverse pyramid
   // let empty="";
   // for(let a=1;a<=5;a++){
+
   //     for(let b=1;b<=5-a;b++){
   //     empty+=" "
   //     }
@@ -352,37 +2302,37 @@ let obj
   //   };
 
   //   console.log(findPath(obj, 'a.b.c'),"12"); // 12
-  //   console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
-  //   console.log(findPath(obj, 'a.b.d')); // undefined
-  //   console.log(findPath(obj, 'a.c')); // undefined
-  //   console.log(findPath(obj, 'a.b.c.d')); // undefined
-  //   console.log(findPath(obj, 'a.b.c.d.e')); // undefined
-  //   console.log(findPath(obj, 'a.b.j')); //false
-  //   console.log(findPath(obj, 'a.b.j.k')); //undefined
-  //   console.log(findPath(obj, 'a.k')); //null
+    // console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
+    // console.log(findPath(obj, 'a.b.d')); // undefined
+    // console.log(findPath(obj, 'a.c')); // undefined
+    // console.log(findPath(obj, 'a.b.c.d')); // undefined
+    // console.log(findPath(obj, 'a.b.c.d.e')); // undefined
+    // console.log(findPath(obj, 'a.b.j')); //false
+    // console.log(findPath(obj, 'a.b.j.k')); //undefined
+    // console.log(findPath(obj, 'a.k')); //null
 
   // ------------------------------------------
-  //     let str = "dsa1fa";
-  //   let blank = [];
-  //   let after;
-  //   for (let i = 0; i < str.length; i++) {
-  //     if (str[i].match(/[1-10]/g)) {
-  //       blank.reverse();
-  //       blank.push(str[i]);
-  //       break;
-  //     } else {
-  //       blank.push(str[i]);
-  //     }
-  //   }
-  //   let splitStr = str.split("");
-  //   for (let i = 0; i < splitStr.length; i++) {
-  //     if (splitStr[i].match(/[1-10]/g)) {
-  //       after = splitStr.slice(i + 1);
-  //       after.reverse();
-  //     }
-  //   }
-  //   let final = [...blank, ...after].join("");
-  //   console.log(final);
+    //   let str = "dsa1fa";
+    // let blank = [];
+    // let after;
+    // for (let i = 0; i < str.length; i++) {
+    //   if (str[i].match(/[1-10]/g)) {
+    //     blank.reverse();
+    //     blank.push(str[i]);
+    //     break;
+    //   } else {
+    //     blank.push(str[i]);
+    //   }
+    // }
+    // let splitStr = str.split("");
+    // for (let i = 0; i < splitStr.length; i++) {
+    //   if (splitStr[i].match(/[1-10]/g)) {
+    //     after = splitStr.slice(i + 1);
+    //     after.reverse();
+    //   }
+    // }
+    // let final = [...blank, ...after].join("");
+    // console.log(final);
   // -------------------------------------------------------------
   // let str="dsa1fa"
   // let empty="";
@@ -401,33 +2351,33 @@ let obj
   // ----------------------------------------------------------
 
   // ----------------------------------------------------------------
-  //     let str = "AAACCCAABBAEE";
-  //   function checkOccurence(str) {
-  //     let obj = {};
+    //   let str = "AAACCCAABBAEE";
+    // function checkOccurence(str) {
+    //   let obj = {};
 
-  //     for (let i = 0; i < str.length; i++) {
-  //       if (obj.hasOwnProperty(str[i])) {
-  //         obj[str[i]] = obj[str[i]] + 1;
-  //       } else if (
-  //         str[i] == "A" ||
-  //         str[i] == "E" ||
-  //         str[i] == "I" ||
-  //         str[i] == "O" ||
-  //         str[i] == "U"
-  //       ) {
-  //         console.log(str[i]);
-  //         obj[str[i]] = 1;
-  //       }
-  //     }
-  //     console.log(obj);
+    //   for (let i = 0; i < str.length; i++) {
+    //     if (obj.hasOwnProperty(str[i])) {
+    //       obj[str[i]] = obj[str[i]] + 1;
+    //     } else if (
+    //       str[i] == "A" ||
+    //       str[i] == "E" ||
+    //       str[i] == "I" ||
+    //       str[i] == "O" ||
+    //       str[i] == "U"
+    //     ) {
+    //       console.log(str[i]);
+    //       obj[str[i]] = 1;
+    //     }
+    //   }
+    //   console.log(obj);
 
-  //     let finalstr = "";
-  //     for (key in obj) {
-  //       finalstr = finalstr + key + obj[key];
-  //     }
-  //     return finalstr;
-  //   }
-  //   console.log(checkOccurence(str));
+    //   let finalstr = "";
+    //   for (key in obj) {
+    //     finalstr = finalstr + key + obj[key];
+    //   }
+    //   return finalstr;
+    // }
+    // console.log(checkOccurence(str));
   // ----------------------------------------------------------------
   //To find a first pair whose sum is zero
   //algo :- first need to creat a function
@@ -732,6 +2682,30 @@ let obj
   // attachEvent(button);
 
   // ---------------------------------------------
+  //find missing multiple number
+
+
+
+
+
+  
+  // ----------------------------------------------------
+//find missing number
+// let arr=[1,2,3,4,6,7,8,9]  //  arr.length * 9/2   8+1      //total 41-36 //5
+
+// function miss(arr){
+//   let leng=arr.length+1 ;  //9
+//   let total=0
+
+//    let formula= (leng*(leng+1)/2)  // 72/2  36
+//     for(let i=0;i<=arr.length-1;i++){
+//       total+=arr[i]
+//     }
+//  return formula- total
+// }
+// console.log(miss(arr))
+
+// --------------------------------------------------------------
   // // // To find all the missing numbers from an array
   // let arr=[1,2,6]    // //output=3,4,5
   // let empty=[];
@@ -918,7 +2892,7 @@ let obj
   // }}
 
   // -----------------------------------------------------------
-  //  Find triplets whose sum is given as a second argument
+  // //  Find triplets whose sum is given as a second argument
   // function findTriplets(inputArr, sum) {
   //     let empty=[]
   //  for(a=0;a<=inputArr.length;a++){
@@ -933,7 +2907,28 @@ let obj
   // }
 
   // console.log(findTriplets([-1, -4, -9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0))
-
+  // --------------------------------------------------------------------------
+  // function findTriplets(arr, n) {
+  //     arr.sort();
+  //     for (var i = 0; i < arr.length; i++) {
+  //         var j = i + 1,
+  //             k = arr.length - 1;
+  //         while (j < k) {
+  //             if (arr[i] + arr[j] + arr[k] < n) {
+  //                 j++;
+  //             } else if (arr[i] + arr[j] + arr[k] > n) {
+  //                 k--;
+  //             } else {
+  //                 console.log(arr[i] + "," + arr[j] + "," + arr[k]);
+  //                 j++;
+  //                 k--;
+  //             }
+  //         }
+  //     }
+  //     return true;
+  // }
+  // var arr = [-1, -4, -9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  // findTriplets(arr, 0);
   // -------------------------------------------------------------
   // Code 24: Fibonacci Series (0,1,1,2,3,5,8,13....)
   // function fibonacciSeries(){
@@ -1306,8 +3301,8 @@ let obj
   //     return longest.length+"  "+longest
   // }
   // console.log(longestWord())
-
-  //find the largest number in string
+// ---------------------------------------------
+  // //find the largest number in string
   // function longestWord(){
   //    let string = "supriya is a masooooom good girl"
   //    var words= string.split(' ')
@@ -1372,15 +3367,15 @@ let obj
   //  -------------------------------------------------
   //  for(i=1; i <= 5; i++){
   //   console.log('*'.repeat(i))}
-  // //   for(j=1; j<=i; j++)
-  // //  {
-  // //     //  console.log('*'.repeat(j))
+  //   for(j=1; j<=i; j++)
+  //  {
+  //      console.log('*'.repeat(j))
 
-  // //   }
-  // //    document.write('<br />');
   //   }
+  //    document.write('<br />');
+    
   // -------------------------------------------------------------
-  // for(let a=5;a>1;a--){
+  // for(let a=5;a>=1;a--){
   //     console.log("*".repeat(a))
   // }
 
@@ -1414,22 +3409,57 @@ let obj
   // }
 
   // console.log(zigzag(arr))
-
+// ----------------------------------------------------------
+//   let obj={                 // find largest value with its key
+//   a:485,
+//   b:504,
+//   c:895,
+//   d:597,
+//   h:845,
+//   z:506
+// }
+//   let highest = 0;
+//   let higestKey = null;
+//   for (let i in obj) {
+//     console.log(obj[i])
+//     if (obj[i] > highest) {
+//       highest = obj[i];
+//       higestKey = i;
+//     }
+//   }
+//   console.log(higestKey, highest);
   // -------------------------------------------------------------------------------
-  // let plusOne=(digits)=>{
-  //     let converts="";
-  // for(let a=0;a<digits.length;a++){
-  // converts+=digits[a];
+//   let plusOne=(digits)=>{
+//       let converts="";
+//   for(let a=0;a<digits.length;a++){
+//   converts+=digits[a];
+// console.log(converts)
+//   }
+//   converts2=++converts
+//   // console.log(converts2,"++2")
+//   }
+
+//       console.log(plusOne([9]))         // [1,0]
+
+//   // console.log(plusOne([1,2,3]))     // Output: [1,2,4]  //need to compleate it
+//   console.log(plusOne([4,3,2,1]))
+// -------------------------------------
+
+
+
+  // function shn(arr){
+  // let str=arr.join("")
+  // let parse=parseInt(str)
+  //  console.log(parse,"parse")
+  // parse++
+  // let opration=[parse].join("").split("")
+  // console.log(opration,"op")
+  // let final=opration.map(Number)
+  // console.log(final)
 
   // }
-  // converts2=++converts
-  // // console.log(converts2,"++2")
-  // }
+  // shn([1,2,5])
 
-  //     // console.log(plusOne([9]))         // [1,0]
-
-  // // console.log(plusOne([1,2,3]))     // Output: [1,2,4]
-  // console.log(plusOne([4,3,2,1]))
   // -----------------------------------------------------------------------------
   // let str = "Hello, how are you madam. Hope you're doing good mam";
   // let largestPalindrome = '';
@@ -1449,18 +3479,44 @@ let obj
   // console.log(largestPalindrome);
 
   // ----------------------------------------------------------------------------------------------
-  // let str="Find the largest palindrome in the string. Hello , how are you madam. Hope you're doing good mam"
-  // let splitt= str.split(" ")
-  // let arr=[splitt].reverse();
-  // for(let a=0;a<splitt.length;a++){
-  //     let empty="";
-  //     if(splitt[a].length===arr.length){
-  //     empty+=splitt[a]
-  //     }
-  //     console.log(empty)
-  // }
+//   let str = "Hello, how are you madam Hope you're doing good mem";
+//   function palan(str){
+//     let empty=""
+//     let empty2=[]
+//   let split=str.split(" ")//[ "Hello,", "how", "are", "you", "madam.", "Hope", "you're", "doing", "good", "mam" ]
+//   console.log(split,"sp")
+//  for(let i=str.length-1;i>=0;i--){
+//    empty += str[i]
+//  }
+//  console.log(empty,"empty")  //mem doog gniod er'uoy epoH madam uoy era woh ,olleH
+//  let emptySplit=empty.split(" ")
+// //  console.log(emptySplit,"emtysp")
+//  for(let j=0;j<=split.length-1;j++){
+//   for(let k=0;k<emptySplit.length-1;k++){
+//     if(split[j]===emptySplit[k] && split[j].length===emptySplit[k].length ){
+//       empty2.push(emptySplit[k])
+//     }
+//   }
+//  }return empty2
+ 
+//   }
+//   console.log(palan(str))
+// -----------------------------------
+// let arr=["mem","madam","taaaaaat"]
+// function shn(arr){
+//   let final=arr[0];
+// for(let i=0;i<=arr.length-1;i++){
+//    if(arr[i].length>final.length){
+//    final=arr[i]
+//    }
 
+// }return final
+// }
+// console.log(shn(arr))
   // --------------------------------------------------------------------------------------
+  
+  
+  
   //                                                       //// // Output
   // // {
   // //     character: 'c',
@@ -1526,11 +3582,12 @@ let obj
   // ---------------------------------------------
   // const input = "Priya Bagde";
   // function alternateText(str){
-  //   var char = str.toLowerCase().split('')
-  //       for(var i=0; i <char.length; i=i+2){
-  //          char[i]=char[i].toUpperCase()
+  //   var LowerSplit = str.toLowerCase().split('')
+  //   console.log({LowerSplit})
+  //       for(var i=0; i <LowerSplit.length; i=i+2){
+  //          LowerSplit[i]=LowerSplit[i].toUpperCase()
   //       }
-  //   return char.join('')
+  //   return LowerSplit.join('')
   // }
   // console.log(alternateText("Priya Bagde")) //"PrIyA BaGdE"
 
@@ -1557,22 +3614,35 @@ let obj
   // console.log(pro)
 
   // --------------------------------------------------------------
-  // for(let a=1;a<=5;a++){
-  //     let empty="";
-  //     for(let b=a;b<=5;b++){
-  //         empty+=b
-  //     }
-  //     console.log(empty)
-  // }
-  // // output
-  // 12345
-  // 2345
-  // 345
-  // 45
-  // 5
-
+//  for(let i=1;i<=5;i++){
+//   let empty="";
+//   for(let j=i;j<=5;j++){
+//     empty+=j
+//   }console.log(empty)
+//  }
+//  console.log(empty)
+//outout
+// 12345 
+// 2345 
+// 345 
+// 45 
+// 5
   // ---------------------------------------------
 
+//   function func1(a){           //infinite currying 
+//    return function (b) {
+//           if(b){
+//           return  func1(a+b)
+//           }  return a
+          
+//     }
+    
+//   }
+// console.log(func1(20)(15)(30)(40)(1000)())
+
+
+
+// ------------------------------------------------------
   // function fucn1(a){
   //     return function func2(a1){
   //         return function func3(a2){
@@ -1581,7 +3651,7 @@ let obj
   //     }
   // }
   // fucn1(100)(20)(20)       //function currying
-
+// --------------------------------------------------
   //    let pro= new Promise((resolve,reject)=>{
   //     let a=11;
   //     if(a===10){
@@ -1592,7 +3662,7 @@ let obj
 
   //    })
   // console.log(pro)
-
+// ---------------------------------------------
   // let str ="hEllo My name is KHan"
   // String.prototype.myUppercase=function(){
   //  let spilttt= str.split("");
@@ -1667,21 +3737,22 @@ let obj
   //     }
   // };
 
-  // const findPath = (object, path) => {
+  // const findPath = (obj, path) => {
   //     const arr = path.split('.');
-  //     //console.log(arr);
-  //     let ans = object;
-  //     for(let x in arr){
-  //         //console.log("path",x,arr[x]);
-  //         if(ans[arr[x]]!==undefined){
-  //             ans = ans[arr[x]];
+  //     console.log({path})
+  //     console.log({arr});
+  //     let obj2 = obj;
+  //     for(let i in arr){
+  //         // console.log("path",i,arr[i]);
+  //         if(obj2[arr[i]]!==undefined){
+  //             obj2 = obj2[arr[i]];
   //         }
   //         else{
-  //             ans = undefined;
+  //             obj2 = undefined;
   //             break;
   //         }
   //     }
-  //     return ans;
+  //     return obj2;
   // };
 
   // console.log(findPath(obj, 'a.b.c')); // 12
@@ -1720,7 +3791,7 @@ let obj
   // console.log(shn(arr))
 
   // ------------------------------------------------------------------/
-  //  const arr = [1,2,[3,4,[5,6],7],8,[9,10]]; //// [1,2,3,4,5,6,7,8,9,10]
+  //  const arr = [1,2,[3,4,5,6,7],8,[9,10]]; //// [1,2,3,4,5,6,7,8,9,10]
 
   // let opration=arr.reduce((acc,val)=>{                            //  but in this method not work in nested array
   //       return acc.concat(val)

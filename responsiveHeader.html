@@ -1,0 +1,170 @@
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        .bar1,.bar2,.bar3{
+            height: 4px;
+            width: 16px;
+            margin: 4px 0;
+            transition: transform 0.4s;
+            background-color: black;
+        }
+        #hamburger{
+            display: none;
+        }
+        .navList{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .barclass .bar1{
+            transform: translate(0 ,16px) rotate(-45deg);
+        }
+        .barclass .bar2{
+            opacity: 0;
+        }
+        .barclass .bar3{
+            transform: translate(0 -16px) rotate(45deg);
+        }
+        @media (max-width:980px){
+            #hamburger{
+                display: block;
+            }
+            .navList{
+                display: none;
+                /* display: flex; */
+                flex-direction: column;
+                background-color: yellow;
+            }
+            .flex{
+                display: flex;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="" alt="logoImg">
+        <div id="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <ul class="navList">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </nav>
+</body>
+</html>
+<script>
+     const navlist = document.querySelector('.navList');
+    let hamburger = document.getElementById("hamburger")
+    hamburger.addEventListener("click",(e)=>{
+        e.preventDefault();
+     hamburger.classList.toggle("barclass")
+     navlist.classList.toggle('flex');
+    })
+</script> 
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bar1, .bar2, .bar3 {
+            height: 4px;
+            width: 16px;
+            margin: 4px 0;
+            transition: transform 0.4s;
+            background-color: black;
+        }
+
+        #hamburger {
+            display: none;
+        }
+
+        .navList {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .barclass .bar1 {
+            transform: translate(0, 16px) rotate(-45deg);
+        }
+
+        .barclass .bar2 {
+            opacity: 0;
+        }
+
+        .barclass .bar3 {
+            transform: translate(0, -16px) rotate(45deg);
+        }
+
+        @media (max-width: 980px) {
+            #hamburger {
+                display: block;
+            }
+
+            .navList {
+                display: none;
+                flex-direction: column;
+                background-color: yellow;
+            }
+
+            .flex {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="" alt="logoImg">
+        <div id="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <ul class="navList">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </nav>
+
+    <script>
+        const navList = document.querySelector('.navList');
+        const hamburger = document.getElementById("hamburger");
+
+        hamburger.addEventListener("click", (e) => {
+            e.preventDefault();
+            hamburger.classList.toggle("barclass");
+            navList.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>  -->

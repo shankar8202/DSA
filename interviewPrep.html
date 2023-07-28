@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+       
+    </div>
+</body>
+</html>
+<script>
+  
+// array entries 
+// let arr =[0,1,2,3,4,5,6]
+// let enter=arr.entries()
+// let empty=[]
+// for(let i of enter){
+//  empty.push(i)
+// }
+// let final=empty.flat(2)
+// console.log(final)
+  // ------------------------------------------
+//   console.log(typeof typeof true);
+//   console.log(typeof typeof 1);
+
+//   let user = {
+//   name : "Priya",
+//   age : 100
+// }
+
+// const mname = "Supriya";
+// const {name : mName} = user;
+
+// console.log(mName)
+  // ----------------------------------
+  // var player = "Virat";  //when player hoist with undefined if condition player has undefined so it will not entertain if condition directly going to the else or console in console we have plyer and also plyer we have with undefined 
+  // function displayPlayer() {
+  //   if (player === "Virat") {
+  //     var player = "VK";
+  //     console.log(player,"player1");
+  //   }
+  //   console.log(player,"player2");
+  // }
+  // displayPlayer()
+
+//   In JavaScript, variable declarations are hoisted to the top of their scope. However, the variable assignments are not hoisted, only the declarations. This means that even though the player variable is declared inside the displayPlayer function, the declaration is hoisted to the top of the function scope.
+
+// Inside the displayPlayer function, there is a local variable named player declared using the var keyword. This local variable shadows the outer variable with the same name.
+
+// When the code execution reaches the line console.log(player, "player1");, it refers to the local player variable declared inside the function. At this point, the local variable player has the value "VK", so it logs "VK player1" to the console.
+
+// However, when the code execution reaches the line console.log(player, "player2");, it refers to the outer variable declared at the top of the function scope. Since the outer variable has not been assigned a value within the function, its value is undefined. Therefore, it logs undefined player2 to the console.
+
+// Note that the 1 before undefined in your question seems to be a typo or a separate issue, as it is not present in the code snippet you provided.
+// --------------------------------------------------
+// const person = { name: 'Lydia' };
+
+// function sayHi(age) {
+//   return `${this.name} is ${age}`;
+// }
+
+// console.log(sayHi.call(person, 21));
+// console.log(sayHi.bind(person, 21));
+// // or 
+// let final=sayHi.bind(person, 21)
+  // ---------------------------------------------
+// var parentElement = document.getElementById('parent');
+
+// var childElement = document.createElement('div');
+// childElement.textContent = 'Child element';
+
+// var textNode = document.createTextNode('Some text');
+
+// parentElement.append(childElement, textNode);
+
+// ------------------------------------------------
+// const promise = new Promise((resolve, reject) => {
+//     console.log(1);                          //1
+//     setTimeout(() => {
+//       console.log("timerStart");           //5
+//       resolve("success");                     //4  async       
+//       console.log("timerEnd");                //last    
+//     }, 0);
+//     console.log(2);                           //2
+//   });
+
+//   promise.then((res) => {
+//     console.log(res);                           //sucuess
+//   });
+
+//   console.log(4);                                    //3          
+// ---------------------------------------------------
+// let getId=document.getElementById("parant")
+// let getId2=document.getElementById("child")
+
+// var obj1 = {
+//     address : "Mumbai,India",
+//     getAddress: function(){
+//     console.log(this.address); 
+//   }
+// }
+   
+// var getAddress = obj1.getAddress;
+// var obj2 = {name:"akshay"};
+// obj2.getAddress();
+
+</script>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+
+
+
+
+
+
+
+
+// let str="words and 987"
+// function strToNum(str){
+//     let empty=[];
+//     // console.log(str)
+// let removeSpace=str.trim()
+// console.log(removeSpace,"rspace")
+// let split=removeSpace.split(" ")
+// let num=split.map(Number)
+// console.log(num,"num")
+// let filter=num.filter((data)=>!isNaN(data))    // [4193]
+// let convertNum=Number(filter)
+// console.log(typeof convertNum)
+// return convertNum
+
+// }
+// console.log(strToNum(str))
+
+
+
+
+
+// let x=10
+// let store= setInterval(() => {
+     
+// console.log(x++)
+
+
+// }, 1000);
+
+// -------------------------------------------------
+// let a=null;
+// let b=a??"hello"
+// console.log(b)
+//The value of a is 0, which is a falsy value in JavaScript. When using nullish coalescing (??), it checks for null or undefined values specifically, but treats other falsy values as truthy. Since a is not null or undefined, 
+//the expression a ?? 18 evaluates to 0 because 0 is a falsy value, but not null or undefined.
+
+
+
+// optional chaning 
+
+// let obj={
+//     name:"shankar",
+//     details:{
+//      height:"5'8",
+//      weight:80
+//     },
+//     lname:"sahu",
+//     age:25,
+//     add:"jabalpur"
+// }
+
+// console.log(obj?.details?.weight)
+
+// or 
+
+// const object = {
+// property1:{
+//     property2:{
+//         property3:"hi"
+//     }
+// }
+// };
+
+// Without optional chaining
+// const value1 = object.property1.property2.property3; // Error: Cannot read property 'property2' of undefined
+// console.log(value1)
+// With optional chaining
+// const value2 = object?.property1?.property2?.property3; // No error, value2 will be 'value'
+// console.log(value2)
+
+// let obj={
+//     name:"shakar",
+//     lname:"sahu",
+//     func2:function(){
+//         return this.name+"   "+this.lname
+//     },
+//     func:()=>{
+//         return this.name+"  "+this.lname
+//     }
+// }
+// console.log(obj.func2())
+// console.log(obj.func())
+
+// ----------------------------------------------
+
+// // prototype 
+// let obj={
+//     name:"shn",
+//     lname:"sahu"
+// }
+// let obj2={
+//     friend:"ravi",
+//     add:"jabalpur",
+//     __proto__:obj
+// }
+// let obj3={
+//     qualification:"BE",
+//     Branch:"mechanical",
+//     __proto__:obj2
+// }
+
+
+
+// console.log(obj3.name)
+
+// ------------------------------------
+// is rest oprator work in normal function or not
+
+// function shn(...args){
+// return args
+// }
+// console.log(shn("hi","hello","my","name"))
+
+// const shn1=(...argss)=>{
+//    console.log(argss)
+// }
+// console.log(shn1("hi","hello","my","name"))
+
+
+
+// -------------------------------------------
+// function currying
+
+// function func(a){
+//   return  function func2(b){
+//      return   function func3(c){
+//             return   a+b+c
+//         }
+//     }
+// }
+// console.log(func(20)(40)(60))
+// --------------------------------------
+
+// const person = {
+//     firstName: "John",
+//     lastName : "Doe",
+//     id       : 5566,
+//     getThis : function() {
+//       return this;
+//     }
+// };
+
+// console.log('this in object method', person.getThis());
+
+// function test() {
+//     console.log('this in a function', this);
+// }
+
+// test()
+
+
+
+// const show = () => this
+
+// console.log('arrow function this', show())
+
+
+// const person = {
+//     name: 'Pedro',
+//     surname: 'Sanchez',
+//     sayName: () => this.name + ' ' + this.surname
+// }
+
+// console.log(person.sayName());
+
+
+// let obj={
+//     name:"shn",
+//     lname:"sahu",
+//     func:function(add,pincode){
+//       return   this.name +"    "+ this.lname +""+add+"  "+ pincode
+//     }
+// }
+// let obj2={
+//     name:"ravi",
+//     lname:"patel",
+    
+   
+// }
+
+// Function.prototype.myBind=function (targetObj,...args){
+// let func;
+// targetObj.func=this;
+// return function(){
+//     return targetObj.func.apply(targetObj,args)
+// }
+// }
+
+// let store=obj.func.myBind(obj,"jabalpur" ,48201)
+
+// console.log(store())
+
+
+// let obj={
+//   name:"shankar",
+//   nes:{
+//     subname:"nick",
+//     nested2:{
+//         greetings:"hi"
+//     }
+//   }
+// }
+// console.log(obj.nes.nested2.greetings)
+
+// let obj2=structuredClone(obj)
+// console.log(obj2.nes.nested2="hello")
+
+// let arr=[1,2,3,4,6,7,8,9] -------missing number
+// let empty=[]
+// function shn(arr){
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i+1]!==arr[i]+1){
+//         empty.push(arr[i]+1) 
+//     }
+// }return empty[0]
+// }
+// console.log(shn(arr))
+
+// unsorted arr 
+// function findMissingNumber(arr) {
+//   let n = arr.length + 1; // total number of elements, including the missing one
+//   console.log(n,"n")
+//   let sum = (n * (n + 1)) / 2; // sum of all numbers from 1 to n
+// console.log(sum)
+//   for (let i = 0; i < arr.length; i++) {
+//     sum -= arr[i]; // subtract each element of the array from the total sum
+//     console.log(sum,"sum")
+//   }
+
+//   return sum; // the remaining sum is the missing number
+// }
+
+// const arr = [1, 4, 7, 8, 9, 6, 2, 3,];
+// const missingNumber = findMissingNumber(arr);
+// console.log("Missing number:", missingNumber);
+
+
+// //optinal channing test
+// let obj={
+//   name:"shankar"
+// }
+// console.log(obj?.lname)
+// ---------------------------------------
+// const obj = {
+//   name:undefined
+// };
+
+// console.log(obj.name = obj.name ?? null)
+
+
+
+
+
+// const p = new Promise((resolve, reject) => {
+//   throw new Error("Error!");
+// });
+
+// p.catch((e) => {
+//   console.log(e)
+// });
+// ----------------------------\
+//spread example
+function myBio(firstName, lastName, company) { 
+  return `${firstName} ${lastName} runs ${company}`;
+}
+
+// Use spread to expand an array’s items into individual arguments:
+console.log(myBio(...["Oluwatobi", "Sofela", "CodeSweetly"]));
+
+
+</script>

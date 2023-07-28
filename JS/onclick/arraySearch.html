@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Your result Showing here</h2>
+        <ol id="list_container"></ol>
+    </div>
+
+    <script>
+        // let getcontain = document.getElementById("list_container")
+        const container = document.createDocumentFragment();
+  const startTime = performance.now();
+
+
+        let arr =["Mackbook", "apple","iphone","ipad"]
+        // its an array collection of data which used for search anything (when we search anything in in search box in 
+        // any website after type product name when we have to hit entre the some product of pakage come 
+        // that kind of things we are goint to explore here )
+        
+        for(let a=0;a<=arr.length-1;a++){
+          let product =arr[a];
+        
+       
+        
+        let newol =document.createElement("ol")
+        newol.innerText=product
+        container.appendChild(newol)
+    }
+
+    
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    'use strict';
+    var x=5;
+    var y=5;
+    function opration(op1=x,op2=y){
+        this.x=op1;
+        this.y=op2;
+    }
+    opration.prototype.sum=()=>this.x+this.y;
+    const op = new opration(10,20);
+    console.log(op.sum());
+</script>

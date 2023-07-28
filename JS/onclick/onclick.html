@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input_dataa{
+            padding: 20px;
+            background-color: rgb(109, 138, 106);
+            gap: 5px;
+            /* display: flex;
+            flex-direction: column; */
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sub_container">
+            <input id="input_box" type="text" placeholder="Enter Something">
+            <button onclick="shn()">Submit</button>
+
+        </div>
+        <hr>
+        <div id="data_con">
+        <h3>all input data Showing here</h3>
+        <div id="input_deta"></div>
+        
+
+        </div>
+    </div>
+    <script>
+        function shn(){
+        let input_value =document.getElementById("input_box")
+        // getting input box id
+    
+    
+       let input_value_two= input_value.value
+    
+    //    input me jo bhi value hogi vo  input_value_two me store hogai
+    
+    
+        if(input_value_two===""){
+            alert("You Can't Leave It Blank");
+            return
+            // reture means yha code stop hojayga or if me ye h ki ager ager input box me value ni hoto h to aleart show krega
+        }
+        let data_container =document.getElementById("input_deta")
+        // ek khali div get kiya  jo apned krne k kam aayga html me
+        
+        let new_div = document.createElement("div")
+        // el div creat kiye jisse input box ki value 
+        // har bar yhi div me aati jaygi fir is div ko hame 
+        // input_deta div html me link kiya 
+        new_div.innerText = input_value_two
+        // fir jo new div k ander innertext vo rhega jo 
+        //  value input box ki hogi
+        new_div.className="input_dataa"
+        // ye class name hamne avail style me lagai or 
+        // styling di or link kr diya direct html me ye class bnane ki zrurat 
+        // ni h to hoga ye jo bhi styling ham dengy vo apply hogi
+        // us data me jo hamne div creat kiya hai
+        
+        
+        input_deta.append(new_div)
+        // ab jo hamara creat div tha usko html div se append kr diya
+        // jo input_dataa hai
+    
+        input_value.value="";
+        // input box me jo bhi hoga button dabane k bad vo khai hojayga 
+        // means input box ki value me kuch ni diya to ,ager aap quote k beetch 
+        // me kuch likhty ho to vo input box k ander chala jayga 
+        // har bar button dabane k bad
+    }
+    </script>
+</body>
+</html>

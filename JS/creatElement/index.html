@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .card-header{
+        height: 30px;
+        width: 131px;
+        /* background-color: rgb(124, 124, 6); */
+        text-align:center;
+        /* display: flex; */
+        margin-left: 140px;
+        border-radius: 3px;
+       
+      }
+      .container{
+        height: 300px;
+        width: 400px;
+        background-color: aqua;
+        margin-left: 500px;
+        text-align: center;
+        /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+      }
+      /* .acc{
+        text-decoration: none;
+      } */
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    
+</body>
+<script>
+       let link_div=document.getElementById("container")
+
+       link_div.className="container"
+
+        let div = document.createElement("h2")
+       div.innerHTML="Login Form"
+       div.className="card-header";
+       link_div.append(div)
+
+let brtag=document.createElement("br")
+link_div.append(brtag)
+// now creating input box
+
+
+
+let lable =document.createElement("lable")
+
+lable.innerHTML="Email :  "
+lable.style.fontWeight="600"
+
+
+let input=document.createElement("input")
+input.style.width="250px"
+input.placeholder="Please Enter your Email"
+
+
+link_div.append(lable)
+
+
+link_div.append(input)
+let brtag3=document.createElement("br")
+link_div.append(brtag3)
+
+let brtag5=document.createElement("br")
+link_div.append(brtag5)
+
+let brtag6=document.createElement("br")
+link_div.append(brtag6)
+
+
+
+
+
+
+
+
+
+let lable2 =document.createElement("lable")
+
+lable2.innerHTML="Password :  "
+lable2.style.fontWeight="600"
+let input2=document.createElement("input")
+input2.style.marginRight="24px"
+input2.placeholder="Please Enter your Password"
+input2.style.width="250px"
+input2.setAttribute("type","password",)
+
+
+link_div.append(lable2)
+
+
+
+link_div.append(input2)
+
+
+
+let breakk= document.createElement("br")
+link_div.append(breakk)
+
+let brtag10=document.createElement("br")
+link_div.append(brtag10)
+
+
+
+// let lastButton=document.createElement("div")
+let button = document.createElement("Button")
+button.setAttribute("onclick","shn()")
+button.innerHTML="Button"
+// button.onclick="onclick=shn()"
+button.style.width="250px"
+button.style.height="25px"
+button.style.marginLeft="46px"
+button.style.backgroundColor="#b9e7b5"
+button.style.borderRadius="5px  "
+button.style.textAlign="center"
+// let h= button.append(lastButton)
+// link_div.append(h)
+
+
+link_div.append(button)
+
+function shn() {
+  if(input===""){
+  alert("do not leave it blank");}
+
+}
+
+
+
+let acc = document.createElement("p")
+acc.className="acc"
+acc.innerHTML="Don't have an account ?<a href=#>creat account</a>"
+link_div.append(acc)
+      </script>
+</html>

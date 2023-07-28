@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    
+<div class="parent" style="display: inline-flex; background-color: yellow;" >
+  <div class="id">hello</div>
+<div class="sqaure" > hello two</div>
+</div>
+
+
+</body>
+</html>
+<script>
+  // let getId=document.getElementById("id").innerHTML="hi ram "
+
+ 
+
+
+// ---------------------------------------------------------------------
+//   (function() {
+//   var a = b = 5;
+// })();
+// console.log(b)   //because accidental variable
+// console.log(a)   //err
+
+// --------------------------------------------------------------------
+//   var y = 1;
+// if (function f() {}) {
+//   y += typeof f;        //function ko dega type of me "function" (string me) or 1 ko bhi add kr dega
+// }
+// console.log(y);
+
+// -------------------------------------------------
+
+// //hoisting
+//  console.log(x)
+//  x=50;  
+
+  // ----------------------------------------------------
+// function func1(){           //are both function is going to return same result ?
+//   return {
+//     bar:"hello"
+//   }
+// }
+// console.log(func1())
+
+// function func2(){
+//   return                                    //this will not because after return automatically js put colon and return statement close there
+//    {
+//     bar:"hello"
+//   }
+// }
+// console.log(func2())
+
+
+
+// ---------------------------------------------------
+// let numbers = [1, 2, 3, 4, NaN];
+// console.log(numbers.indexOf(NaN));  //-1
+
+// NaN === NaN
+// -------------------------------------------
+// for(var i = 0; i <5; i++)        //if u do with let it will work fine
+// {
+// 	((i2)=>{
+//     setTimeout(()=>{
+// 		console.log(i2);
+//     },100)
+//   })(i)
+// }
+
+  // -------------------------------------
+// var player ="virat";
+// function dispalyPlayer(){
+// if(player ==="virat"){
+// var player="vk";
+// console.log(player)
+// }
+// console.log(player)
+// }
+// dispalyPlayer()
+
+// ----------------------------------------
+// let count = 0;
+// (function immediate() {
+//   if (count === 0) {
+//     let count = 3;
+//     console.log(count); // What is logged?   3
+//   }
+//   console.log(count); // What is logged?  0
+// })();
+// let hello="yo"
+// -------------------------------------------
+// let x="hi"
+
+// (()=>console.log(x))()
+
+// -----------------------------------------
+// var length=4;
+// function callback(){
+//     console.log(this.length)           
+// }
+// const obj={
+//     length:5,
+//     method:function (){
+//         arguments[0]();
+//     }
+// };
+// obj.method(callback,1,5)
+  // ------------------------------------
+//   console.log(1+false); //1
+// console.log(1+true); //2    yha true ki value =1
+// console.log(1-false); //1
+// console.log(1+'2'-1); //11
+// ------------------------------------------------------------------
+// (function fnA(a) {
+//   return (function fnB(b) {
+//     console.log(a); // What is logged?
+//   })(1);
+// })(0);
+  // -----------------------------------------------------
+// var a = 3;
+// // console.log(a)
+// var b = {
+//   a: 9,
+//   b: ++a              // if a++  diffrent ans
+// };
+// // console.log(a) //4
+// console.log(a + b.a + ++b.b); //18   because a is become 4 ,b.a = 9 ,++b.b  4 but we additionally making 1 more + so now it 5
+
+
+
+//     let c=10
+// let obj={
+//     val:++c
+// }
+// console.log(obj.val)
+// console.log(c)
+
+// -------------------------------------------------------------------
+// const arr = [1, 2, undefined, NaN, null, false, true, "", 'abc', 3];
+
+// console.log(arr.filter(Boolean));   //jo true h sab dega 
+
+// -----------------------------------------------------------
+// const person = {
+//   name: 'Ayush Verma',
+//   .25e2: 29
+// };
+
+// console.log(person[name]);    //undefined   you can do preson.name
+// console.log(person.name);    // 'Ayush Verma'
+// console.log(person[25]);     // 29  because of dot ko ignore krke 25 as a key le rha h 
+// console.log(person[.25e2]);  // 29
+// console.log(person['.25e2']); //undefined 
+
+// --------------------------------------------------------------
+// const shape = {
+//   radius: 10,
+//   diameter() {
+//     return this.radius * 2;       //20
+//   },
+//   perimeter: () => 2 * Math.PI * this.radius,    //2*3*undefined (kyu this arrow k ander h)
+// };
+
+// console.log(shape.diameter());
+// console.log(shape.perimeter());
+
+// --------------------------------------------------------
+// let a = 10, b = 20;
+// setTimeout(function () {
+//   console.log('Ayush');
+//   a++;
+//   b++;
+//   console.log(a + b);
+// });
+// console.log(a + b);       //30  fir ayush  fir 32
+
+
+
+// --------------------------------------------
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// }
+
+// const ayush = new Person('Ayush', 'Verma');
+// const sarah = Person('Sarah', 'Smith');              //we haven't use new keyword
+
+// console.log(ayush);
+// console.log(sarah);
+
+
+
+// --------------------------------------------
+// const shape = {
+//   radius: 10,
+//   diameter() {
+//     return this.radius * 2;
+//   },
+//   perimeter: () => 2 * Math.PI * this.radius,
+// };
+
+// console.log(shape.diameter());
+// console.log(shape.perimeter());
+
+// -------------------------------------------
+// const person = {
+//   name: 'Ayush Verma',
+//   .25e2: 25
+// };
+
+// console.log(person[25]);
+// console.log(person[.25e2]);
+// console.log(person['.25e2']);
+
+// -------------------------------------------------------
+//     const arr = [1, 2, undefined, NaN, null, false, true, "", 'abc', 3];
+// console.log(arr.filter(Boolean));
+// ----------------------------------------------
+// var a = 3;
+// var b = {
+//   a: 9,
+//   b: ++a
+// };
+// console.log(a + b.a + ++b.b);
+    // ---------------------------------------------
+//     console.log([1, 2, 3] + [1, 3, 4]);
+// console.log([1] + "abc");
+// console.log([] + []);
+// const arrTest = [10, 20, 30, 40, 50][0,1,3,4];   // because in 2nd array those numbers act like a indedx of pervios array element and which number will last it will give last value 
+// console.log(arrTest);
+
+// let arr=[2,5,46,5,555][1]
+// console.log(arr)
+
+    // ---------------------------------------------
+// const ans1 = NaN === NaN; //false
+// const ans2 = Object.is(NaN, NaN);
+// console.log(ans1, ans2);
+// ----------------------------------------------
+// function sum(){
+//   return arguments.reduce((a, b) => a + b);
+// }
+
+// console.log(sum(1,2,3)); (1)
+
+
+// ---------------------------------------------
+// function sum(...arguments){
+//     // console.log(...arguments)
+//   return arguments.reduce((a, b) => a + b  );
+// }
+
+// console.log(sum(1,2,3)); (2)
+// ----------------------------------------------------
+// console.log('1' - - '1'); //2
+// console.log('1' + - '1');//1-1
+// --------------------------------------------------
+// let a = 3;
+// let b = new Number(3);      //because its typeof is object
+// let c = 3;
+
+// console.log(a == b);  //true
+// console.log(a === b);   //false
+// console.log(b === c);  //false
+
+// -------------------------------------------------------
+// function checkAge(data) {
+//   if (data === { age: 18 }) {        // object ===object  => false
+//     console.log('You are an adult!');
+//   } else if (data == { age: 18 }) {      //// object ===object  => false
+//     console.log('You are still an adult.');
+//   } else {                                   //print 
+//     console.log(`Hmm.. You don't have an age I guess`);
+//   }
+// }
+
+// checkAge({ age: 18 });
+
+
+// --------------------------------------------
+// let person = { name: 'Ayush' };
+// const members = [person];
+// person = null;
+
+// console.log(members);  //refrence to member k pass aagya
+// console.log(person);
+
+// ----------------------------------------------------------
+// let arr=["hi ",5,null]
+// let op= arr.map((data)=>{
+//     if (typeof data === 'number') return;
+//   return data * 2;
+// })
+// console.log(op)
+// ------------------------------------------------------------------------
+// const users = [
+//     {
+//       id: 1,
+//       name: "Vishal",
+//       city: "Bihar",
+//     },
+//     {
+//       id: 2,
+//       name: "Ankit",
+//       city: "Morena",
+//     },
+//     {
+//       id: 3,
+//       name: "Ritesh",
+//       city: "Bhopal",
+//     },
+//   ];
+
+//   const orders = [
+//     {
+//       id: 1,
+//       userId: 1,
+//       name: "Apple iPhone 14 Pro Max",
+//     },
+//     {
+//       id: 2,
+//       userId: 2,
+//       name: "Apple iPhone 13 Pro Max",
+//     },
+//     {
+//       id: 3,
+//       userId: 2,
+//       name: "Apple iPhone 12 Pro Max",
+//     },
+//     {
+//       id: 4,
+//       userId: 2,
+//       name: "Apple iPhone 11 Pro Max",
+//     },
+//   ];
+
+//   const results = [
+//     {
+//       id: 1,
+//       name: "Vishal",
+//       orders: [
+//         {
+//           productId: 1,
+//           productName: "Apple iPhone 14 Pro Max",
+//         },
+//       ],
+//     },
+//     {
+//       id: 2,
+//       name: "Ankit",
+//       orders: [
+//         {
+//           productId: 2,
+//           productName: "Apple iPhone 13 Pro Max",
+//         },
+//         {
+//           productId: 3,
+//           productName: "Apple iPhone 12 Pro Max",
+//         },
+//         {
+//           productId: 4,
+//           productName: "Apple iPhone 11 Pro Max",
+//         },
+//       ],
+//     },
+//     {
+//       id: 3,
+//       name: "Ritesh",
+//       orders: [],
+//     },
+//   ];
+
+// const final = users.map((item) => {
+//     item.orders = [];
+//     delete item.city;
+//     orders.map((data) => {
+//       if (item.id === data.userId) {
+//         item.orders.push({ productId: data.id, productName: data.name });
+//       }
+//     });
+//     // console.log("jih",item)
+//     return item;
+//   });
+//   console.log(final);
+// ---------------------------------------
+// let apnaMap=new Map([
+//    [ "name", 27],
+//     ["age",26]
+// ])
+// let opration=apnaMap.forEach((value,key)=>{
+//     console.log(value*50)
+//     console.log(key)
+// })
+// console.log(opration)
+
+
+// -------------------------------------------
+//     for (var i = 0; i < 3; i++) 
+// {
+//   setTimeout(function() { alert(i); }, 1000 + i);
+// }
+    // -----------------------------------------
+//     let arr=[1,2,3,4,5]
+// console.log(arr[2], arr.length);
+// arr.length=0;
+// console.log(arr[2], arr.length);
+    // ----------------------------------------
+
+  // ------------------------------------------------------------
+// console.log(1 && 0);   
+// console.log(1 ?? 2);
+// console.log(0 ?? 2)
+// console.log([1, 2, 3, 4, 5].fill(0, 1, 3))
+// const items = [1, 2, 3, 4, 5];
+// const [, , ,...restitem] = items;
+// console.log(restitem);
+// console.log(1|| 2|| 3)
+// console.log(0|| false || 2)
+// // -----------
+// let arr = [];
+// console.log(arr.push(1, 2, 3).length)
+// let arr=[1,2,3,4]
+// console.log(arr.fill("hello"))
+
+
+// ------------------------------------
+// let user = {
+//   age : 100,
+//   fullName : {
+//     first : "Priya",
+//     last : "Bagde"
+//   }
+// }
+// let { age, fullName: { first, last } } = user;     //nested other way
+
+
+
+// ------------------------------------------
+// function sayHi() {
+//   console.log(name);
+//   console.log(age);
+//   var name = 'Lydia';
+//   let age = 21;
+// }
+
+// sayHi();
+// ----------------------------------------------
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1);
+// }
+
+// for (let i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1);
+// }
+// --------------------------------------------
+// const shape = {
+//   radius: 10,
+//   diameter() {
+//     return this.radius * 2; //20
+//   },
+//   perimeter: () => 2 * Math.PI * this.radius, //NaN   because arrow function not bind
+// };
+
+// console.log(shape.diameter());
+// console.log(shape.perimeter());
+// ----------------------------------------------------
+// +true;    //guess an output
+// !'Lydia';
+// -------------------------------
+// let randomValue = { name: "Lydia" }
+// randomValue = 23
+
+// if (!typeof randomValue === "string") {
+// 	console.log("It's not a string!")
+// } else {
+// 	console.log("Yay it's a string!")             //this one
+// }
+// ------------------------------------------------
+// const createMember = ({ email, address = {}}) => {
+// 	const validEmail = /.+\@.+\..+/.test(email)
+// 	if (!validEmail) throw new Error("Valid email pls")
+
+// 	return {
+// 		email,
+// 		address: address ? address : null
+// 	}
+// }
+
+// const member = createMember({ email: "my@email.com" })
+// console.log(member)
+// --------------------------------------------------------
+// const keys = ["name", "age"]
+// const values = ["Lydia", 22]
+
+
+// Object[fromEntries](keys.map((_, i) => {
+// 	return [keys[i], values[i]]
+// })) // { name: "Lydia", age: 22 }               //from entery method se
+// -----------------------------------------
+// const promise1 = Promise.resolve('First')
+// const promise2 = Promise.resolve('Second')
+// const promise3 = Promise.reject('Third')
+// const promise4 = Promise.resolve('Fourth')
+
+// const runPromises = async () => {
+// 	const res1 = await Promise.all([promise1, promise2])
+// 	const res2  = await Promise.all([promise3, promise4])
+// 	return [res1, res2]
+// }
+
+// runPromises()
+// 	.then(res => console.log(res))
+// 	.catch(err => console.log(err))             
+// -------------------------------------------------
+// const user = {
+// 	email: "my@email.com",
+// 	updateEmail: email => {
+// 		this.email = email
+// 	}
+// }
+
+// user.updateEmail("new@email.com")
+// console.log(user.email)         //yes you are correct arrow k sath this bind ni hoga but console check kr phle kya ho rha h 
+// ------------------------------------------------------------
+// const animals = {};
+// let dog = { emoji: '🐶' }
+// let cat = { emoji: '🐈' }
+
+// animals[dog] = { ...dog, name: "Mara" }
+// animals[cat] = { ...cat, name: "Sara" }
+
+// console.log(animals[dog])
+// ------------------------------------------
+// const fruit = ['🍌', '🍊', '🍎']
+
+// fruit.slice(0, 1)
+// fruit.splice(0, 1)
+// fruit.unshift('🍇')
+
+// console.log(fruit)
+// ------------------------------------
+// const user = {
+// 	email: "e@mail.com",
+// 	password: "12345"
+// }
+
+// const updateUser = ({ email, password }) => {
+// 	if (email) {
+// 		Object.assign(user, { email })
+// 	}
+
+// 	if (password) {
+// 		user.password = password
+// 	}
+
+// 	return user
+// }
+
+// const updatedUser = updateUser({ email: "new@email.com" })
+
+// console.log(updatedUser === user)
+// ---------------------------------------------
+// function getFruit(fruits) {
+// 	console.log(fruits?.[1]?.[1])
+// }
+
+// getFruit([['🍊', '🍌'], ['🍍']])
+// getFruit()
+// getFruit([['🍍'], ['🍊', '🍌']])
+// --------------------------------------------
+// let count = 0;
+// const nums = [0, 1, 2, 3];
+
+// nums.forEach(data => {
+// 	if (data) count += 1
+// })
+
+// console.log(count)
+// ----------------------------------------------------
+// var length=4;
+// function callback(){
+//     console.log(this.length)
+// }
+// const obj={
+//     length:5,
+//     method:function (){
+//         arguments[0]();
+//     }
+// };
+// obj.method(callback,1,5)
+// ------------------------------------------------
+// console.log(1 + "2" + "2"); //122
+// console.log(1 + +"2" + "2"); //32
+// console.log(1 + -"1" + "2"); //02
+// console.log(+"1" + "1" + "2"); //112
+// console.log( "A" - "B" + "2");//nan2
+// ----------------------------------------------
+// var a = 1;
+// function b() {
+//   a = 10;
+//   return;
+//   function a() {}
+// }
+// b();
+// console.log(a);
+// -----------------------------------------------------
+// const x = [1, 2, 3];
+// x[-1] = -1;
+// console.log(x[x.indexOf(10000)]);
+// --------------------------------------------------
+// let hero = {
+//     powerLevel: 99,
+//      getPower(){
+//       return this.powerLevel;
+//     }
+//   }
+  
+//   let getPower = hero.getPower;
+  
+//   let hero2 = {powerLevel:42};
+//   console.log(getPower());
+//   console.log(getPower.apply(hero2));
+
+// --------------------------------------
+// var x = 23;
+
+// (function(){
+//   var x = 43;
+//   (function random(){
+//     x++;
+//     console.log(x);
+//     var x = 21;
+//   })();
+// })(); 
+// --------------------------------------------------
+// console.log(foo())
+//  foo =function shn(){
+//   console.log("hi")
+// }
+
+
+// let counter =function (){
+//   let k=0;
+//   return ()=>k++
+// }();
+// console.log(counter())//0
+// console.log(counter())//1
+// console.log(counter())//2
+// ------------------------------------------------
+// function creatClosure(){
+//   var badArr=[];
+//   for(var i=0;i<5;i++){
+//     badArr[i]=function(){
+//       return  'n= '+i
+//     }
+//     // console.log(badArr,"badarr")
+//   }return badArr
+// }
+
+// var badArr=creatClosure();
+// for(var i in badArr){
+//   console.log(badArr[i]());
+// }
+// ------------------------------------------
+// let arr=[{name:"shankar"},"yo",3,"yes"]
+// console.log(arr.length,"1")
+// delete arr[1]
+// console.log(arr.length,"2")
+// ---------------------------------
+// let obj={
+//   console.log("hello")
+// }
+// -------------------------------------------
+// console.log(Number())  //0
+// console.log(Number(""))  //0
+// console.log(Number("98"))  //98
+// let y = "5";      // y is a string
+// let x = + y;      // x is a number
+//let y = "John";   // y is a string
+// let x = + y;
+// console.log(typeof(x)  ) //number
+// console.log(String(new Date()))  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+Number(false)     // returns 0
+Number(true)      // returns 1
+5 + null    // returns 5         because null is converted to 0
+"5" + null  // returns "5null"   because null is converted to "null"
+"5" + + null  //'50'
+"5" + 2     // returns "52"      because 2 is converted to "2"
+"5" - 2     // returns 3         because "5" is converted to 5
+"5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2
+
+
+
+
+
+//https://www.w3schools.com/js/js_type_conversion.asp
+// Original
+// Value	    to Number	Converted   to String	Converted   to Boolean
+// false    	0	                         "false"    	false	
+// true	    1	                          "true"	         true	
+// 0         0	                            "0"	         false	
+// 1	        1                              	"1"           	true	
+// "0"      	0	                              "0"	           true	
+// "000"	    0                              	"000"       	true	
+// "1"	      1	                                 "1"         	true	
+// NaN    	NaN	                                 "NaN"	      false	
+// Infinity	 Infinity	 "Infinity"  	true	
+
+// ""	     0	   ""	       false	
+// "20"  	20	  "20"	         true	
+// "twenty"	NaN	   "twenty"	      true	
+// [ ]	0	""	true	
+// [20]	20	"20"	true	
+// [10,20]	NaN	"10,20"	true	
+// ["twenty"]	NaN	"twenty"	true	
+// ["ten","twenty"]	NaN	"ten,twenty"	true	
+// function(){}	NaN	"function(){}"	true	
+// { }	NaN	"[object Object]"	true	
+// null	0	"null"	false	
+// undefined	NaN	"undefined"	false
+// ---------------------------------
+
+// let obj={
+//   yes:"true",
+//   func:function(){
+//     return this.yes
+//   }
+ 
+// }
+// let functi= obj.func()
+// console.log(functi)
+// -------------------------------------------
+// let a =(1,2,3,4)
+// console.log(a) //it return last one
+// --------------------------------------------
+// const originalObject = { key: 'value', number: 42 };
+
+// // Stringify the object
+// const jsonString = JSON.stringify(originalObject);
+
+// console.log(originalObject); // { key: 'value', number: 42 }
+// console.log(jsonString); // '{"key":"value","number":42}'
+// console.log(originalObject===jsonString)
+</script>

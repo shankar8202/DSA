@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>My Products</h3>
+      <hr />
+      <ul id="productList"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  const products = [
+    "apple",
+    "grapes",
+    "mango",
+    "pineapple",
+    "Guava",
+    "Pear",
+    "Tamato",
+    "Peach",
+  ];
+
+  const listContainer = document.getElementById("productList");
+
+  for (let i = 0; i < products.length; i++) {
+    const meraProduct = products[i];
+
+    console.log("@AJ i: ", meraProduct);
+
+    const listItem = document.createElement("li");
+    listItem.innerText = meraProduct;
+    listContainer.appendChild(listItem);
+  }
+</script>

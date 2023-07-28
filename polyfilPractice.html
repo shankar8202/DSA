@@ -5,31 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+       .container {
+      width: 100%;
+    }
+
+    .sidebar {
+      width: 25%;
+      background-color: lightblue;
+      float: left;
+    }
+
+    .main-content {
+      /* The main content width is calculated dynamically as 75% (100% - 25%) minus 20 pixels */
+      width: calc(75% - 20px);
+      background-color: lightgreen;
+      float: left;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    </style>
 </head>
 <body>
-    
+    <div class="container clearfix">
+        <div class="sidebar">
+          <p>Sidebar content goes here</p>
+        </div>
+        <div class="main-content">
+          <p>Main content goes here</p>
+        </div>
+      </div>
 </body>
 </html>
 <script>
 
- Map  
+ //Map  
 
-    let arr=[1,2,3,4,5,6]
  Array.prototype.myMap=function(data){
-    let empty=[];
-    for(let i=0;i<this.length;i++){
-        empty.push(data(this[i]))
-    }
-return empty
+let empty=[];
+for(let i=0;i<this.length;i++){
+    empty.push(data(this[i]))
+}return empty
+}
+let arr=[1,2,3,4,5,6]
 
- }
 let op =arr.myMap((val)=>{
    return val*2
 })
 console.log(op)
 
 
-Filter
+
+
+
+//Filter
 
 let arr2=[1,2,3,4,5,6]
 Array.prototype.myFil=function(data){
@@ -46,7 +80,7 @@ let opration=arr2.myFil((data)=>{
     console.log(opration)
 
 
-reduce 
+//reduce 
 let arr3=[1,2,3,4,5,6];
 
 Array.prototype.Myred=function(data,initialVal){

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="shn2()">
+    <input type="text" id="inputbox" onkeyup="shn()">
+</body>
+</html>
+<script>
+    function shn(){
+    let frag =document.createDocumentFragment();
+ let input =document.getElementById("inputbox");
+ let inputVal=input.value;
+let store= localStorage.setItem("value:-",inputVal)
+
+df.append(input)
+df.append(store)
+document.body.append(df)
+
+}
+function shn2(){
+    document.getElementById("inputbox").value=localStorage.getItem("value:-")
+}
+
+</script>

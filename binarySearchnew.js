@@ -14,7 +14,7 @@ function shn(arr) {
   
   
       if (mid === 0 && arr[mid] >= arr[mid + 1]) {
-        return arr[mid];
+        return arr[mid,"midd=0"];
       }
      
   

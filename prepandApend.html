@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prepend and Append Example</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>Existing Content</p>
+  </div>
+
+  <script>
+    // Get the parent element
+    const parentElement = document.getElementById('myDiv');
+
+    // Create new elements
+    const newElement1 = document.createElement('p');
+    newElement1.textContent = 'New Element 1';
+
+    const newElement2 = document.createElement('p');
+    newElement2.textContent = 'New Element 2';
+
+    // Using prepend
+    parentElement.prepend(newElement1);
+    parentElement.prepend(newElement2);
+
+    // Using append
+    const textContent = 'Appended Text';
+    parentElement.append(textContent);
+
+    // Display the updated content
+    console.log(parentElement.innerHTML);
+  </script>
+</body>
+</html>

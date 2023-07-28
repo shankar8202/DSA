@@ -5,18 +5,193 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+<div class="parenet">
+    <div id="idd">one</div>
+
+</div>
+<div id="myElement"></div>
+
+
+
 </body>
 </html>
 <script>
 
-let arr =[1,2,3,1,4,5,5,4,5]
 
+let arr=[1,5,4,8,9,3,2,4]
+function shn(arr){
+    let empty=[]
+for(let i=0;i<=arr.length-1;i++){
+    for(let j=i+1;j<=arr.length;j++){
+       if(arr [i]>arr[j]){
+      let storingVar=arr[i]
+      arr[i]=arr[j]
+      arr[j]=storingVar
+       }
+    }
+}return arr
+}
+console.log(shn(arr))
+
+// const element = document.getElementById("myElement");
+// console.log(element.innerText); // Retrieves the visible text content of the element
+// element.innerText = "<b>New text</b>"; // Sets the visible text content of the element
+
+
+
+
+// const element = document.getElementById("myElement");
+// console.log(element.innerHTML); // Retrieves the HTML content of the element
+// element.innerHTML = "<b>New text</b>"; // Sets the HTML content of the element
+
+
+
+
+
+// -------------------------------------
+// for(let i=0;i<=5;i++){
+//     let empty=""
+//     for(let j=i+1;j<=5;j++){
+//        empty+="*"
+//     }console.log(empty)
+// }
+
+
+// //  12345 
+// //  2345 
+// //  345 
+// //  45 
+// //  5
+
+
+// ---------------------------------
+// let arr=[1,5,7,8,9,6,5,5,4,7,8]        //cheaking occurance of an element
+// function shn(arr){
+//     let obj={};
+//      for(let i=0;i<=arr.length-1;i++){
+//       if(arr[i] in obj){
+//         obj[arr[i]]+=1
+//       }
+//       else{
+//        obj [arr[i]]=1
+//       }
+
+//      } return obj
+    
+// }
+// console.log(shn(arr))
+
+
+
+
+
+
+
+
+
+
+    // promise pract 
+
+// function prom(){
+//     return new Promise((resolve,reject)=>{
+//         resolve ("yes im resolved 1")
+//         reject("sorry i got rejected 1")
+      
+//     })
+// }
+// function prom2(){
+//     return new Promise((resolve,reject)=>{
+       
+        
+//         resolve ("yes im resolved 2")
+//         reject("sorry i got rejected 2")
+      
+//     })
+// }
+// function prom3(){
+//     return new Promise((resolve,reject)=>{
+//         reject(Error("sorry i got rejected 3"))
+//         resolve ("yes im resolved 3")
+      
+       
+      
+//     })
+// }
+
+// let commonFunc=async ()=>{
+//      try{
+//         let pro1 = await prom()
+//       console.log(pro1)
+//       let pro2 = await prom2()
+//       console.log(pro2)
+//       let pro3 = await prom3()
+//       console.log(pro3)
+//      } catch(err){
+//         console.log(err)
+//      }
+// }
+// commonFunc()
+
+
+
+
+
+
+
+
+    // prom().then((data)=>{
+    //     console.log(data)
+    //     prom2().then((data2)=>{
+    //         console.log(data2)
+    //         prom3().then((data3)=>{
+    //             console.log(data3)
+    //         }).catch((err)=>console.log(err))
+    //     }).catch((err2)=>console.log(err2))
+    // }).catch((err3)=>console.log(err3))
+
+
+    // -----------------------------------
+// let obj={
+//     name:"shankar",
+//     lname:"sahu",
+//     func:function(pera){
+//         console.log(`${pera} my name is  ${this.name}`)
+//     }
+// }
+// obj.func("hello")
+// let obj2={
+//     name:"nicky",
+//     lname:"sahu"
+// }
+// obj.func.call(obj2,"hi")
+
+
+// let a =[1,2,3,4]
+// let b=[2,3,4,5,6,7,8]
+// let c =[...a,...b]
+
+// let set= new Set(c)
+// // console.log(c)
+// let obj={}
+// for(let i=0;i<=c.length-1;i++){
+//   obj[c[i]]=true
+// }
+// let final= Object.keys(obj)
+// let final2=final.map(Number)
+
+// console.log(final2)
+// console.log(c)
+
+
+
+// let arr =[1,2,3,1,4,5,5,4,5]
 
     // -------------------------------------------------------
-//   //  put all negative value in one Array
+  //  put all negative value in one Array
 //     let arr =[-12, 11, -13, -5, 6, -7, 5, -3, -6]
 //     let empty =[]
 //    let fil =arr.filter((data)=>{
@@ -25,16 +200,43 @@ let arr =[1,2,3,1,4,5,5,4,5]
 
 //     }return empty
 //    })
-// console.log(empty)
-    // ------------------------------------------------
-    // // finifing missing value 
-    //    let arr =[1, 2, 4, 6, 3, 7, 8]
-    //    let empty=[];
-    //    let sort=arr.sort((a,b)=> { return a-b})
-    //    for(let a=0;a<=sort.length;a++){
-    //     if(sort[a]!==a+1){
-    //         empty.push(a+1);
-    //        break
-    //     }console.log(empty)
-    //    }
+// // console.log(empty)
+//     // ------------------------------------------------
+//     // finifing missing value 
+//        let arr =[1, 2, 4, 6, 3, 7, 8]
+//        let empty=[];
+//        let sort=arr.sort((a,b)=> { return a-b})
+//        for(let a=0;a<=sort.length;a++){
+//         if(sort[a]!==a+1){
+//             empty.push(a+1);
+//            break
+//         }console.log(empty)
+//        }
+// ----------------------------------------------------------------------
+// const input = "aaaabbbbbbbbbbbbbbbbbbbbbbbbbaaccccccccccccccccccde";
+
+//  function shn(str){
+//     let obj={};
+//    for(let i=0;i<=str.length-1;i++){
+//        if(str[i] in obj){
+//         obj[str[i]]+=1
+
+//        }
+//        else{
+//         obj[str[i]]=1
+//        }
+//    }                //{ a: 6, b: 2, c: 18, d: 1, e: 1 }
+// let final=Object.entries(obj).flat(2)
+//  let val=Object.values(obj)
+//  let high=Math.max(...val)//18
+//  for(let i=0;i<=final.length-1;i++){
+//     if(final[i]===high){
+//         console.log(final[i-1],final[i])
+//     }
+//  }
+
+//  }
+// console.log(shn(input))
+// ---------------------------------------------------------
+
 </script>

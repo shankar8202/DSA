@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    li {
+      margin: 5px;
+    }
+    
+    button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button onclick="addTask()">Add</button>
+  
+  <ul id="taskList"></ul>
+  
+  <script>
+    // Get references to the input and task list elements
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+    // taskInput.scrollIntoView({
+    //     behavior:"smooth"
+    // })
+    
+    // Create an array to store the tasks
+    let tasks = [];
+    
+    // Function to add a task to the list
+    function addTask() {
+      const taskText = taskInput.value.trim();
+      
+      // Check if the input is empty
+      if (taskText === "") {
+        alert("Please enter a task.");
+        return;
+      }
+      
+      // Create a new task object
+      const task = {
+        id: Date.now(),
+        text: taskText
+      };
+      
+      // Add the task to the array
+      tasks.push(task);
+      
+      // Clear the input
+      taskInput.value = "";
+      
+      // Call the function to display the updated list
+      displayTasks();
+    }
+    
+    // Function to delete a task from the list
+    function deleteTask(id) {
+      // Filter out the task with the specified id
+      tasks = tasks.filter(task => task.id !== id);
+      
+      // Call the function to display the updated list
+      displayTasks();
+    }
+    
+    // Function to display the tasks in the list
+    function displayTasks() {
+      // Clear the existing list
+      taskList.innerHTML = "";
+      
+      // Loop through the tasks and create list items
+      tasks.forEach(task => {
+        const li = document.createElement("li");
+        li.innerHTML = task.text;
+        
+        const deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "Delete";
+        deleteButton.onclick = () => deleteTask(task.id);
+        
+        li.appendChild(deleteButton);
+        taskList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
