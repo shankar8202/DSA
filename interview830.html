@@ -1,97 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
 <script>
-//     let user = {   //destructure in diffrent diffrent way
-//   age : 100,
-//   fullName : {
-//     first : "Priya",
-//     last : "Bagde"
-//   }
-// }
-// --------------------------------------------------
-// var player = "Virat";
-//   function displayPlayer() {
-//     if (player === "Virat") {
-//       var player = "VK";
-//       console.log(player);
-//     }
-//     console.log(player);
-//   }
-//   displayPlayer();      //why it show undefined
-// -------------------------------------------------
-// console.log("First");  //1
+  //     let user = {   //destructure in diffrent diffrent way
+  //   age : 100,
+  //   fullName : {
+  //     first : "Priya",
+  //     last : "Bagde"
+  //   }
+  // }
+  // --------------------------------------------------
+  // var player = "Virat";
+  //   function displayPlayer() {
+  //     if (player === "Virat") {
+  //       var player = "VK";
+  //       console.log(player);
+  //     }
+  //     console.log(player);
+  //   }
+  //   displayPlayer();      //why it show undefined
+  // -------------------------------------------------
+  // console.log("First");  //1
 
-//   const promise = new Promise((resolve) => {
-//     console.log("Second");     //2
-//   });
+  //   const promise = new Promise((resolve) => {
+  //     console.log("Second");     //2
+  //   });
 
-//   promise.then((data) => {
-//     console.log(data); //resolve hua hi ni
-//   });
+  //   promise.then((data) => {
+  //     console.log(data); //resolve hua hi ni
+  //   });
 
-//   console.log("Third");  //3
-// ---------------------------------------------------
-// const user = {
-//     userName: "Jayesh",
-//     displayName: function () {
-//       console.log(this.userName);
-//     },
-//   };
+  //   console.log("Third");  //3
+  // ---------------------------------------------------
+  // const user = {
+  //     userName: "Jayesh",
+  //     displayName: function () {
+  //       console.log(this.userName);
+  //     },
+  //   };
 
-//   setTimeout(user.displayName, 1000);
-// -----------------------------------
-// infinite currying 
-// --------------------------------------------------------
-// let arr=[1,2,3,4,5,6]
-// let opration=arr.map((data)=>{
-// if(data%2==0){
-//     data2= data*3 //if i do return data*3 it will show undefined which is not datisfy consition
-// }return data
-// })
-// console.log(opration)
+  //   setTimeout(user.displayName, 1000);
+  // -----------------------------------
+  // infinite currying
+  // --------------------------------------------------------
+  // let arr=[1,2,3,4,5,6]
+  // let opration=arr.map((data)=>{
+  // if(data%2==0){
+  //     data2= data*3 //if i do return data*3 it will show undefined which is not datisfy consition
+  // }return data
+  // })
+  // console.log(opration)
 
-// let arr=[1,2,3,4,5,6,78]
+  // let arr=[1,2,3,4,5,6,78]
 
-// console.log(arr.length-1)
+  // console.log(arr.length-1)
 
-// var arr = [
-//   [1, 2, 3, 4],
-//   [5, 6, 7, 8],
-//   [9, 10, 11, 12],
-//   [13, 14, 15, 16]
-// ];
-// let empty = [];
-// let shn=(arr)=> {
- 
-//   empty.push(arr.shift()); // [1, 2, 3, 4],
+  // var arr = [
+  //   [1, 2, 3, 4],
+  //   [5, 6, 7, 8],
+  //   [9, 10, 11, 12],
+  //   [13, 14, 15, 16]
+  // ];
+  // let empty = [];
+  // let shn=(arr)=> {
 
-//   for (let i = 0; i <= arr.length - 1; i++) {
-//     empty.push(arr[i].pop());
-//   }
-//   empty.push(arr.pop().reverse());
+  //   empty.push(arr.shift()); // [1, 2, 3, 4],
 
-//   for (let i = arr.length - 1; i >= 0; i--) {
-//     empty.push(arr[i].shift());
-//   }
-//   console.log(arr,"ar")
-//   if (arr.length > 0) {
-//    return shn(arr);
-//   }
-//  return  empty.flat()
+  //   for (let i = 0; i <= arr.length - 1; i++) {
+  //     empty.push(arr[i].pop());
+  //   }
+  //   empty.push(arr.pop().reverse());
 
-// }
-// console.log(shn(arr));
-// ------------------------------------------------
+  //   for (let i = arr.length - 1; i >= 0; i--) {
+  //     empty.push(arr[i].shift());
+  //   }
+  //   console.log(arr,"ar")
+  //   if (arr.length > 0) {
+  //    return shn(arr);
+  //   }
+  //  return  empty.flat()
 
+  // }
+  // console.log(shn(arr));
 
+  // --------------------STRING MEthod----------------------------
+
+  //   let text = "ABCDEFGHIJKL MNOPQRSTUVWXYZ";
+  //   console.log(text.charCodeAt(0));
+  // -----------------------------------------
+  //   const name = "W3Schools";
+  //   let letter = name.at(2);
+  //   console.log(letter);
+  // --------------------------------------------
+  // let text = "HELLO WORLD";
+  // console.log((text[0] = "A"));
+  // console.log(text);
+  // ----------------slice------------------------
+  // let text = "ABCDEFGHIJKL MNOPQRSTUVWXYZ";
+  // console.log(text.slice(0, 5));
+  // console.log(text);
+  // -----------------------substr---------------------
+  //   let text = "ABCDEFGHIJKL MNOPQRSTUVWXYZ";
+  //   console.log(text.substring(0, 5));
+  //   console.log(text);
+  // --------------------------------------------------
+  // let text = "Apple, Banana, Kiwi,mango";
+  // let part = text.slice(7);
+  // let part2 = text.slice(0,7);
+  // console.log(part);
+  // console.log(part2);
+  // console.log(text);
+  // --------------------uppercase----------------------
+
+  // let text = "Apple, Banana, Kiwi,mango";
+  // let part = text.toUpperCase();
+  // console.log(part);
+  // console.log(text);
+  // ----------------------------concate---------------------------
+  // let text1 = "Hello";
+  // let text2 = "World";
+  // let text3 = text1.concat(" ", text2);
+  // console.log(text1);
+  // console.log(text2);
+  // console.log(text3);
+  // --------------------------trim-------------------------------
+  // let text1 = "      Hello World!      ";
+  // console.log(text1);
+  // let text2 = text1.trim();
+  // console.log(text1);
+  // console.log(text2);
+  // ---------------------------it can remove space from where string start----------------------
+  // let text1 = "     Hello World!     ";
+  // let text2 = text1.trimStart();
+  // console.log(text2);
+  // --------------------------------------------
+  // let text = "5";
+  // let padded = text.padStart(5, "0");
+  // console.log(padded);
+  // -------------------------------------------
+  //   let text = "Hello world!";
+  //   let result = text.concat(" ").repeat(4);
+  //   console.log(result);
+  //   ------------------------------------------
+  // let text =
+  //   "Please visit Microsoft yes hi bro Microsoft tu check kr Microsoft!";
+  // let newText = text.replace(/Microsoft/g, "W3Schools"); //replace globaly
+  // let newTextNotglobaly = text.replace("Microsoft", "W3Schools"); ////replace only first place
+  // console.log(newText);
+  // console.log(newTextNotglobaly);
+  //   ------------------------------------------------------------
+  //   let text =
+  //     "Please visit Microsoft yes hi bro Microsoft tu check kr Microsoft!";
+  //   let newTextNotglobaly2 = text.replace("Microsoft", "W3Schools"); ////replace only first place
+  //   let newTextNotglobaly = text.replaceAll("Microsoft", "W3Schools"); ////replace only first place
+  //   let newText = text.replace(/Microsoft/g, "W3Schools"); //replace globaly
+  //   console.log(newText);
+  //   console.log(newTextNotglobaly);
+  //   ----------------------------------------------------------------
+  //   let str = "heeeeee heooo";
+  //   let op = str.split(",");
+  //   console.log(op);
+  //   console.log(str.split(",")); // Split on commas
+  //   console.log(str.split(" ")); // Split on spaces
+  //   console.log(str.split("|")); // Split on pipe
+  // ---------------------------serach string-------------------------------
+  //   let text = "Please locate where 'locate' occurs!";
+  //   let op = text.indexOf("locate", "occurs");
+  //   console.log(op);
+  //   let text = "Please locate where 'locate' occurs!";
+  //   let index = text.lastIndexOf("locate");
+  //   console.log(index);
+  // --------------------------------------------------------
+  //   let text = "Please locate where 'locate' occurs!";
+  //   let index = text.indexOf("locate", 15);
+  //   console.log(index);
+  // ---------------------------------------------------------------
+  //   let text = "Please  where 'locate' occurs!";
+  //   console.log(text.search(/locate/g));
+  // ---------------------match--------------------
+  //   let text = "The rain in SPAIN stays mainly in the plain";
+  //   console.log(text.match("ain"));
+  // ----------------------------------------------------------
+  // let text = "The rain in SPAIN stays mainly in the plain";
+  // console.log(text.match(/ain/g));
+  // --------------------------as it it ---------------------
+  // let text = "The rain in SPAIN stays mainly in the plAin";
+  // console.log(text.match(/ain/gi));
+
+  // function shn (item){
+  // let check = item
+  // let check2 =check
+  // console.log(check2)
+  // }
+  // console.log(shn(50))
+
+  // const tt = 50;
+  // if (tt) {
+  //   let newCheck = 10;
+  //   const newCheck2 = 10;
+  //   var yoCheck = 20;
+  // }
+
+  // console.log(yoCheck);
+  // console.log(newCheck);
+  // console.log(newCheck2);
+
+  // anonemous function
+  // const MyFunction = () => 20+20
+  // console.log(MyFunction())
+
+  // ----------------genrator functions------------------------
+
+  // let shankar = () => "hello world";
+  // let shankar2 = () => "hello world 2";
+
+  // function* shn() {
+  //   yield 1;
+  //   yield 2;
+  //   yield shankar();
+  //   yield shankar2();
+  // }
+
+  // let check = shn();
+  // console.log(check.next());
+  // console.log(check.next());
+  // console.log(check.next());
+  // console.log(check.next());
+  // console.log(check.next());
+  // --------------------------------------------
+  // let obj = {
+  //   name: "shankar",
+  //   lname: "sahu",
+  // };
+  // let obj2 = {
+  //   name: "shankar",
+  //   lname: "sahu",
+  // };
+  // -----------------destructuring-------------------
+
+  // const {name,lname} = obj
+  // console.log(lname)
+  // -----------way 2---------------------------
+  // function printDetails({ name, lname }) {
+  //   console.log(name);
+  //   console.log(lname);
+  // }
+  // --------------alies way 3------------------------
+
+  // const { name: firstName, lname: lastName } = obj;
+  // console.log(firstName, lastName);
+  // ----------------------------------------------------
+
+  // printDetails(obj);
+
+  //   if (obj.hasOwnProperty("name")) {
+  //   console.log('The "name" key exists in the object.');
+  // } else {
+  //   console.log('The "name" key does not exist in the object.');
+  // }
+
+  // // console.log(JSON.stringify(obj) === JSON.stringify(obj2));
+  // for(let i = 0 ; i <=obj.length ; i++){
+
+  // }
+  // delete obj.name;
+  // Object.seal(obj);
+  // console.log(obj);
+  // ---------------------------------------------------
+  // const newmap = new Map([
+  //   ["name", "shankar"],
+  //   ["lname", "sahu"],
+  // ]);
+  // console.log(newmap.get("name"));
+  // console.log(newmap.set("name", "raju"));
+  // console.log(newmap.get("name"));
+
+  //   let arr = [1, 2, 3, 4, 5, 6];
+
+  // arr.splice(3, 1, 400);
+
+  // console.log(arr); // Output: [1, 2, 3, 400, 5, 6]
+
+  //   const spl =arr.slice(0,2)
+
+  // console.log(arr)
+  // console.log(spl)
+  // -------------------need to understand this code this is regarding cathing---------------------------
+
+  // Create a Map for caching
+  // const cache = new Map();
+
+  // // Function to fetch data from an API
+  // async function fetchData(key) {
+  //   console.log(key);
+  //   console.log(cache);
+  //   // Check if the data is already cached
+  //   if (cache.has(key)) {
+  //     console.log("Data found in cache");
+  //     return cache.get(key);
+  //   }
+
+  //   // Fetch data from the API
+  //   console.log("Fetching data from API");
+  //   const data = await fetch(`https://api.example.com/data/${key}`);
+
+  //   // Process the response
+  //   const jsonData = await data.json();
+
+  //   // Cache the data
+  //   cache.set(key, jsonData);
+
+  //   return jsonData;
+  // }
+
+  // // Example usage
+  // async function exampleUsage() {
+  //   const data1 = await fetchData("exampleKey");
+  //   console.log(data1);
+
+  //   // Data should be retrieved from cache this time
+  //   const data2 = await fetchData("exampleKey");
+  //   console.log(data2);
+  // }
+
+  // exampleUsage();
+  // ------------------------------------question------------------------------------------
+  // let obj = {
+  //   name: "shankar",
+  //   fuct: function () {
+  //     return "hello world " + this.name;
+  //   },
+  // };
+  // let obj2 = {
+  //   fuct: obj.fuct,
+  //   name: "yoyasso",
+  // };
+
+  // console.log(obj2.fuct());
+  // -------------------------------------------------------
+  // const output = [4, 9, 16, 25, 36];  //finding squire root 
+  // const opration =output.map(data=>Math.sqrt(data))
+  // console.log(opration)
+  // ----------------------------------------------------------
+  
 </script>

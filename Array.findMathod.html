@@ -1,62 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
 <script>
+  //it return 1 value
+  //   const trees = ["birch", "maple", "maak", "poplar"];
+  // console.log(trees)
+  //   const result = trees.find((tree) => tree.startsWith("m"));
+  //   console.log(result);
+  // -----------------------------------------------------
+  // const trees = [
+  //   { name: "birch", count: 4 },
+  //   { name: "maple", count: 5 },
+  //   { name: "oak", count: 2 }
+  // ];
 
+  // const result = trees.find(tree => tree.name === "oak");
+  // console.log(result)
+  // { name: "oak", count, 2 }
+  // ------------------------------------------------
+  // const deciduous = [
+  //   { name: "birch", count: 4 },
+  //   { name: "maple", count: 5 },
+  //   { name: "oak", count: 2 }
+  // ];
 
+  // const evergreens = [
+  //   { name: "cedar", count: 2 },
+  //   { name: "fir", count: 6 },
+  //   { name: "pine", count: 3 }
+  // ];
 
+  // // our testing function
+  // const hasFiveOrMore = el => el.count >= 5;
 
+  // const decResult = deciduous.find(hasFiveOrMore);
+  // // { name: "maple", count: 5 }
 
-//it return 1 value
-// const trees = [ 
-//   "birch", 
-//   "maple", 
-//   "maak", 
-//   "poplar" 
-// ];
+  // const evgResult = evergreens.find(hasFiveOrMore);
+  // // { name: "fir", count: 6 }
+  // -----------------------------------------------------------
+  ////find closest number
+  // const inputArr = [1, 10, 7, 2, 4, 9];
+  // let finder = 7;
 
-// const result = trees.find(tree => tree.startsWith("m"));
-// console.log(result)
-// -----------------------------------------------------
-// const trees = [
-//   { name: "birch", count: 4 },
-//   { name: "maple", count: 5 },
-//   { name: "oak", count: 2 }
-// ];
+  // function shn(arr) {
+  //   let empty = [];
+  //   let sort = arr.sort((a, b) => a - b);
+  //   console.log(sort);
+  //   const filtering = sort.filter((data, i) =>
+  //     data === finder ? empty.push(i - 1, i + 1) : ""
+  //   );
+  //   console.log(empty, "empty");
+  //   let finalOne = sort[empty[0]];
+  //   let finalOne2 = sort[empty[1]];
+  //   console.log(finalOne, "final1");
+  //   console.log(finalOne2, "final1");
+  // }
+  // console.log(shn(inputArr));
+  // -----------------------------------------------------------
+    const companies = [
+      { name: "Company A", id: 1 }, //if Company A come again with same id it's key will only  but key is diffrent then +1
+      { name: "Company B", id: 2 },
+      { name: "Company C", id: 3 },
+      { name: "Company A", id: 4 },
+      { name: "Company B", id: 2 },
+    ];
 
-// const result = trees.find(tree => tree.name === "oak");
-// console.log(result)
-// { name: "oak", count, 2 }
-// ------------------------------------------------
-// const deciduous = [
-//   { name: "birch", count: 4 },
-//   { name: "maple", count: 5 },
-//   { name: "oak", count: 2 }
-// ];
+    const out = {
+      "Company A": 2,
+      "Company B": 1,
+      "Company C": 1,
+    };
 
-// const evergreens = [
-//   { name: "cedar", count: 2 },
-//   { name: "fir", count: 6 },
-//   { name: "pine", count: 3 }
-// ];
+    let obj = {};
+    let arr = [];
+    for (let i = 0; i < companies.length; i++) {
+      if (
+        Object.keys(obj).includes(companies[i].name) &&
+        !arr.includes(companies[i].id)
+      ) {
+        obj[companies[i].name]++;
+      } else {
+        obj[companies[i].name] = 1;
+        console.log(obj, "check");
+      }
+      // console.log(obj,"obj")
+      arr.push(companies[i].id);
+    }
+    console.log(obj);
 
-// // our testing function
-// const hasFiveOrMore = el => el.count >= 5;
+  // ---------------------------------------------------
 
-// const decResult = deciduous.find(hasFiveOrMore);
-// // { name: "maple", count: 5 }
-
-// const evgResult = evergreens.find(hasFiveOrMore);
-// // { name: "fir", count: 6 }
-// -----------------------------------------------------------
-
-
+  //   let obj = {
+  //     name: {
+  //       name2: "check",
+  //       name3: {
+  //         name4: "hiiiiiiiii",
+  //       },
+  //     },
+  //     lname: "sahu",
+  //     hi: "hi3",
+  //     yo: "ji",
+  //   };
+  //   Object.entries(obj).forEach(([key, value]) => {
+  //     console.log(key, value);
+  //     console.log(Object.entries(obj).flat(Infinity));
+  //     console.log(typeof key, typeof value);
+  //   });
 </script>
